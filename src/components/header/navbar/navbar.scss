@@ -1,0 +1,27 @@
+@import 'src/sass/common';
+
+#navbar {
+  height: 10%;
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+
+  .left {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+  }
+  .right {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+
+    ul {
+      li {
+        display: inline-block;
+        margin: 0 20px;
+        cursor: pointer;
+      }
+    }
+  }
+}
