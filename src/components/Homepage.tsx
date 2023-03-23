@@ -1,10 +1,19 @@
 import * as React from "react";
-import {Header} from "./imports";
+import {Header, AboutMe} from "./imports";
+import {useState} from "react";
 
 function Homepage() {
+
+    const [theme, setTheme] = useState(false)
+
+    const onChangeTheme = () => {
+        setTheme(!theme)
+    }
+
     return (
-        <div id="homepage">
-            <Header/>
+        <div id="homepage" className={theme ? "dark" : "light"}>
+            <Header theme={theme} onChangeTheme={onChangeTheme}/>
+            <AboutMe theme={theme} />
         </div>
     )
 }

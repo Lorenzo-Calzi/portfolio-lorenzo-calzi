@@ -1,26 +1,99 @@
+//VARIABLES
+$black: black;
+$grey: #545454;
+$white: white;
+$purple: #6D56E9;
+
+// HTML BODY
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 html, body {
   height: 100%;
 }
+
+// CONTAINER
 .container {
-  width: 90%;
+  height: 100%;
+  width: 80%;
   margin: auto;
 }
+
+// FLEX
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+// ALIGN ITEMS
+.ai-start {
+  align-items: flex-start;
+}
+.ai-center {
+  align-items: center;
+}
+.ai-end {
+  align-items: flex-end;
+}
+
+// JUSTIFY CONTENT
+.jc-center {
+  justify-content: center;
+}
+.jc-between {
+  justify-content: space-between;
+}
+.jc-evenly {
+  justify-content: space-evenly;
+}
+.jc-around {
+  justify-content: space-around;
+}
+
+// LIST
 ul {
   list-style: none;
+
+  li {
+    transition: all 1000ms;
+  }
 }
+
+// THEME
 .dark {
   color: white;
-  background-color: rebeccapurple;
+  background-color: #6D56E9;
+  transition: all 1000ms;
 }
 .light {
   color: black;
   background-color: white;
+  transition: all 1000ms;
 }
 
-
+// TEXT
+.white {
+  color: $white;
+}
+.black {
+  color: $black;
+}
+.grey {
+  color: $grey;
+}
+.purple {
+  color: $purple;
+}
+.li-active {
+  border-bottom: 2px solid $purple !important;
+}
+.li-hover {
+  border-bottom: 2px solid $purple;
+}

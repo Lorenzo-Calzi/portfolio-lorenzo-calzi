@@ -1,10 +1,12 @@
 import * as React from "react";
-import { Navbar } from "../imports";
+import { Navbar, Jumbotron } from "../imports";
 
-function Header() {
+function Header(props) {
+
     return (
         <div id="header">
-            <Navbar/>
+            <Navbar theme={props.theme} onChangeTheme={props.onChangeTheme}/>
+            <Jumbotron theme={props.theme}/>
         </div>
     )
 }

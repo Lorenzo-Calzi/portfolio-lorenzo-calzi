@@ -1,29 +1,28 @@
 import * as React from "react";
-import {useEffect} from "react";
 
-function Navbar() {
-
-    useEffect(() => {
-
-    }, []);
+function Navbar(props) {
 
     return (
-        <div id="navbar" className="container">
-            <div className="left">
-                <span>Lorenzo</span>
-            </div>
+        <div id="navbar">
+            <div className="container flex-row jc-between">
+                <div className="left">
+                    <span>Portfolio</span>
+                </div>
 
-            <div className="right">
-                <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Skills</li>
-                    <li>Services</li>
-                    <li>Portfolio</li>
-                    <li>Contact</li>
-                    <li><i className="fa-solid fa-moon"></i></li>
-                </ul>
-
+                <div className="right">
+                    <ul>
+                        <li className="list-item li-active">Home</li>
+                        <li className="list-item">About</li>
+                        <li className="list-item">Skills</li>
+                        <li className="list-item">Services</li>
+                        <li className="list-item">Portfolio</li>
+                        <li className="list-item">Contact</li>
+                        <li className="theme" onClick={props.onChangeTheme}>
+                            <i className={`fa-solid fa-sun ${props.theme && "opacity"}`}></i>
+                            <i className={`fa-solid fa-moon ${!props.theme && "opacity"}`}></i>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     )
