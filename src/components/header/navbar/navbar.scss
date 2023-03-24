@@ -3,6 +3,7 @@
 #navbar {
   width: 100%;
   position: fixed;
+  z-index: 999;
   display: flex;
   align-content: center;
   justify-content: space-between;
@@ -29,11 +30,8 @@
         cursor: pointer;
       }
       .list-item {
-        border-bottom: 2px solid white;
-
-        &:hover {
-          border-bottom: 2px solid $purple;
-        }
+        border-bottom: 2px solid transparent;
+        transition: all 1000ms;
       }
       .theme {
         position: relative;
@@ -52,6 +50,13 @@
           opacity: 0;
         }
       }
+      .language {
+        height: 20px;
+        width: 20px;
+        background-size: cover;
+        background-position: center;
+        border-radius: 50%;
+      }
     }
   }
 }
@@ -61,6 +66,7 @@
     bottom: 0;
     top: inherit;
     height: 10%;
+    box-shadow: rgba(33, 35, 38, 0.1) 0 -10px 10px -10px ;
 
     .container {
       width: 90%;
@@ -97,6 +103,7 @@
     bottom: 0;
     top: inherit;
     height: 10%;
+    box-shadow: rgba(33, 35, 38, 0.1) 0 -10px 10px -10px ;
 
     .container {
       width: 90%;
@@ -133,6 +140,7 @@
     bottom: 0;
     top: inherit;
     height: 10%;
+    box-shadow: rgba(33, 35, 38, 0.1) 0 -10px 10px -10px ;
 
     .container {
       width: 80%;
@@ -169,6 +177,7 @@
     bottom: 0;
     top: inherit;
     height: 10%;
+    box-shadow: rgba(33, 35, 38, 0.1) 0 -10px 10px -10px ;
 
     .container {
       width: 80%;
@@ -206,6 +215,7 @@
     left: 0;
     right: 0;
     height: 15%;
+    box-shadow: rgba(33, 35, 38, 0.1) 0 10px 10px -10px;
 
     .left {
       span {
@@ -235,6 +245,7 @@
     left: 0;
     right: 0;
     height: 15%;
+    box-shadow: rgba(33, 35, 38, 0.1) 0 10px 10px -10px;
 
     .left {
       span {
@@ -264,6 +275,7 @@
     left: 0;
     right: 0;
     height: 10%;
+    box-shadow: rgba(33, 35, 38, 0.1) 0 10px 10px -10px;
 
     .left {
       span {
@@ -292,6 +304,7 @@
     bottom: 0;
     top: inherit;
     height: 10%;
+    box-shadow: rgba(33, 35, 38, 0.1) 0 -10px 10px -10px ;
 
     .container {
       width: 80%;
@@ -329,6 +342,7 @@
     left: 0;
     right: 0;
     height: 10%;
+    box-shadow: rgba(33, 35, 38, 0.1) 0 10px 10px -10px;
 
     .left {
       span {
@@ -356,6 +370,7 @@
     left: 0;
     right: 0;
     height: 10%;
+    box-shadow: rgba(33, 35, 38, 0.1) 0 10px 10px -10px;
 
     .left {
       span {
@@ -383,6 +398,7 @@
     left: 0;
     right: 0;
     height: 10%;
+    box-shadow: rgba(33, 35, 38, 0.1) 0 10px 10px -10px;
 
     .left {
       span {

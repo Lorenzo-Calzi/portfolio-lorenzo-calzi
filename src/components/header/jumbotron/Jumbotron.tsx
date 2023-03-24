@@ -1,7 +1,11 @@
 import * as React from "react";
-import {useEffect} from "react";
+import {useEffect, useRef} from "react";
+import Typed from "typed.js";
 
 function Jumbotron(props) {
+    const el = useRef(null);
+    const configArray = props.configArray.header.jumbotron
+
     const setImageHeight = () => {
         const box:any = document.getElementById("image");
         const height = box.offsetWidth
@@ -13,8 +17,21 @@ function Jumbotron(props) {
 
     useEffect(() => {
         setImageHeight()
-    }, [window.addEventListener("resize", setImageHeight)])
 
+        const typed = new Typed(el.current, {
+            strings: props.language ? configArray.subtitle.ita : configArray.subtitle.eng,
+            startDelay: 300,
+            typeSpeed: 100,
+            backSpeed: 100,
+            backDelay: 1000,
+            loop: true
+        });
+
+        return () => {
+            typed.destroy();
+        };
+
+    }, [window.addEventListener("resize", setImageHeight), props.language])
 
 
     return (
@@ -42,10 +59,10 @@ function Jumbotron(props) {
 
                 <div className="content">
                     <div className="description">
-                        <h1 className={`title ${props.theme ? "white" : "black"}`}>Hi, I'm Lorenzo</h1>
-                        <h3 className={`subtitle ${props.theme ? "white" : "grey"}`}>Frontend developer</h3>
-                        <p className={`paragraph ${props.theme ? "white" : "grey"}`}>High level experience in web deisgn and development knowledge, producing quality work.</p>
-                        <button className={`contact ${props.theme ? "light purple" : "contact dark"}`}>Contattami <i className="fa-solid fa-paper-plane"></i></button>
+                        <h1 className={`title ${props.theme ? "white" : "black"}`}>{props.language ? configArray.title.ita : configArray.title.eng}</h1>
+                        <h3 className={`subtitle ${props.theme ? "white" : "grey"}`}><span ref={el}></span></h3>
+                        <p className={`paragraph ${props.theme ? "white" : "grey"}`}>{props.language ? configArray.paragraph.ita : configArray.paragraph.eng}</p>
+                        <button className={`contact ${props.theme ? "light purple" : "contact dark"}`}>{props.language ? configArray.button.ita : configArray.button.eng} <i className="fa-solid fa-paper-plane"></i></button>
                     </div>
 
                     <div className="images">

@@ -46,14 +46,28 @@
           display: none;
         }
         #image {
-          background-image: url("../../../../public/img/io-2.png");
+          background-image: url("../../../../public/assets/img/io.png");
           background-position: center;
           background-repeat: no-repeat;
           background-size: cover;
           border-radius: 52% 48% 51% 49% / 29% 28% 72% 71%;
+          box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+          animation: floatImage 4s ease-in-out infinite;
         }
       }
     }
+  }
+}
+
+@keyframes floatImage {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-1rem);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
 

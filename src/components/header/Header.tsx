@@ -4,10 +4,10 @@ import { Navbar, Jumbotron } from "../imports";
 function Header(props) {
 
     return (
-        <div id="header">
-            <Navbar theme={props.theme} onChangeTheme={props.onChangeTheme}/>
-            <Jumbotron theme={props.theme}/>
-        </div>
+        <section id="header">
+            <Navbar theme={props.theme} onChangeTheme={props.onChangeTheme} language={props.language} onChangeLanguage={props.onChangeLanguage} configArray={props.configArray}/>
+            <Jumbotron theme={props.theme} language={props.language} configArray={props.configArray}/>
+        </section>
     )
 }
 
