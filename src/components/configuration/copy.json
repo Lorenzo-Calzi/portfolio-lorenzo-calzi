@@ -1,0 +1,32 @@
+{
+  "header": {
+    "navbar": {
+      "title": {
+        "ita": "Portfolio",
+        "eng": "Portfolio"
+      },
+      "listItems": {
+        "ita": ["Home", "Su di me", "Abilità", "Servizi", "Contatti"],
+        "eng": ["Home", "About", "Skills", "Services", "Contact"]
+      }
+    },
+    "jumbotron": {
+      "title": {
+        "ita": "Ciao, sono Lorenzo",
+        "eng": "Hi, I'm Lorenzo"
+      },
+      "subtitle": {
+        "ita": ["Sviluppatore Web", "Progettista UI/UX", "Videogiocatore", "Appassionato di Tecnologia"],
+        "eng": ["Web Developer", "UI/UX Designer", "Video Gamer", "Tech Enthusiast"]
+      },
+      "paragraph": {
+        "ita": "Esperienza di alto livello nel web design e conoscenza dello sviluppo, producendo un lavoro di qualità.",
+        "eng": "High level experience in web deisgn and development knowledge, producing quality work."
+      },
+      "button": {
+        "ita": "Contattami",
+        "eng": "Contact Me"
+      }
+    }
+  }
+}
