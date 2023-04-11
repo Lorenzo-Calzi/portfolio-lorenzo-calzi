@@ -29,6 +29,12 @@ function Navbar(props) {
                                                     <a href="#aboutMe">{value}</a>
                                                 </li>
                                             )
+                                        } else if (index === 4) {
+                                            return (
+                                                <li key={value} className={`contactMe list-item`}>
+                                                    <a href="#contactMe">{value}</a>
+                                                </li>
+                                            )
                                         } else {
                                             return (
                                                 <li key={value} className={`list-item`}>
@@ -51,6 +57,12 @@ function Navbar(props) {
                                                     <a href="#aboutMe">{value}</a>
                                                 </li>
                                             )
+                                        } else if (index === 4) {
+                                            return (
+                                                <li key={value} className={`contactMe list-item`}>
+                                                    <a href="#contactMe">{value}</a>
+                                                </li>
+                                            )
                                         } else {
                                             return (
                                                 <li key={value} className={`list-item`}>
@@ -64,8 +76,8 @@ function Navbar(props) {
 
 
                         <li className="theme" onClick={props.onChangeTheme}>
-                            <i className={`fa-solid fa-sun ${props.theme && "opacity"}`}></i>
-                            <i className={`fa-solid fa-moon ${!props.theme && "opacity"}`}></i>
+                            <i className={`fa-solid fa-sun ${props.theme ? "opacity" : ''}`}></i>
+                            <i className={`fa-solid fa-moon ${!props.theme ? "opacity" : ''}`}></i>
                         </li>
                         <li className="language" onClick={props.onChangeLanguage} style={{
                             backgroundImage: `url(${process.env.PUBLIC_URL + flag})`

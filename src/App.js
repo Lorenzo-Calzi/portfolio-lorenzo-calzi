@@ -10,6 +10,8 @@ import './components/header/jumbotron/jumbotron.scss';
 
 import './components/main/main.scss';
 import './components/main/aboutMe/aboutMe.scss';
+import './components/main/contactMe/contactMe.scss';
+
 
 import { Homepage } from "./components/imports"
 

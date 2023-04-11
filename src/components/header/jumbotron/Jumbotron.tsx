@@ -1,22 +1,26 @@
 import * as React from "react";
-import {useEffect, useRef} from "react";
+import {useEffect, useRef, useState} from "react";
 import Typed from "typed.js";
 
 function Jumbotron(props) {
     const el = useRef(null);
     const configArray = props.configArray.header.jumbotron
 
-    const setImageHeight = () => {
-        const box:any = document.getElementById("image");
-        const height = box.offsetWidth
+    const setImageHeight = (timeout?:string) => {
 
-        if(height) {
-            document.getElementById("image").setAttribute("style",`height: ${height}px`)
-        }
+        const timer = setTimeout(() => {
+            const height = document.getElementById("image").offsetWidth;
+
+            if(height) {
+                document.getElementById("image").setAttribute("style",`height: ${height}px`)
+            }
+        }, timeout === 'DEFAULT' ? 0 : 500);
+        return () => clearTimeout(timer);
+
     }
 
     useEffect(() => {
-        setImageHeight()
+        setImageHeight('DEFAULT')
 
         const typed = new Typed(el.current, {
             strings: props.language ? configArray.subtitle.ita : configArray.subtitle.eng,
@@ -27,12 +31,13 @@ function Jumbotron(props) {
             loop: true
         });
 
+        // @ts-ignore
+        window.addEventListener("resize", setImageHeight)
+
         return () => {
             typed.destroy();
         };
-
-    }, [window.addEventListener("resize", setImageHeight), props.language])
-
+    }, [props.language])
 
     return (
         <div id="jumbotron">
@@ -62,7 +67,7 @@ function Jumbotron(props) {
                         <h1 className={`title ${props.theme ? "white" : "black"}`}>{props.language ? configArray.title.ita : configArray.title.eng}</h1>
                         <h3 className={`subtitle ${props.theme ? "white" : "grey"}`}><span ref={el}></span></h3>
                         <p className={`paragraph ${props.theme ? "white" : "grey"}`}>{props.language ? configArray.paragraph.ita : configArray.paragraph.eng}</p>
-                        <button className={`contact ${props.theme ? "light purple" : "contact dark"}`}>{props.language ? configArray.button.ita : configArray.button.eng} <i className="fa-solid fa-paper-plane"></i></button>
+                        <button className="contact">{props.language ? configArray.button.ita : configArray.button.eng} <i className="fa-solid fa-paper-plane"></i></button>
                     </div>
 
                     <div className="images">
@@ -86,7 +91,7 @@ function Jumbotron(props) {
                             </ul>
                         </div>
 
-                        <div id="image" className={`${props.theme ? "light" : "dark"}`}></div>
+                        <div id="image"></div>
                     </div>
                 </div>
             </div>

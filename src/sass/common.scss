@@ -3,6 +3,7 @@ $black: black;
 $grey: #545454;
 $white: white;
 $purple: #6D56E9;
+$darkPurple: #181623;
 
 // HTML BODY
 * {
@@ -70,7 +71,7 @@ ul {
 // THEME
 .dark {
   color: white !important;
-  background-color: #6D56E9;
+  background-color: $darkPurple;
   transition: all 500ms;
 }
 .light {

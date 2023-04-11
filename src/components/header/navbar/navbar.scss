@@ -51,8 +51,6 @@
         }
       }
       .language {
-        height: 20px;
-        width: 20px;
         background-size: cover;
         background-position: center;
         border-radius: 50%;
@@ -78,19 +76,19 @@
         }
       }
       .right {
-        width: 20px;
-
         ul {
           .list-item {
             display: none;
           }
           .theme {
-            height: 20px;
-            width: 0;
-
             i {
               font-size: 5vw;
             }
+          }
+          .language {
+            height: 5vw;
+            width: 5vw;
+            margin-left: 10vw;
           }
         }
       }
@@ -115,19 +113,19 @@
         }
       }
       .right {
-        width: 20px;
-
         ul {
           .list-item {
             display: none;
           }
           .theme {
-            height: 20px;
-            width: 0;
-
             i {
               font-size: 5vw;
             }
+          }
+          .language {
+            height: 5vw;
+            width: 5vw;
+            margin-left: 10vw;
           }
         }
       }
@@ -152,19 +150,19 @@
         }
       }
       .right {
-        width: 20px;
-
         ul {
           .list-item {
             display: none;
           }
           .theme {
-            height: 20px;
-            width: 0;
-
             i {
-              font-size: 3.5vw;
+              font-size: 5vw;
             }
+          }
+          .language {
+            height: 5vw;
+            width: 5vw;
+            margin-left: 10vw;
           }
         }
       }
@@ -189,19 +187,19 @@
         }
       }
       .right {
-        width: 20px;
-
         ul {
           .list-item {
             display: none;
           }
           .theme {
-            height: 20px;
-            width: 0;
-
             i {
-              font-size: 3.5vw;
+              font-size: 5vw;
             }
+          }
+          .language {
+            height: 5vw;
+            width: 5vw;
+            margin-left: 10vw;
           }
         }
       }
@@ -231,8 +229,13 @@
           margin: 0 10px;
         }
         .theme {
-          height: 20px;
-          width: 20px;
+          i {
+            font-size: 1.4vw;
+          }
+        }
+        .language {
+          height: 1.4vw;
+          width: 1.4vw;
         }
       }
     }
@@ -261,8 +264,13 @@
           margin: 0 15px;
         }
         .theme {
-          height: 20px;
-          width: 20px;
+          i {
+            font-size: 1.4vw;
+          }
+        }
+        .language {
+          height: 1.4vw;
+          width: 1.4vw;
         }
       }
     }
@@ -291,8 +299,13 @@
           margin: 0 20px;
         }
         .theme {
-          height: 20px;
-          width: 20px;
+          i {
+            font-size: 1.4vw;
+          }
+        }
+        .language {
+          height: 1.4vw;
+          width: 1.4vw;
         }
       }
     }
@@ -316,19 +329,20 @@
         }
       }
       .right {
-        width: 20px;
-
         ul {
           .list-item {
             display: none;
           }
           .theme {
-            height: 20px;
-            width: 0;
 
             i {
-              font-size: 3.5vw;
+              font-size: 5vw;
             }
+          }
+          .language {
+            height: 5vw;
+            width: 5vw;
+            margin-left: 10vw;
           }
         }
       }
@@ -356,8 +370,13 @@
           margin: 0 25px;
         }
         .theme {
-          height: 20px;
-          width: 20px;
+          i {
+            font-size: 1.4vw;
+          }
+        }
+        .language {
+          height: 1.4vw;
+          width: 1.4vw;
         }
       }
     }
@@ -387,6 +406,10 @@
           height: 20px;
           width: 20px;
         }
+        .language {
+          height: 20px;
+          width: 20px;
+        }
       }
     }
   }
@@ -412,8 +435,13 @@
           margin: 0 30px;
         }
         .theme {
-          height: 20px;
-          width: 20px;
+          i {
+            font-size: 1.4vw;
+          }
+        }
+        .language {
+          height: 1.4vw;
+          width: 1.4vw;
         }
       }
     }
