@@ -48,14 +48,14 @@
           display: none;
         }
         #image {
-          background-image: url("../../../../public/assets/img/profile.png");
+          background-image: url("../../../../public/assets/img/profile.jpg");
           background-position: center;
           background-repeat: no-repeat;
           background-size: cover;
           background-color: $purple;
           border-radius: 52% 48% 51% 49% / 29% 28% 72% 71%;
           box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
-          animation: floatImage 4s ease-in-out infinite;
+          //animation: floatImage 4s ease-in-out infinite;
         }
       }
     }

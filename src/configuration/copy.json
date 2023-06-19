@@ -6,8 +6,8 @@
         "eng": "Portfolio"
       },
       "listItems": {
-        "ita": ["Home", "Su di me", "Abilità", "Servizi", "Contatti"],
-        "eng": ["Home", "About", "Skills", "Services", "Contact"]
+        "ita": ["Home", "Su di me", "Abilità", "Progetti", "Contatti"],
+        "eng": ["Home", "About", "Skills", "Projects", "Contacts"]
       }
     },
     "jumbotron": {
