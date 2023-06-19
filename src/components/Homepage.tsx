@@ -5,7 +5,6 @@ import {useEffect, useState} from "react";
 import config from '../configuration/copy.json'
 
 function Homepage() {
-
     const configArray = config
     const [theme, setTheme] = useState(true)
     const [language, setLanguage] = useState(false)
@@ -47,7 +46,6 @@ function Homepage() {
 
                 if (top >= offset) {
                     current = section.getAttribute("id");
-
                     navLi.forEach((li) => {
                         li.classList.remove(`li-active${dynamicTheme}`);
                         if (li.classList.contains(current)) {

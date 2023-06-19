@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Navbar, Jumbotron } from "../imports";
+import {Navbar, Jumbotron} from "../imports";
 
 function Header(props) {
 
