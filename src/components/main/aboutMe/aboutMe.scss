@@ -1,41 +1,43 @@
+@import 'src/sass/common';
+
 #aboutMe {
   height: 100vh;
   width: 100%;
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
 
   .dynamic-flex {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: flex-start;
+    height: 90%;
 
-    .top {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      height: 15%;
+    .image {
+      background-image: url("../../../../public/assets/img/proflle-2.jpg");
+      background-position: center;
+      background-size: cover;
+      width: 48%;
+      margin-right: 2%;
+      height: 50%;
+      border-radius: 5px;
+      box-shadow: rgba(0, 0, 0, 0.12) 0 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
     }
 
-    .bottom {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 85%;
-      width: 100%;
+    .description {
+      width: 48%;
+      margin-left: 2%;
 
-      .image {
-        background-image: url("../../../../public/assets/img/profile-2.jpg");
-        background-position: center;
-        background-size: cover;
-        width: 50%;
-        height: 50%;
-        border-radius: 5px;
-        box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+      h5 {
+        font-size: 1.2rem;
+        font-weight: 800;
+        padding-right: 10px;
+        margin-bottom: 20px;
       }
-
-      .description {
-        width: 50%;
+      p {
+        font-size: 0.9rem;
+        padding: 10px 10px 10px 25px;
+        border-left: 3px solid $purple;
       }
     }
   }
