@@ -4,18 +4,11 @@ function ContactMe() {
 
     return (
         <section id="contactMe">
-            <div className="dynamic-flex">
-                <div className="container">
-                    <div className="content">
-                        <div className="top">
-                            <h1 className="title">About Me</h1>
-                            <h3 className="subtitle">My Introduction</h3>
-                        </div>
+            <div className="void-space"></div>
 
-                        <div className="bottom">
-                            <h1>Ciao</h1>
-                        </div>
-                    </div>
+            <div className="container dynamic-flex">
+                <div className="description">
+                    <h5>"Contacts"</h5>
                 </div>
             </div>
         </section>
