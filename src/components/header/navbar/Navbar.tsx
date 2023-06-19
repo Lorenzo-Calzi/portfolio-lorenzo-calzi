@@ -29,6 +29,18 @@ function Navbar(props) {
                                                     <a href="#aboutMe">{value}</a>
                                                 </li>
                                             )
+                                        } else if (index === 2) {
+                                            return (
+                                                <li key={value} className={`skills list-item`}>
+                                                    <a href="#skills">{value}</a>
+                                                </li>
+                                            )
+                                        } else if (index === 3) {
+                                            return (
+                                                <li key={value} className={`projects list-item`}>
+                                                    <a href="#projects">{value}</a>
+                                                </li>
+                                            )
                                         } else if (index === 4) {
                                             return (
                                                 <li key={value} className={`contactMe list-item`}>
@@ -55,6 +67,18 @@ function Navbar(props) {
                                             return (
                                                 <li key={value} className={`aboutMe list-item`}>
                                                     <a href="#aboutMe">{value}</a>
+                                                </li>
+                                            )
+                                        } else if (index === 2) {
+                                            return (
+                                                <li key={value} className={`skills list-item`}>
+                                                    <a href="#skills">{value}</a>
+                                                </li>
+                                            )
+                                        } else if (index === 3) {
+                                            return (
+                                                <li key={value} className={`projects list-item`}>
+                                                    <a href="#projects">{value}</a>
                                                 </li>
                                             )
                                         } else if (index === 4) {
