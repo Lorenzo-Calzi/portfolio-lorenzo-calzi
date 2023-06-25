@@ -3,6 +3,7 @@ $black: black;
 $grey: #545454;
 $white: white;
 $purple: #6D56E9;
+$lightPurple: #eeedfa;
 $darkPurple: #181623;
 
 // HTML BODY
@@ -78,13 +79,6 @@ ul {
   color: black !important;
   background-color: white;
   transition: all 500ms;
-}
-
-.void-space {
-  height: 10%;
-  width: 100%;
-  background-color: white;
-  //background: linear-gradient(180deg, rgba(24,22,35,1) 0%, rgba(35,32,51,1) 10%, rgba(109,86,233,1) 50%, rgba(35,32,51,1) 90%, rgba(24,22,35,1) 100%);
 }
 
 // TEXT
