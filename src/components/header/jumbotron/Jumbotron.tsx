@@ -1,5 +1,5 @@
 import * as React from "react";
-import {useEffect, useRef, useState} from "react";
+import {useEffect, useRef} from "react";
 import Typed from "typed.js";
 
 function Jumbotron(props) {
@@ -67,7 +67,9 @@ function Jumbotron(props) {
                         <h1 className={`title ${props.theme ? "white" : "black"}`}>{props.language ? configArray.title.ita : configArray.title.eng}</h1>
                         <h3 className={`subtitle ${props.theme ? "white" : "grey"}`}><span ref={el}></span></h3>
                         <p className={`paragraph ${props.theme ? "white" : "grey"}`}>{props.language ? configArray.paragraph.ita : configArray.paragraph.eng}</p>
-                        <button className="contact">{props.language ? configArray.button.ita : configArray.button.eng} <i className="fa-solid fa-paper-plane"></i></button>
+                        <a className="contact" href="#contactMe">
+                            {props.language ? configArray.button.ita : configArray.button.eng} <i className="fa-solid fa-paper-plane"></i>
+                        </a>
                     </div>
 
                     <div className="images">
