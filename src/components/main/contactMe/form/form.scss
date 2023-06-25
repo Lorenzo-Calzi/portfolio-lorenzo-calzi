@@ -1,0 +1,204 @@
+@import 'src/sass/common';
+
+#form {
+  height: auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+
+  .inputs {
+    height: fit-content;
+    width: 50%;
+    padding: 3%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 5px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.9px);
+
+    .groups {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: space-between;
+
+      .input-group {
+        position: relative;
+        width: 47%;
+        margin-bottom: 30px;
+
+        input {
+          font-size: .9rem;
+          margin-left: auto;
+          margin-right: auto;
+          padding: 10px 5%;
+          display: block;
+          height: 70px;
+          width: 100%;
+          border: none;
+          border-radius: 5px;
+          resize: none;
+          background-color: $lightPurple;
+          color: $black;
+
+          &:focus {
+            outline: none;
+          }
+          &:focus ~ label, &:valid ~ label {
+            top: -22px;
+            font-size: .9rem;
+            font-weight: 700;
+            color: $purple;
+          }
+        }
+        label {
+          color: $black;
+          font-size: .9rem;
+          font-weight: normal;
+          position: absolute;
+          pointer-events: none;
+          top: 10px;
+          left: 5%;
+          transition: 0.2s ease all;
+          -moz-transition: 0.2s ease all;
+          -webkit-transition: 0.2s ease all;
+        }
+        .error-container {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          margin-top: 5px;
+
+          i {
+            color: $purple;
+          }
+          .error {
+            color: $purple;
+            font-weight: 700;
+            font-size: 12px;
+            margin-left: 5px;
+          }
+        }
+      }
+      .textarea-group {
+        position: relative;
+        margin-bottom: 30px;
+        width: 100%;
+
+        textarea {
+          font-size: .9rem;
+          margin-left: auto;
+          margin-right: auto;
+          padding: 10px 2.1%;
+          display: block;
+          height: 150px;
+          width: 100%;
+          border: none;
+          border-radius: 5px;
+          resize: none;
+          background-color: $lightPurple;
+          color: $black;
+
+          &:focus {
+            outline: none;
+          }
+          &:focus ~ label, &:valid ~ label {
+            top: -22px;
+            font-weight: 700;
+            font-size: .9rem;
+            color: $purple;
+          }
+        }
+        label {
+          color: $black;
+          font-size: .9rem;
+          font-weight: normal;
+          position: absolute;
+          pointer-events: none;
+          top: 10px;
+          left: 2.1%;
+          transition: 0.2s ease all;
+          -moz-transition: 0.2s ease all;
+          -webkit-transition: 0.2s ease all;
+        }
+        .error-container {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          margin-top: 5px;
+
+          i {
+            color: $purple;
+          }
+          .error {
+            color: $purple;
+            font-weight: 700;
+            font-size: 12px;
+            margin-left: 5px;
+          }
+        }
+      }
+    }
+    .submit {
+      font-size: .9rem;
+      padding: 10px 5%;
+      display: block;
+      height: 70px;
+      border: none;
+      border-radius: 5px;
+      resize: none;
+      width: 100%;
+      align-self: flex-start;
+      cursor: pointer;
+      background-color: $lightPurple;
+      color: $black;
+
+      &:hover {
+        color: $purple;
+        font-weight: 700;
+        font-size: 1rem;
+      }
+    }
+  }
+  .informations {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    border-radius: 5px 0 0 5px;
+    text-align: right;
+    padding: 3%;
+
+    .information {
+      margin: 20px 0;
+      display: flex;
+      align-items: center;
+      padding: 10px 5%;
+      height: 70px;
+      width: 100%;
+      border: none;
+      border-radius: 5px;
+      resize: none;
+      background-color: $lightPurple;
+      color: $black;
+
+      i {
+        width: 50px;
+        text-align: left;
+        font-size: 1.5rem;
+        color: $purple;
+      }
+      span {
+        color: black;
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
+
