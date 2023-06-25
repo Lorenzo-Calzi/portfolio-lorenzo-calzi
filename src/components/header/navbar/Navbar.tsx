@@ -98,15 +98,9 @@ function Navbar(props) {
                                 )
                         }
 
-
-                        <li className="theme" onClick={props.onChangeTheme}>
-                            <i className={`fa-solid fa-sun ${props.theme ? "opacity" : ''}`}></i>
-                            <i className={`fa-solid fa-moon ${!props.theme ? "opacity" : ''}`}></i>
-                        </li>
-                        <li className="language" onClick={props.onChangeLanguage} style={{
-                            backgroundImage: `url(${process.env.PUBLIC_URL + flag})`
-                        }}>
-                        </li>
+                        {/*<li className="language" onClick={props.onChangeLanguage}*/}
+                        {/*    style={{backgroundImage: `url(${process.env.PUBLIC_URL + flag})`}}>*/}
+                        {/*</li>*/}
                     </ul>
                 </div>
             </div>
