@@ -12,7 +12,11 @@ import './components/main/main.scss';
 import './components/main/aboutMe/aboutMe.scss';
 import './components/main/skills/skills.scss';
 import './components/main/projects/projects.scss';
+import './components/main/projects/carousel/carousel.scss';
 import './components/main/contactMe/contactMe.scss';
+import './components/main/contactMe/form/form.scss';
+
+import './components/void-space/voidSpace.scss';
 
 import { Homepage } from "./components/imports"
 
