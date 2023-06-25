@@ -1,19 +1,21 @@
 import * as React from "react";
-import {useEffect, useRef, useState} from "react";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import {Carousel, VoidSpace} from "../../imports";
+
 
 function Projects(props) {
 
-    useEffect(() => {
-    }, [])
-
     return (
         <section id="projects">
-            <div className="void-space"></div>
+            {/*<VoidSpace />*/}
 
             <div className="container dynamic-flex">
-                <div className="description">
-                    <h5>"Projects"</h5>
+                <div className="titles">
+                    <h1 className="title-gradient">Progetti</h1>
+                    <h2 className="title-solid">Progetti</h2>
                 </div>
+
+                <Carousel theme={props.theme}/>
             </div>
         </section>
     )
