@@ -200,7 +200,6 @@ function Carousel(props) {
                 </div>
             </div>
 
-
             <a className="slider-right" style={{color: props.theme ? 'white' : 'black'}} onClick={() => changeSlide('right')}>
                 <i className="fa-solid fa-circle-chevron-right" />
             </a>
