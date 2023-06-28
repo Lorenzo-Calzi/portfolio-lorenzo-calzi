@@ -1,6 +1,6 @@
 {
   "name": "portfolio-lorenzo-calzi",
-  "homepage": "https://Lorenzo-Calzi.github.io/portfolio-lorenzo-calzi",
+  "homepage": "https://Lorenzo-Calzi.github.io",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -12,13 +12,10 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-fast-marquee": "^1.6.0",
-    "react-responsive-carousel": "^3.2.23",
     "react-scripts": "5.0.1",
-    "react-slick": "^0.29.0",
+    "react-spinners": "^0.13.8",
     "sass": "^1.59.3",
-    "slick-carousel": "^1.8.1",
-    "typed.js": "^2.0.132",
-    "web-vitals": "^2.1.4"
+    "typed.js": "^2.0.132"
   },
   "scripts": {
     "predeploy": "npm run build",
@@ -45,5 +42,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "web-vitals": "^3.3.2"
   }
 }
