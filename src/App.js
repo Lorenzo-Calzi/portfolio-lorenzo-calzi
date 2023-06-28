@@ -17,6 +17,8 @@ import './components/main/contactMe/contactMe.scss';
 import './components/main/contactMe/form/form.scss';
 
 import './components/void-space/voidSpace.scss';
+import './components/loader-spinner/loaderSpinner.scss';
+import './components/popup/popup.scss';
 
 import { Homepage } from "./components/imports"
 
