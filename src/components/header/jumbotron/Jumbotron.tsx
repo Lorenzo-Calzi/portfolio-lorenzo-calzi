@@ -43,23 +43,17 @@ function Jumbotron(props) {
         <div id="jumbotron">
             <div className="container dynamic-flex">
                 <div className="icons-xl">
-                    <ul>
-                        <li>
-                            <a href="https://www.linkedin.com/in/lorenzo-calzi-9a12101a0/" target="_blank">
-                                <i className={`fa-brands fa-linkedin-in ${props.theme ? "white" : "purple"}`}></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.instagram.com/lorenzo_calzi/" target="_blank">
-                                <i className={`fa-brands fa-instagram ${props.theme ? "white" : "purple"}`}></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/Lorenzo-Calzi" target="_blank">
-                                <i className={`fa-brands fa-github ${props.theme ? "white" : "purple"}`}></i>
-                            </a>
-                        </li>
-                    </ul>
+                    <a href="https://www.linkedin.com/in/lorenzo-calzi-9a12101a0/" target="_blank" className="icon">
+                        <i className={`fa-brands fa-linkedin-in ${props.theme ? "white" : "purple"}`}></i>
+                    </a>
+
+                    <a href="https://www.instagram.com/lorenzo_calzi/" target="_blank" className="icon">
+                        <i className={`fa-brands fa-instagram ${props.theme ? "white" : "purple"}`}></i>
+                    </a>
+
+                    <a href="https://github.com/Lorenzo-Calzi" target="_blank" className="icon">
+                        <i className={`fa-brands fa-github-alt ${props.theme ? "white" : "purple"}`}></i>
+                    </a>
                 </div>
 
                 <div className="content">
