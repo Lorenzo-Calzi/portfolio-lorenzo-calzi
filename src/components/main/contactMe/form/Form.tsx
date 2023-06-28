@@ -2,7 +2,7 @@ import * as React from "react"
 import {useRef, useState} from "react";
 import emailjs from '@emailjs/browser';
 
-function Form() {
+function Form(props) {
     const form = useRef();
 
     const [formValue, setFormValue] = useState({
@@ -121,6 +121,11 @@ function Form() {
             (errors.phone || !formValue.phone) ||
             (errors.message || !formValue.message)) {
         } else {
+            props.handler({
+                bar: true,
+                popup: false
+            })
+
             const initialState = {
                 name: '',
                 surname: '',
@@ -132,12 +137,27 @@ function Form() {
             {
                 emailjs.sendForm('service_ctu1qvq', 'template_hdkgqj9', form.current, '_8H8v9WlJx2oNsYXn')
                     .then((result) => {
-                        alert('Email inviata correttamente!')
                         setFormValue(initialState)
+                        props.handler({
+                            bar: false,
+                            popup: true
+                        })
+
                     }, (error) => {
-                        alert('Email non inviata, riprovare.')
+                        props.handler({
+                            bar: false,
+                            popup: true
+                        })
                     });
             }
+
+            const timer = setTimeout(() => {
+                props.handler({
+                    bar: false,
+                    popup: false
+                })
+            }, 5000);
+            return () => clearTimeout(timer);
         }
     };
 
@@ -180,9 +200,8 @@ function Form() {
                                        value={formValue[input.name]}
                                        onChange={onChange}
                                        onBlur={formFieldsCheck}
-                                       required
                                 />
-                                <label>{input.label}</label>
+                                <label className={formValue[input.name] !== '' ? 'upper' : ''}>{input.label}</label>
                                 {errors[input.name] && (
                                     <div className="error-container">
                                         <i className="fa-solid fa-circle-exclamation" />
@@ -198,9 +217,8 @@ function Form() {
                                       value={formValue.message}
                                       onChange={onChange}
                                       onBlur={formFieldsCheck}
-                                      required
                             />
-                        <label>Messaggio *</label>
+                        <label className={formValue.message !== '' ? 'upper' : ''}>Messaggio *</label>
                         {errors.message && (
                             <div className="error-container">
                                 <i className="fa-solid fa-circle-exclamation" />

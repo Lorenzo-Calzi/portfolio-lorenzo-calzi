@@ -7,6 +7,43 @@
   align-items: center;
   border-radius: 5px;
 
+  .informations {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    border-radius: 5px 0 0 5px;
+    text-align: right;
+    padding: 3%;
+
+    .information {
+      margin: 20px 0;
+      display: flex;
+      align-items: center;
+      padding: 10px 5%;
+      height: 70px;
+      width: 100%;
+      border: none;
+      border-radius: 5px;
+      resize: none;
+      background-color: $lightPurple;
+      color: $black;
+      box-shadow: rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+
+      i {
+        width: 50px;
+        text-align: left;
+        font-size: 1.5rem;
+        color: $purple;
+      }
+      span {
+        color: black;
+        font-size: 1.1rem;
+      }
+    }
+  }
   .inputs {
     height: fit-content;
     width: 50%;
@@ -48,7 +85,7 @@
           &:focus {
             outline: none;
           }
-          &:focus ~ label, &:valid ~ label {
+          &:focus ~ label {
             top: -22px;
             font-size: .9rem;
             font-weight: 700;
@@ -66,6 +103,12 @@
           transition: 0.2s ease all;
           -moz-transition: 0.2s ease all;
           -webkit-transition: 0.2s ease all;
+        }
+        .upper {
+          top: -22px;
+          font-size: .9rem;
+          font-weight: 700;
+          color: $purple;
         }
         .error-container {
           display: flex;
@@ -106,7 +149,7 @@
           &:focus {
             outline: none;
           }
-          &:focus ~ label, &:valid ~ label {
+          &:focus ~ label {
             top: -22px;
             font-weight: 700;
             font-size: .9rem;
@@ -124,6 +167,12 @@
           transition: 0.2s ease all;
           -moz-transition: 0.2s ease all;
           -webkit-transition: 0.2s ease all;
+        }
+        .upper {
+          top: -22px;
+          font-size: .9rem;
+          font-weight: 700;
+          color: $purple;
         }
         .error-container {
           display: flex;
@@ -161,42 +210,6 @@
         color: $purple;
         font-weight: 700;
         font-size: 1rem;
-      }
-    }
-  }
-  .informations {
-    height: 100%;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    border-radius: 5px 0 0 5px;
-    text-align: right;
-    padding: 3%;
-
-    .information {
-      margin: 20px 0;
-      display: flex;
-      align-items: center;
-      padding: 10px 5%;
-      height: 70px;
-      width: 100%;
-      border: none;
-      border-radius: 5px;
-      resize: none;
-      background-color: $lightPurple;
-      color: $black;
-
-      i {
-        width: 50px;
-        text-align: left;
-        font-size: 1.5rem;
-        color: $purple;
-      }
-      span {
-        color: black;
-        font-size: 1.1rem;
       }
     }
   }

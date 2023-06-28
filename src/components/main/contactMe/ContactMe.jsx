@@ -1,11 +1,22 @@
 import * as React from "react"
-import {Form, VoidSpace} from "../../imports";
+import {Form, LoaderSpinner, Popup} from "../../imports";
+import {useState} from "react";
 
 function ContactMe() {
+    const [loading, setLoading] = useState({
+        bar: false,
+        popup: false
+    })
+
+    const handler = (setValue) => {
+        setLoading(setValue)
+    }
 
     return (
-        <section id="contactMe">
-            {/*<VoidSpace />*/}
+        <section id="contactMe" style={{pointerEvents: loading.bar ? 'none' : 'auto', userSelect: loading.bar ? 'none' : 'auto'}}>
+            {/*<LoaderSpinner loading={loading} />*/}
+
+            <Popup loading={loading}/>
 
             <div className="container dynamic-flex">
                 <div className="titles">
@@ -13,7 +24,7 @@ function ContactMe() {
                     <h2 className="title-solid">Contatti</h2>
                 </div>
 
-                <Form/>
+                <Form handler={handler}/>
             </div>
         </section>
     )
