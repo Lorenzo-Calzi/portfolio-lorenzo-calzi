@@ -3,8 +3,9 @@ $black: black;
 $grey: #545454;
 $white: white;
 $purple: #6D56E9;
-$lightPurple: #eeedfa;
-$darkPurple: #181623;
+$lightPurple: #e2e1f8;
+$darkPurple: #211d3a;
+$red: red;
 
 // HTML BODY
 * {
@@ -17,6 +18,26 @@ $darkPurple: #181623;
 html, body {
   height: 100%;
   scroll-behavior: smooth;
+}
+
+// SCROLLBAR
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: $lightPurple;
+}
+::-webkit-scrollbar-thumb {
+  background: $purple;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: $darkPurple;
+  cursor: pointer;
+}
+
+//SHADOW
+.button-shadow {
+  box-shadow: 0 0 10px 3px $lightPurple;
 }
 
 // CONTAINER
@@ -72,14 +93,14 @@ ul {
 
 // THEME
 .dark {
-  color: white !important;
+  color: $white !important;
   background-color: $darkPurple;
-  transition: all 500ms;
+  transition: all 0.3s ease-in-out;
 }
 .light {
-  color: black !important;
+  color: $darkPurple !important;
   background-color: white;
-  transition: all 500ms;
+  transition: all 0.3s ease-in-out;
 }
 
 // TEXT

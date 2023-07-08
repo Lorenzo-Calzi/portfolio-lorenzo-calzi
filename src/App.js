@@ -16,18 +16,20 @@ import './components/main/projects/carousel/carousel.scss';
 import './components/main/contactMe/contactMe.scss';
 import './components/main/contactMe/form/form.scss';
 
+import './components/footer/footer.scss';
+
 import './components/void-space/voidSpace.scss';
 import './components/loader-spinner/loaderSpinner.scss';
 import './components/popup/popup.scss';
 
-import { Homepage } from "./components/imports"
+import {Homepage} from "./components/imports"
 
 function App() {
-  return (
-    <div className="App">
-        <Homepage/>
-    </div>
-  );
+    return (
+        <div className="App">
+            <Homepage/>
+        </div>
+    );
 }
 
 export default App;

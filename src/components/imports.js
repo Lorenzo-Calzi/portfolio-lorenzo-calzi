@@ -12,6 +12,8 @@ export { default as Form } from "./main/contactMe/form/Form.tsx";
 export { default as Projects } from "./main/projects/Projects";
 export { default as Carousel } from "./main/projects/carousel/Carousel";
 
+export { default as Footer } from "./footer/Footer.tsx";
+
 export { default as VoidSpace } from "./void-space/VoidSpace.tsx";
 export { default as LoaderSpinner } from "./loader-spinner/LoaderSpinner.tsx";
 export { default as Popup } from "./popup/Popup.tsx";

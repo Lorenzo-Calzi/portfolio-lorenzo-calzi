@@ -1,126 +1,126 @@
 import * as React from "react";
-import {useEffect} from "react";
-import {VoidSpace} from "../../imports";
-
 function Skills(props) {
-
-    useEffect(() => {
-    }, [])
 
     const educationCopies = [
         {
-            period: '2020-2021',
+            period: '2020 - 2021',
             strong: 'Web developer',
             description: 'Boolean Careers'
         },
         {
-            period: '2013-2019',
+            period: '2013 - 2019',
             strong: 'Diploma',
             description: 'Erasmo Da Rotterdam'
-        },
-        {
-            period: '2020-2021',
-            strong: 'Web developer',
-            description: 'Boolean Careers'
         }
     ]
 
     const skillsCopies = [
         {
             title: 'HTML',
+            icon: 'devicon-html5-plain colored',
             percentage: '95%',
         },
         {
             title: 'CSS',
+            icon: 'devicon-css3-plain colored',
             percentage: '90%',
         },
         {
             title: 'Javascript',
+            icon: 'devicon-javascript-plain colored',
             percentage: '80%',
         },
-        {
-            title: 'PHP',
-            percentage: '45%',
-        }
     ]
 
-    const awardsCopies = [
+    const jobsCopies = [
         {
-            period: '2019-2020',
-            strong: 'Best Developer',
-            description: 'Università di Milano'
+            period: '11/2021 - Current',
+            strong: 'Full Stack Web Developer',
+            description: 'ANYT1ME'
         },
         {
-            period: '2019-2020',
-            strong: 'Best Developer',
-            description: 'Università di Milano'
+            period: '03/2021 - 09/2021',
+            strong: 'Jr. Full Stack Web Developer Trainee',
+            description: 'Boolean Careers'
         },
         {
-            period: '2019-2020',
-            strong: 'Best Developer',
-            description: 'Università di Milano'
+            period: '11/2019 - 11/2020',
+            strong: 'Tecnico Help Desk',
+            description: 'Sielte S.p.a'
         }
     ]
 
     return (
         <section id="skills">
-            {/*<VoidSpace/>*/}
-
             <div className="container dynamic-flex">
                 <div className="titles">
                     <h1 className="title-gradient">Abilità</h1>
                     <h2 className="title-solid">Abilità</h2>
                 </div>
 
-                <div className="cards">
+                <div className="cards-container">
                     <div className="education">
                         <div className="subtitle">
-                            <h3>Studi</h3>
+                            <h3 className="button-shadow">Studi</h3>
                         </div>
-                        {
-                            educationCopies.map((copy, index) => (
-                                <div className="box" key={index}>
-                                    <span className="period">{copy.period}</span>
-                                    <span className="description"><strong>{copy.strong}</strong> - {copy.description}</span>
-                                </div>
-                            ))
-                        }
+
+                        <div className="cards">
+                            {
+                                educationCopies.map((copy, index) => (
+                                    <div className="box" key={index}>
+                                        <span className="period">{copy.period}</span>
+                                        <span className="description"><strong>{copy.strong}</strong> - {copy.description}</span>
+                                    </div>
+                                ))
+                            }
+                        </div>
                     </div>
 
                     <div className="skills">
                         <div className="subtitle">
-                            <h3>Abilità</h3>
+                            <h3 className="button-shadow">Skills</h3>
                         </div>
-                        {
-                            skillsCopies.map((copy, index) => (
-                                <div className="box" key={index}>
-                                    <div className="information">
-                                        <span className="title">{copy.title}</span>
-                                        <span className="percentage">{copy.percentage}</span>
+
+                        <div className="cards">
+                            {
+                                skillsCopies.map((copy, index) => (
+                                    <div className="box" key={index}>
+                                        <div className="information">
+                                            <div className="icons">
+                                                <span className="title">{copy.title}</span>
+                                                <i className={copy.icon}></i>
+                                            </div>
+
+                                            <span className="percentage">{copy.percentage}</span>
+                                        </div>
+                                        <div className="bar">
+                                            <div className="percentage" style={{width: `${copy.percentage}`}}></div>
+                                        </div>
                                     </div>
-                                    <div className="bar">
-                                        <div className="percentage" style={{width: `${copy.percentage}`}}></div>
-                                    </div>
-                                </div>
-                            ))
-                        }
+                                ))
+                            }
+                        </div>
                     </div>
 
-                    <div className="awards">
+                    <div className="experience">
                         <div className="subtitle">
-                            <h3>Premi</h3>
+                            <h3 className="button-shadow">Esperienze</h3>
                         </div>
-                        {
-                            awardsCopies.map((copy, index) => (
-                                <div className="box" key={index}>
-                                    <span className="period">{copy.period}</span>
-                                    <span className="description"><strong>{copy.strong}</strong> - {copy.description}</span>
-                                </div>
-                            ))
-                        }
+                        
+                        <div className="cards">
+                            {
+                                jobsCopies.map((copy, index) => (
+                                    <div className="box" key={index}>
+                                        <span className="period">{copy.period}</span>
+                                        <span className="description"><strong>{copy.strong}</strong> - {copy.description}</span>
+                                    </div>
+                                ))
+                            }
+                        </div>
                     </div>
                 </div>
 
+                {/*<VoidSpace/>*/}
             </div>
         </section>
     )

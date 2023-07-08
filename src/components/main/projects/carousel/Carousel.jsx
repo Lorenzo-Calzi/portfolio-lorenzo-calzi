@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from "react";
+import React, {useEffect, useRef} from "react";
 
 function Carousel(props) {
     const data = [
@@ -181,7 +181,7 @@ function Carousel(props) {
                                     <img className="slider-single-image" src={element.src} alt={element.alt}/>
                                 </a>
                                 <a href={element.url} target="_blank">
-                                    <h1 className="slider-single-title">
+                                    <h1 className="slider-single-title button-shadow">
                                         {element.alt}
                                         <i className="fa-solid fa-arrow-up-right-from-square" />
                                     </h1>

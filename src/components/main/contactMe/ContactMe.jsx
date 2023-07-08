@@ -4,6 +4,7 @@ import {useState} from "react";
 
 function ContactMe() {
     const [loading, setLoading] = useState({
+        background: false,
         bar: false,
         popup: false
     })
@@ -14,9 +15,9 @@ function ContactMe() {
 
     return (
         <section id="contactMe" style={{pointerEvents: loading.bar ? 'none' : 'auto', userSelect: loading.bar ? 'none' : 'auto'}}>
-            {/*<LoaderSpinner loading={loading} />*/}
+            <LoaderSpinner loading={loading} />
 
-            <Popup loading={loading}/>
+            <Popup loading={loading} handler={handler} />
 
             <div className="container dynamic-flex">
                 <div className="titles">

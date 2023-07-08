@@ -9,10 +9,10 @@ function Jumbotron(props) {
     const setImageHeight = (timeout?:string) => {
 
         const timer = setTimeout(() => {
-            const height = document.getElementById("image").offsetWidth;
+            const width = document.getElementById("image").offsetWidth;
 
-            if(height) {
-                document.getElementById("image").setAttribute("style",`height: ${height}px`)
+            if(width) {
+                document.getElementById("image").setAttribute("style",`height: ${width}px`)
             }
         }, timeout === 'DEFAULT' ? 0 : 500);
         return () => clearTimeout(timer);
@@ -31,8 +31,7 @@ function Jumbotron(props) {
             loop: true
         });
 
-        // @ts-ignore
-        window.addEventListener("resize", setImageHeight)
+        window.addEventListener("resize", () => setImageHeight)
 
         return () => {
             typed.destroy();
@@ -43,15 +42,15 @@ function Jumbotron(props) {
         <div id="jumbotron">
             <div className="container dynamic-flex">
                 <div className="icons-xl">
-                    <a href="https://www.linkedin.com/in/lorenzo-calzi-9a12101a0/" target="_blank" className="icon">
+                    <a href="https://www.linkedin.com/in/lorenzo-calzi-9a12101a0/" target="_blank" className="icon button-shadow">
                         <i className={`fa-brands fa-linkedin-in ${props.theme ? "white" : "purple"}`}></i>
                     </a>
 
-                    <a href="https://www.instagram.com/lorenzo_calzi/" target="_blank" className="icon">
+                    <a href="https://www.instagram.com/lorenzo_calzi/" target="_blank" className="icon button-shadow">
                         <i className={`fa-brands fa-instagram ${props.theme ? "white" : "purple"}`}></i>
                     </a>
 
-                    <a href="https://github.com/Lorenzo-Calzi" target="_blank" className="icon">
+                    <a href="https://github.com/Lorenzo-Calzi" target="_blank" className="icon button-shadow">
                         <i className={`fa-brands fa-github-alt ${props.theme ? "white" : "purple"}`}></i>
                     </a>
                 </div>
@@ -61,9 +60,11 @@ function Jumbotron(props) {
                         <h1 className={`title ${props.theme ? "white" : "black"}`}>{props.language ? configArray.title.ita : configArray.title.eng}</h1>
                         <h3 className={`subtitle ${props.theme ? "white" : "grey"}`}><span ref={el}></span></h3>
                         <p className={`paragraph ${props.theme ? "white" : "grey"}`}>{props.language ? configArray.paragraph.ita : configArray.paragraph.eng}</p>
-                        <a className="contact" href="#contactMe">
-                            {props.language ? configArray.button.ita : configArray.button.eng} <i className="fa-solid fa-paper-plane"></i>
-                        </a>
+                        <div className="contact button-shadow">
+                            <a href="#contactMe">
+                                {props.language ? configArray.button.ita : configArray.button.eng} <i className="fa-solid fa-paper-plane"></i>
+                            </a>
+                        </div>
                     </div>
 
                     <div className="images">
@@ -87,7 +88,9 @@ function Jumbotron(props) {
                             </ul>
                         </div>
 
-                        <div id="image"></div>
+                        <div id="image">
+                            {/*<img src={`${process.env.PUBLIC_URL}/assets/img/me-profile.png`} alt=""/>*/}
+                        </div>
                     </div>
                 </div>
             </div>

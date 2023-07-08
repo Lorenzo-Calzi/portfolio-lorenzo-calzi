@@ -17,6 +17,7 @@
     align-items: center;
 
     span {
+      font-size: 1.2vw;
       font-weight: 500;
     }
   }
@@ -30,12 +31,18 @@
       height: 100%;
 
       li {
+        font-size: 1vw;
         font-weight: 500;
         cursor: pointer;
-      }
-      .list-item {
         border-bottom: 2px solid transparent;
-        transition: all 100ms;
+
+        &:hover {
+          border-bottom: 2px solid $lightPurple;
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
       }
       .language {
         background-size: cover;
@@ -68,7 +75,7 @@
       }
       .right {
         ul {
-          .list-item {
+          li {
             display: none;
           }
           .language {
@@ -100,7 +107,7 @@
       }
       .right {
         ul {
-          .list-item {
+          li {
             display: none;
           }
           .language {
@@ -132,7 +139,7 @@
       }
       .right {
         ul {
-          .list-item {
+          li {
             display: none;
           }
           .language {
@@ -164,7 +171,7 @@
       }
       .right {
         ul {
-          .list-item {
+          li {
             display: none;
           }
           .language {
@@ -286,7 +293,7 @@
       }
       .right {
         ul {
-          .list-item {
+          li {
             display: none;
           }
           .language {
@@ -338,13 +345,13 @@
 
     .left {
       span {
-        font-size: 1.2vw;
+        //font-size: 1.2vw;
       }
     }
     .right {
       ul {
         li {
-          font-size: 1vw;
+          //font-size: 1vw;
           margin: 0 30px;
         }
         .language {

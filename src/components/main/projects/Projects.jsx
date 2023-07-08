@@ -1,13 +1,11 @@
 import * as React from "react";
-import {Carousel, VoidSpace} from "../../imports";
+import {Carousel} from "../../imports";
 
 
 function Projects(props) {
 
     return (
         <section id="projects">
-            {/*<VoidSpace />*/}
-
             <div className="container dynamic-flex">
                 <div className="titles">
                     <h1 className="title-gradient">Progetti</h1>

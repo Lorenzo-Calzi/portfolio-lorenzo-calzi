@@ -32,7 +32,7 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         opacity: 0.1;
-        margin: 0 0 -40px 0;
+        line-height: 70px;
       }
       .title-solid {
         text-align: center;
@@ -40,6 +40,7 @@
         font-weight: 700;
         position: relative;
         margin: 0;
+        line-height: 35px;
       }
     }
   }

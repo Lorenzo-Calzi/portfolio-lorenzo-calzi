@@ -1,18 +1,22 @@
 @import 'src/sass/common';
 
-.popup {
+#popup {
   position: absolute;
   z-index: 999;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  animation: slide-top 1s ease-in-out both;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  animation: fade-in 1s ease-in-out both;
   width: 350px;
-  height: 400px;
+  height: 350px;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 
   .top {
     width: 100%;
@@ -25,11 +29,13 @@
     justify-content: center;
 
     i {
-      padding: 25px;
+      height: 100px;
+      width: 100px;
+      padding: 25px 0 0 0;
       border: 2px solid $white;
       text-align: center;
-      border-radius: 50px;
-      font-size: 2rem;
+      border-radius: 50%;
+      font-size: 3rem;
     }
   }
   .bottom {
@@ -63,11 +69,20 @@
   }
 }
 
-@keyframes slide-top {
+@keyframes fade-in {
   0% {
-    bottom: -300px;
+    opacity: 0;
   }
   100% {
-    bottom: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }

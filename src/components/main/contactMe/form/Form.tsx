@@ -1,6 +1,7 @@
 import * as React from "react"
 import {useRef, useState} from "react";
 import emailjs from '@emailjs/browser';
+import ScrollReveal from 'scrollreveal'
 
 function Form(props) {
     const form = useRef();
@@ -28,7 +29,8 @@ function Form(props) {
             type: 'text',
             label: 'Nome *',
             pattern: /^[A-Za-z0-9]{3,16}$/g,
-            emptyError: 'Insere un nome',
+            infoInput: 'Inserire un nome',
+            emptyError: 'Inserire un nome',
             invalidError: 'Inserire un nome di almeno 3 lettere',
             required: true
         },
@@ -38,7 +40,8 @@ function Form(props) {
             type: 'text',
             label: 'Cognome *',
             pattern: /^[A-Za-z0-9]{3,16}$/g,
-            emptyError: 'Insere un nome',
+            infoInput: 'Inserire un cognome',
+            emptyError: 'Insere un cognome',
             invalidError: 'Inserire un cognome di almeno 3 lettere',
             required: true
         },
@@ -48,7 +51,8 @@ function Form(props) {
             type: 'text',
             label: 'Email *',
             pattern: /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/g,
-            emptyError: "Insere un'email",
+            infoInput: "Inserire un'email",
+            emptyError: "Inserire un'email",
             invalidError: "Inserire un'email valida",
             required: true
         },
@@ -58,7 +62,8 @@ function Form(props) {
             type: 'text',
             label: 'Telefono *',
             pattern: /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/g,
-            emptyError: 'Insere un numero di telefono',
+            infoInput: 'Inserire un numero di telefono',
+            emptyError: 'Inserire un numero di telefono',
             invalidError: 'Inserire un numero di telefono valido',
             required: true
         }
@@ -122,6 +127,7 @@ function Form(props) {
             (errors.message || !formValue.message)) {
         } else {
             props.handler({
+                background: true,
                 bar: true,
                 popup: false
             })
@@ -139,56 +145,64 @@ function Form(props) {
                     .then((result) => {
                         setFormValue(initialState)
                         props.handler({
+                            background: true,
                             bar: false,
                             popup: true
                         })
-
+                        document.body.style.overflow = "hidden"
                     }, (error) => {
                         props.handler({
+                            background: true,
                             bar: false,
                             popup: true
                         })
                     });
             }
-
-            const timer = setTimeout(() => {
-                props.handler({
-                    bar: false,
-                    popup: false
-                })
-            }, 5000);
-            return () => clearTimeout(timer);
         }
     };
 
     return (
         <form ref={form} id="form" onSubmit={sendEmail}>
             <div className="informations">
+                <div className="title">Le mie informazioni</div>
+
                 <div className="information">
-                    <i className="fa-solid fa-address-card" />
+                    <div className="icon-container">
+                        <i className="fa-solid fa-address-card" />
+                    </div>
                     <span>Lorenzo Calzi</span>
                 </div>
 
                 <div className="information">
-                    <i className="fa-solid fa-cake-candles" />
+                    <div className="icon-container">
+                        <i className="fa-solid fa-cake-candles" />
+                    </div>
                     <span>23 Anni</span>
                 </div>
 
                 <div className="information">
-                    <i className="fa-solid fa-map-location-dot" />
+                    <div className="icon-container">
+                        <i className="fa-solid fa-map-location-dot" />
+                    </div>
                     <span>Milano</span>
                 </div>
 
                 <div className="information">
-                    <i className="fa-solid fa-envelope" />
+                    <div className="icon-container">
+                        <i className="fa-solid fa-envelope" />
+                    </div>
                     <span>lorenzocalzi@gmail.com</span>
                 </div>
 
                 <div className="information">
-                    <i className="fa-solid fa-phone" />
+                    <div className="icon-container">
+                        <i className="fa-solid fa-phone" />
+                    </div>
                     <span>3451559558</span>
                 </div>
             </div>
+
+            <div className="divider" />
 
             <div className="inputs">
                 <div className="groups">
@@ -202,12 +216,16 @@ function Form(props) {
                                        onBlur={formFieldsCheck}
                                 />
                                 <label className={formValue[input.name] !== '' ? 'upper' : ''}>{input.label}</label>
-                                {errors[input.name] && (
-                                    <div className="error-container">
-                                        <i className="fa-solid fa-circle-exclamation" />
-                                        <span className='error'>{formValue[input.name] === '' ? input.emptyError : input.invalidError}</span>
-                                    </div>
-                                )}
+
+                                {
+                                    errors[input.name] && (
+                                        <div className="error-container">
+                                            <i className="fa-solid fa-circle-exclamation" />
+                                            <span className='error'>{formValue[input.name] === '' ? input.emptyError : input.invalidError}</span>
+                                        </div>
+                                    )
+                                }
+
                             </div>
                         ))
                     }
@@ -219,12 +237,15 @@ function Form(props) {
                                       onBlur={formFieldsCheck}
                             />
                         <label className={formValue.message !== '' ? 'upper' : ''}>Messaggio *</label>
-                        {errors.message && (
-                            <div className="error-container">
-                                <i className="fa-solid fa-circle-exclamation" />
-                                <span className='error'>{formValue.message === '' ? 'Inserire un messaggio' : 'Inserire un messaggio di almeno 5 caratteri'}</span>
-                            </div>
-                        )}
+
+                        {
+                            errors.message && (
+                                <div className="error-container">
+                                    <i className="fa-solid fa-circle-exclamation" />
+                                    <span className='error'>{formValue.message === '' ? 'Inserire un messaggio' : 'Inserire un messaggio di almeno 5 caratteri'}</span>
+                                </div>
+                            )
+                        }
                     </div>
                 </div>
 

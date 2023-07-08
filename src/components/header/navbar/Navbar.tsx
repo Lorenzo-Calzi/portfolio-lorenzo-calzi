@@ -19,31 +19,31 @@ function Navbar(props) {
                                     configArray.listItems.ita.map((value, index) => {
                                         if(index === 0) {
                                             return (
-                                                <li key={value} className={`header list-item ${props.theme ? "li-active-dark" : "li-active-light"}`}>
+                                                <li key={value} className={`header ${props.theme ? "li-active-dark" : "li-active-light"}`}>
                                                     <a href="#header">{value}</a>
                                                 </li>
                                             )
                                         } else if (index === 1) {
                                             return (
-                                                <li key={value} className={`aboutMe list-item`}>
+                                                <li key={value} className={`aboutMe`}>
                                                     <a href="#aboutMe">{value}</a>
                                                 </li>
                                             )
                                         } else if (index === 2) {
                                             return (
-                                                <li key={value} className={`skills list-item`}>
+                                                <li key={value} className={`skills`}>
                                                     <a href="#skills">{value}</a>
                                                 </li>
                                             )
                                         } else if (index === 3) {
                                             return (
-                                                <li key={value} className={`projects list-item`}>
+                                                <li key={value} className={`projects`}>
                                                     <a href="#projects">{value}</a>
                                                 </li>
                                             )
                                         } else if (index === 4) {
                                             return (
-                                                <li key={value} className={`contactMe list-item`}>
+                                                <li key={value} className={`contactMe`}>
                                                     <a href="#contactMe">{value}</a>
                                                 </li>
                                             )
@@ -59,31 +59,31 @@ function Navbar(props) {
                                     configArray.listItems.eng.map((value, index) => {
                                         if(index === 0) {
                                             return (
-                                                <li key={value} className={`header list-item ${props.theme ? "li-active-dark" : "li-active-light"}`}>
+                                                <li key={value} className={`header ${props.theme ? "li-active-dark" : "li-active-light"}`}>
                                                     <a href="#header">{value}</a>
                                                 </li>
                                             )
                                         } else if (index === 1) {
                                             return (
-                                                <li key={value} className={`aboutMe list-item`}>
+                                                <li key={value} className={`aboutMe`}>
                                                     <a href="#aboutMe">{value}</a>
                                                 </li>
                                             )
                                         } else if (index === 2) {
                                             return (
-                                                <li key={value} className={`skills list-item`}>
+                                                <li key={value} className={`skills`}>
                                                     <a href="#skills">{value}</a>
                                                 </li>
                                             )
                                         } else if (index === 3) {
                                             return (
-                                                <li key={value} className={`projects list-item`}>
+                                                <li key={value} className={`projects`}>
                                                     <a href="#projects">{value}</a>
                                                 </li>
                                             )
                                         } else if (index === 4) {
                                             return (
-                                                <li key={value} className={`contactMe list-item`}>
+                                                <li key={value} className={`contactMe`}>
                                                     <a href="#contactMe">{value}</a>
                                                 </li>
                                             )

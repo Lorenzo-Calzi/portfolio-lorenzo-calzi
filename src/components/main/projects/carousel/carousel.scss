@@ -92,13 +92,7 @@ $mode: cubic-bezier(0.17, 0.67, 0.55, 1.43);
             opacity: 0.3;
             transform: translateX(-25%) scale(0.8);
           }
-          .slider-single-download {
-            transform: translateX(-150px);
-          }
           .slider-single-title {
-            transform: translateX(-150px);
-          }
-          .slider-single-likes {
             transform: translateX(-150px);
           }
         }
@@ -109,13 +103,7 @@ $mode: cubic-bezier(0.17, 0.67, 0.55, 1.43);
             opacity: 0.3;
             transform: translateX(25%) scale(0.8);
           }
-          .slider-single-download {
-            transform: translateX(150px);
-          }
           .slider-single-title {
-            transform: translateX(150px);
-          }
-          .slider-single-likes {
             transform: translateX(150px);
           }
         }
@@ -131,28 +119,10 @@ $mode: cubic-bezier(0.17, 0.67, 0.55, 1.43);
             opacity: 1;
             transform: translateX(0%) scale(1);
           }
-          .slider-single-download {
-            opacity: 1;
-            transition-delay: 100ms;
-            transform: translateX(0px);
-          }
           .slider-single-title {
             opacity: 1;
             transition-delay: 200ms;
             transform: translateX(0px);
-          }
-          .slider-single-likes {
-            opacity: 1;
-            transition-delay: 300ms;
-            transform: translateX(0px);
-
-            i {
-              animation-name: heartbeat;
-              animation-duration: 500ms;
-              animation-delay: 900ms;
-              animation-iteration-count: 1;
-              animation-fill-mode: forwards;
-            }
           }
         }
       }
@@ -169,9 +139,10 @@ $mode: cubic-bezier(0.17, 0.67, 0.55, 1.43);
         height: 20px;
         width: 20px;
         border-radius: 50%;
-        background-color: white;
-        opacity: 0.5;
+        background-color: $purple;
+        opacity: 0.2;
         cursor: pointer;
+        transition: all 0.4s ease-in-out;
 
         &:last-child {
           margin-right: 0;
@@ -191,6 +162,12 @@ $mode: cubic-bezier(0.17, 0.67, 0.55, 1.43);
 
     i {
       cursor: pointer;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        transform: scale(1.1);
+        color: $purple;
+      }
     }
   }
   .slider-right {
@@ -201,10 +178,13 @@ $mode: cubic-bezier(0.17, 0.67, 0.55, 1.43);
 
     i {
       cursor: pointer;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        transform: scale(1.1);
+        color: $purple;
+      }
     }
-  }
-  .not-visible {
-    display: none !important;
   }
 }
 

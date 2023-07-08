@@ -6,7 +6,7 @@ function LoaderSpinner(props) {
     return (
         <>
             {
-                (props.loading.bar || props.loading.popup) && (
+                props.loading.background && (
                     <div className="loader-container">
                         {
                             props.loading.bar && (
