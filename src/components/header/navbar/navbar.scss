@@ -91,6 +91,7 @@
 
 @media screen and (min-width: 321px) and (max-width: 480px) and (orientation: portrait) {
   #navbar {
+    display: none;
     bottom: 0;
     top: inherit;
     height: 10%;

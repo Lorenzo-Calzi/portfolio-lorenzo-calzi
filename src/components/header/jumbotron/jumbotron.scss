@@ -1,22 +1,115 @@
 @import 'src/sass/common';
 
+//#jumbotron {
+//  .dynamic-flex {
+//    display: flex;
+//
+//    .icons {
+//      display: flex;
+//      align-items: center;
+//      margin-right: 5%;
+//
+//      .icon {
+//        font-size: 1.5vw;
+//        margin: 20px 0;
+//        cursor: pointer;
+//        border-radius: 50%;
+//        width: 50px;
+//        height: 50px;
+//        display: flex;
+//        align-items: center;
+//        justify-content: center;
+//        box-sizing: border-box;
+//        color: $purple;
+//
+//        &:hover {
+//          transition: all 0.3s ease-in-out;
+//          transform: scale(1.1);
+//        }
+//      }
+//    }
+//    .content {
+//      display: flex;
+//
+//      .description {
+//        .title {
+//          font-weight: 500;
+//          font-size: clamp(2rem, 4vw + 1rem, 5rem);
+//        }
+//        .subtitle {
+//          font-weight: 500;
+//        }
+//        .paragraph {
+//          font-weight: 300;
+//        }
+//        .contact {
+//          font-weight: 600;
+//          border: none;
+//          border-radius: 5px;
+//          background-color: $purple;
+//          color: $white;
+//          display: inline-block;
+//          cursor: pointer;
+//
+//          &:hover {
+//            transform: scale(1.1);
+//          }
+//
+//          i {
+//            margin-left: 10px;
+//          }
+//        }
+//      }
+//
+//      .images {
+//        display: flex;
+//        align-items: center;
+//
+//        .icons-sm {
+//          display: none;
+//        }
+//        #image {
+//          background-image: url("../../../../public/assets/img/jumbo-image.jpg");
+//          background-position: center;
+//          background-repeat: no-repeat;
+//          background-size: contain;
+//
+//          //background-image: url("../../../../public/assets/img/profile.jpg");
+//          //background-position: center;
+//          //background-size: contain;
+//          //background-color: $purple;
+//          //border-radius: 52% 48% 51% 49% / 29% 28% 72% 71%;
+//          //box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+//
+//          //background-image: url("../../../../public/assets/img/test-2.png");
+//          //background-size: 160%;
+//          //position: relative;
+//          //background-position: center;
+//
+//          //img {
+//          //  position: absolute;
+//          //  top: -10%;
+//          //  left: 13%;
+//          //  width: 340px;
+//          //  height: auto;
+//          //}
+//        }
+//      }
+//    }
+//  }
+//}
+
 #jumbotron {
   .dynamic-flex {
     display: flex;
 
-    .icons-xl {
+    .icons {
       display: flex;
-      flex-direction: column;
       align-items: center;
-      margin-right: 5%;
 
       .icon {
-        font-size: 1.5vw;
-        margin: 20px 0;
         cursor: pointer;
         border-radius: 50%;
-        width: 50px;
-        height: 50px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -24,7 +117,6 @@
         color: $purple;
 
         &:hover {
-          transition: all 0.3s ease-in-out;
           transform: scale(1.1);
         }
       }
@@ -33,9 +125,10 @@
       display: flex;
 
       .description {
+        display: flex;
+
         .title {
           font-weight: 500;
-          font-size: clamp(2rem, 4vw + 1rem, 5rem);
         }
         .subtitle {
           font-weight: 500;
@@ -46,11 +139,9 @@
         .contact {
           font-weight: 600;
           border: none;
-          border-radius: 5px;
           background-color: $purple;
           color: $white;
           display: inline-block;
-          //transition: all 0.3s ease-in-out;
           cursor: pointer;
 
           &:hover {
@@ -62,7 +153,6 @@
           }
         }
       }
-
       .images {
         display: flex;
         align-items: center;
@@ -75,26 +165,6 @@
           background-position: center;
           background-repeat: no-repeat;
           background-size: contain;
-
-          //background-image: url("../../../../public/assets/img/profile.jpg");
-          //background-position: center;
-          //background-size: contain;
-          //background-color: $purple;
-          //border-radius: 52% 48% 51% 49% / 29% 28% 72% 71%;
-          //box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
-
-          //background-image: url("../../../../public/assets/img/test-2.png");
-          //background-size: 160%;
-          //position: relative;
-          //background-position: center;
-
-          //img {
-          //  position: absolute;
-          //  top: -10%;
-          //  left: 13%;
-          //  width: 340px;
-          //  height: auto;
-          //}
         }
       }
     }
@@ -116,7 +186,7 @@
       align-items: flex-start;
       height: auto;
 
-      .icons-xl {
+      .icons {
         display: none;
       }
       .content {
@@ -188,82 +258,74 @@
 
 @media screen and (min-width: 321px) and (max-width: 480px) and (orientation: portrait) {
   #jumbotron {
-    height: 90%;
+    height: auto;
     width: 100%;
     display: flex;
 
     .container {
-      width: 90%;
+      width: 85%;
+      margin: 7.5% auto;
     }
     .dynamic-flex {
       flex-direction: column-reverse;
       justify-content: center;
-      align-items: flex-start;
       height: auto;
 
-      .icons-xl {
+      .icons {
+        flex-direction: row;
         display: none;
+
+        .icon {
+          font-size: 4vw;
+          margin: 10px 10px 0 0;
+          border-radius: 50%;
+          width: 40px;
+          height: 40px;
+          justify-content: center;
+          box-shadow: none;
+        }
       }
       .content {
         flex-direction: column-reverse;
-        align-items: flex-start;
         justify-content: space-between;
-        width: 100%;
 
+        .images {
+          width: 100%;
+          margin-bottom: 20px;
+
+          #image {
+            width: 90%;
+            margin: auto;
+          }
+        }
         .description {
           flex-direction: column;
           align-items: flex-start;
-          justify-content: space-between;
-          width: 100%;
-          height: 100%;
 
           .title {
             max-width: 100%;
-            font-size: 9vw;
-            margin: 0;
+            font-size: 10vw;
             text-align: left;
+            margin-bottom: 5px;
+            line-height: 50px;
           }
           .subtitle {
             max-width: 100%;
             font-size: 5vw;
-            margin: 0;
             text-align: left;
+            margin: 0 0 7px 2px;
           }
           .paragraph {
             max-width: 100%;
-            font-size: 4vw;
-            margin: 5px 0;
+            font-size: 3.5vw;
+            margin: 0 0 12px 2px;
             text-align: left;
           }
           .contact {
-            font-size: 4vw;
-            padding: 16px 15px;
-            margin: 15px 0;
-          }
-        }
-        .images {
-          display: flex;
-          align-items: center;
-          height: 100%;
-          width: 100%;
-          margin-bottom: 10%;
-
-          .icons-sm {
-            display: block;
-
-            ul {
-              li {
-                margin: 25px 0;
-
-                .fa-brands {
-                  font-size: 5vw;
-                }
-              }
-            }
-          }
-          #image {
-            width: 55%;
-            margin: auto;
+            font-size: 1rem;
+            padding: 15px 10px;
+            border-radius: 3px;
+            margin-left: 2px;
           }
         }
       }
@@ -286,7 +348,7 @@
       align-items: flex-start;
       height: auto;
 
-      .icons-xl {
+      .icons {
         display: none;
       }
       .content {
@@ -371,7 +433,7 @@
       align-items: flex-start;
       height: auto;
 
-      .icons-xl {
+      .icons {
         display: none;
       }
       .content {
@@ -451,7 +513,7 @@
       flex-direction: row;
       align-items: center;
 
-      .icons-xl {
+      .icons {
         align-items: center;
         width: 15%;
 
@@ -526,7 +588,7 @@
       flex-direction: row;
       align-items: center;
 
-      .icons-xl {
+      .icons {
         align-items: center;
         width: 15%;
 
@@ -601,7 +663,7 @@
       flex-direction: row;
       align-items: center;
 
-      .icons-xl {
+      .icons {
         align-items: center;
         width: 15%;
 
@@ -680,7 +742,7 @@
       align-items: flex-start;
       height: auto;
 
-      .icons-xl {
+      .icons {
         display: none;
       }
       .content {
@@ -760,7 +822,7 @@
       flex-direction: row;
       align-items: center;
 
-      .icons-xl {
+      .icons {
         align-items: center;
         width: 15%;
 
@@ -834,8 +896,10 @@
       flex-direction: row;
       align-items: center;
 
-      .icons-xl {
+      .icons {
         align-items: center;
+        flex-direction: column;
+
         //width: 15%;
 
         ul {
@@ -908,7 +972,7 @@
       flex-direction: row;
       align-items: center;
 
-      .icons-xl {
+      .icons {
         align-items: center;
         width: 15%;
 

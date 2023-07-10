@@ -41,7 +41,7 @@ function Jumbotron(props) {
     return (
         <div id="jumbotron">
             <div className="container dynamic-flex">
-                <div className="icons-xl">
+                <div className="icons">
                     <a href="https://www.linkedin.com/in/lorenzo-calzi-9a12101a0/" target="_blank" className="icon button-shadow">
                         <i className={`fa-brands fa-linkedin-in ${props.theme ? "white" : "purple"}`}></i>
                     </a>
@@ -60,34 +60,12 @@ function Jumbotron(props) {
                         <h1 className={`title ${props.theme ? "white" : "black"}`}>{props.language ? configArray.title.ita : configArray.title.eng}</h1>
                         <h3 className={`subtitle ${props.theme ? "white" : "grey"}`}><span ref={el}></span></h3>
                         <p className={`paragraph ${props.theme ? "white" : "grey"}`}>{props.language ? configArray.paragraph.ita : configArray.paragraph.eng}</p>
-                        <div className="contact button-shadow">
-                            <a href="#contactMe">
-                                {props.language ? configArray.button.ita : configArray.button.eng} <i className="fa-solid fa-paper-plane"></i>
-                            </a>
-                        </div>
+                        <a className="contact button-shadow" href="#contactMe">
+                            {props.language ? configArray.button.ita : configArray.button.eng} <i className="fa-solid fa-paper-plane"></i>
+                        </a>
                     </div>
 
                     <div className="images">
-                        <div className="icons-sm">
-                            <ul>
-                                <li>
-                                    <a href="https://www.linkedin.com/in/lorenzo-calzi-9a12101a0/" target="_blank">
-                                        <i className={`fa-brands fa-linkedin-in ${props.theme ? "white" : "purple"}`}></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://www.instagram.com/lorenzo_calzi/" target="_blank">
-                                        <i className={`fa-brands fa-instagram ${props.theme ? "white" : "purple"}`}></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://github.com/Lorenzo-Calzi" target="_blank">
-                                        <i className={`fa-brands fa-github ${props.theme ? "white" : "purple"}`}></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-
                         <div id="image">
                             {/*<img src={`${process.env.PUBLIC_URL}/assets/img/me-profile.png`} alt=""/>*/}
                         </div>

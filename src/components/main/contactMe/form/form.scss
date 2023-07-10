@@ -6,57 +6,43 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-radius: 5px;
 
   .informations {
-    height: 100%;
-    width: 45%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
-    border-radius: 5px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(7.9px);
     background-color: $white;
-    padding: 10px 20px 10px 20px;
     background-image: url("../../../../../public/assets/img/waves-form.svg");
     background-size: cover;
     background-position: center;
 
     .title {
-      padding: 10px 0;
       width: 100%;
       color: $darkPurple;
-      font-size: 1.3rem;
       font-weight: 700;
     }
     .information {
       display: flex;
       align-items: center;
-      margin: 10px 0;
       width: 100%;
-      border-radius: 5px;
       resize: none;
 
       .icon-container {
-        width: 50px;
-        height: 50px;
         display: flex;
         align-items: center;
         justify-content: center;
         border-radius: 50%;
-        margin-right: 20px;
         box-shadow: 0 0 10px 0 #eeedfa;
         border: 2px dashed $lightPurple;
 
         i {
-          font-size: 1.2rem;
           color: $purple;
         }
       }
       span {
-        font-size: 1.1rem;
         font-weight: 500;
         color: $darkPurple;
       }
@@ -66,14 +52,11 @@
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(7.9px);
     height: 100%;
-    width: 45%;
-    padding: 10px 25px 25px 25px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    border-radius: 5px;
 
     .groups {
       display: flex;
@@ -83,18 +66,13 @@
 
       .input-group {
         position: relative;
-        width: 47.5%;
-        margin: 15px 0 10px 0;
 
         input {
-          font-size: .8rem;
           margin-left: auto;
           margin-right: auto;
-          padding: 2%;
           display: block;
           height: 70px;
           width: 100%;
-          border-radius: 5px;
           resize: none;
           box-shadow: 0 0 10px 0 #eeedfa;
           border: 2px dashed $lightPurple;
@@ -103,27 +81,20 @@
             outline: none;
           }
           &:focus ~ label {
-            top: -20px;
-            font-size: .8rem;
             font-weight: 700;
             color: $purple;
           }
         }
         label {
           color: $darkPurple;
-          font-size: .8rem;
           font-weight: normal;
           position: absolute;
           pointer-events: none;
-          top: 5px;
-          left: 3%;
           transition: 0.2s ease all;
           -moz-transition: 0.2s ease all;
           -webkit-transition: 0.2s ease all;
         }
         .upper {
-          top: -20px;
-          font-size: .8rem;
           font-weight: 700;
           color: $purple;
         }
@@ -131,34 +102,25 @@
           display: flex;
           align-items: center;
           justify-content: flex-start;
-          margin: 5px 5px 0 3%;
 
           i {
             color: $red;
-            font-size: 10px;
           }
           .error {
             color: $red;
             font-weight: 700;
-            font-size: 10px;
-            margin-left: 5px;
           }
         }
       }
       .textarea-group {
         position: relative;
-        margin: 15px 0 25px 0;
         width: 100%;
 
         textarea {
-          font-size: .8rem;
           margin-left: auto;
           margin-right: auto;
-          padding: 2% 1.5% 2% 1.5%;
           display: block;
-          height: 100px;
           width: 100%;
-          border-radius: 5px;
           resize: none;
           box-shadow: 0 0 10px 0 #eeedfa;
           border: 2px dashed $lightPurple;
@@ -167,27 +129,20 @@
             outline: none;
           }
           &:focus ~ label {
-            top: -20px;
             font-weight: 700;
-            font-size: .8rem;
             color: $purple;
           }
         }
         label {
           color: $darkPurple;
-          font-size: .8rem;
           font-weight: normal;
           position: absolute;
           pointer-events: none;
-          top: 5px;
-          left: 1.5%;
           transition: 0.2s ease all;
           -moz-transition: 0.2s ease all;
           -webkit-transition: 0.2s ease all;
         }
         .upper {
-          top: -20px;
-          font-size: .8rem;
           font-weight: 700;
           color: $purple;
         }
@@ -195,28 +150,20 @@
           display: flex;
           align-items: center;
           justify-content: flex-start;
-          margin: 5px 5px 0 1.5%;
 
           i {
             color: $red;
-            font-size: 10px;
           }
           .error {
             color: $red;
             font-weight: 700;
-            font-size: 10px;
-            margin-left: 5px;
           }
         }
       }
     }
     .submit {
-      font-size: .9rem;
-      padding: 10px 5%;
       display: block;
-      height: 70px;
       border: none;
-      border-radius: 5px;
       resize: none;
       width: 100%;
       align-self: flex-start;
@@ -228,7 +175,6 @@
       &:hover {
         background-color: $purple;
         color: white;
-        font-size: 1rem;
       }
     }
   }
@@ -241,3 +187,417 @@
   }
 }
 
+@media screen and (max-width: 320px) and (orientation: portrait) {
+
+}
+
+@media screen and (min-width: 321px) and (max-width: 480px) and (orientation: portrait) {
+  #form {
+    height: auto;
+    width: 100%;
+    border-radius: 3px;
+    flex-direction: column;
+    gap: 30px;
+
+    .informations {
+      height: 100%;
+      width: 100%;
+      border-radius: 3px;
+      padding: 10px 20px;
+
+      .title {
+        padding: 10px 0;
+        font-size: 5vw;
+      }
+      .information {
+        margin: 10px 0;
+        border-radius: 3px;
+        gap: 20px;
+
+        .icon-container {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+
+          i {
+            font-size: 4.5vw;
+          }
+        }
+        span {
+          font-size: 4vw;
+          font-weight: 500;
+        }
+      }
+    }
+    .inputs {
+      width: 100%;
+      padding: 10px 25px 25px 25px;
+      border-radius: 3px;
+
+      .groups {
+        .input-group {
+          position: relative;
+          width: 47.5%;
+          margin: 15px 0 10px 0;
+
+          input {
+            font-size: 4vw;
+            padding: 2%;
+            height: 70px;
+            border-radius: 3px;
+
+            &:focus ~ label {
+              top: -20px;
+              font-size: 3.5vw;
+            }
+          }
+          label {
+            font-size: 3vw;
+            top: 5px;
+            left: 3%;
+          }
+          .upper {
+            top: -20px;
+            font-size: 3vw;
+          }
+          .error-container {
+            margin: 5px 5px 0 3%;
+
+            i {
+              font-size: 2.5vw;
+            }
+            .error {
+              font-size: 2.5vw;
+              margin-left: 5px;
+            }
+          }
+        }
+        .textarea-group {
+          margin: 15px 0 25px 0;
+
+          textarea {
+            font-size: 3vw;
+            padding: 2% 1.5% 2% 1.5%;
+            height: 100px;
+            border-radius: 3px;
+
+            &:focus ~ label {
+              top: -20px;
+              font-size: 3vw;
+            }
+          }
+          label {
+            font-size: 3vw;
+            top: 5px;
+            left: 1.5%;
+          }
+          .upper {
+            top: -20px;
+            font-size: 3vw;
+          }
+          .error-container {
+            margin: 5px 5px 0 1.5%;
+
+            i {
+              font-size: 2.5vw;
+            }
+            .error {
+              font-size: 2.5vw;
+              margin-left: 5px;
+            }
+          }
+        }
+      }
+      .submit {
+        font-size: 3.5vw;
+        padding: 10px 5%;
+        height: 70px;
+        border-radius: 3px;
+
+        &:hover {
+          font-size: 4vw;
+        }
+      }
+    }
+    .divider {
+      width: 70%;
+      height: 5px;
+      border-radius: 3px;
+    }
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) and (orientation: portrait) {
+
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) and (orientation: portrait) {
+
+}
+
+@media screen and (min-width: 320px) and (max-width: 655px) and (orientation: landscape) {
+
+}
+
+@media screen and (min-width: 656px) and (max-width: 1024px) and (orientation: landscape) {
+
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1200px) and (orientation: landscape) {
+
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1200px) and (orientation: portrait) {
+
+}
+
+@media screen and (min-width: 1201px) and (max-width: 1500px) {
+
+}
+
+@media screen and (min-width: 1501px) and (max-width: 2000px) {
+  #form {
+    height: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px;
+
+    .informations {
+      height: 100%;
+      width: 45%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+      border-radius: 5px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(7.9px);
+      background-color: $white;
+      padding: 10px 20px 10px 20px;
+      background-image: url("../../../../../public/assets/img/waves-form.svg");
+      background-size: cover;
+      background-position: center;
+
+      .title {
+        padding: 10px 0;
+        width: 100%;
+        color: $darkPurple;
+        font-size: 1.3rem;
+        font-weight: 700;
+      }
+      .information {
+        display: flex;
+        align-items: center;
+        margin: 10px 0;
+        width: 100%;
+        border-radius: 5px;
+        resize: none;
+
+        .icon-container {
+          width: 50px;
+          height: 50px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+          margin-right: 20px;
+          box-shadow: 0 0 10px 0 #eeedfa;
+          border: 2px dashed $lightPurple;
+
+          i {
+            font-size: 1.2rem;
+            color: $purple;
+          }
+        }
+        span {
+          font-size: 1.1rem;
+          font-weight: 500;
+          color: $darkPurple;
+        }
+      }
+    }
+    .inputs {
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(7.9px);
+      height: 100%;
+      width: 45%;
+      padding: 10px 25px 25px 25px;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      border-radius: 5px;
+
+      .groups {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: space-between;
+
+        .input-group {
+          position: relative;
+          width: 47.5%;
+          margin: 15px 0 10px 0;
+
+          input {
+            font-size: .8rem;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 2%;
+            display: block;
+            height: 70px;
+            width: 100%;
+            border-radius: 5px;
+            resize: none;
+            box-shadow: 0 0 10px 0 #eeedfa;
+            border: 2px dashed $lightPurple;
+
+            &:focus {
+              outline: none;
+            }
+            &:focus ~ label {
+              top: -20px;
+              font-size: .8rem;
+              font-weight: 700;
+              color: $purple;
+            }
+          }
+          label {
+            color: $darkPurple;
+            font-size: .8rem;
+            font-weight: normal;
+            position: absolute;
+            pointer-events: none;
+            top: 5px;
+            left: 3%;
+            transition: 0.2s ease all;
+            -moz-transition: 0.2s ease all;
+            -webkit-transition: 0.2s ease all;
+          }
+          .upper {
+            top: -20px;
+            font-size: .8rem;
+            font-weight: 700;
+            color: $purple;
+          }
+          .error-container {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            margin: 5px 5px 0 3%;
+
+            i {
+              color: $red;
+              font-size: 10px;
+            }
+            .error {
+              color: $red;
+              font-weight: 700;
+              font-size: 10px;
+              margin-left: 5px;
+            }
+          }
+        }
+        .textarea-group {
+          position: relative;
+          margin: 15px 0 25px 0;
+          width: 100%;
+
+          textarea {
+            font-size: .8rem;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 2% 1.5% 2% 1.5%;
+            display: block;
+            height: 100px;
+            width: 100%;
+            border-radius: 5px;
+            resize: none;
+            box-shadow: 0 0 10px 0 #eeedfa;
+            border: 2px dashed $lightPurple;
+
+            &:focus {
+              outline: none;
+            }
+            &:focus ~ label {
+              top: -20px;
+              font-weight: 700;
+              font-size: .8rem;
+              color: $purple;
+            }
+          }
+          label {
+            color: $darkPurple;
+            font-size: .8rem;
+            font-weight: normal;
+            position: absolute;
+            pointer-events: none;
+            top: 5px;
+            left: 1.5%;
+            transition: 0.2s ease all;
+            -moz-transition: 0.2s ease all;
+            -webkit-transition: 0.2s ease all;
+          }
+          .upper {
+            top: -20px;
+            font-size: .8rem;
+            font-weight: 700;
+            color: $purple;
+          }
+          .error-container {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            margin: 5px 5px 0 1.5%;
+
+            i {
+              color: $red;
+              font-size: 10px;
+            }
+            .error {
+              color: $red;
+              font-weight: 700;
+              font-size: 10px;
+              margin-left: 5px;
+            }
+          }
+        }
+      }
+      .submit {
+        font-size: .9rem;
+        padding: 10px 5%;
+        display: block;
+        height: 70px;
+        border: none;
+        border-radius: 5px;
+        resize: none;
+        width: 100%;
+        align-self: flex-start;
+        cursor: pointer;
+        background-color: $lightPurple;
+        color: $purple;
+        font-weight: 700;
+
+        &:hover {
+          background-color: $purple;
+          color: white;
+          font-size: 1rem;
+        }
+      }
+    }
+    .divider {
+      width: 3px;
+      height: 40%;
+      background-color: #6D56E9;
+      border-radius: 5px;
+      //transform: rotate(90deg);
+    }
+  }
+}
+
+@media screen and (min-width: 2001px) {
+
+}

@@ -1,21 +1,13 @@
 @import 'src/sass/common';
 
 #aboutMe {
-  height: 100vh;
-  width: 100%;
   display: flex;
   flex-direction: column;
 
   .dynamic-flex {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    height: 90%;
 
     .titles {
-      height: 25%;
-      max-height: 25%;
       display: flex;
       flex-direction: column;
       align-self: center;
@@ -23,79 +15,361 @@
 
       .title-gradient {
         text-align: center;
-        font-size: 4.5rem;
-        font-weight: 800;
         background: linear-gradient(to top, transparent 0%, $grey 70%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         opacity: 0.1;
-        line-height: 70px;
       }
       .title-solid {
         text-align: center;
-        font-size: 3.5rem;
-        font-weight: 700;
         position: relative;
-        margin: 0;
-        line-height: 35px;
       }
     }
     .content {
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 75%;
 
       .image {
         background-image: url("../../../../public/assets/img/proflle-2.jpg");
         background-position: center;
         background-size: cover;
-        width: 48%;
-        margin-right: 2%;
-        height: 80%;
-        border-radius: 5px;
-        box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
       }
       .description {
-        width: 48%;
-        margin-left: 2%;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
 
         h5 {
-          font-size: 1.2rem;
           font-weight: 800;
-          padding-right: 10px;
-          margin-bottom: 20px;
         }
         p {
-          font-size: 0.9rem;
-          padding: 10px 10px 10px 25px;
-          border-left: 3px solid $purple;
           text-align: left;
+          border-left: 3px solid $purple;
         }
         .button {
           border: none;
-          border-radius: 5px;
           background-color: #6D56E9;
           color: white;
           display: inline-block;
-          padding: 15px;
-          margin-top: 20px;
-          //transition: all 0.3s ease-in-out;
           cursor: pointer;
+          font-weight: 600;
 
           &:hover {
             transform: scale(1.1);
           }
+        }
+      }
+    }
+  }
+}
 
-          a {
-            font-size: 1vw;
+@media screen and (max-width: 320px) and (orientation: portrait) {
+  #aboutMe {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .dynamic-flex {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      height: 90%;
+
+      .titles {
+        height: 25%;
+        max-height: 25%;
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        justify-content: center;
+
+        .title-gradient {
+          text-align: center;
+          font-size: 4.5rem;
+          font-weight: 800;
+          background: linear-gradient(to top, transparent 0%, $grey 70%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          opacity: 0.1;
+          line-height: 70px;
+        }
+        .title-solid {
+          text-align: center;
+          font-size: 3.5rem;
+          font-weight: 700;
+          position: relative;
+          margin: 0;
+          line-height: 35px;
+        }
+      }
+      .content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 75%;
+
+        .image {
+          background-image: url("../../../../public/assets/img/proflle-2.jpg");
+          background-position: center;
+          background-size: cover;
+          width: 48%;
+          margin-right: 2%;
+          height: 80%;
+          border-radius: 5px;
+          //box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+          //width: 0;
+          //height: 0;
+          //border-style: solid;
+          //border-width: 346.4px 200px 0 200px;
+          //border-color: #6D56E9 transparent transparent transparent;
+          //transform: rotate(0deg);
+        }
+        .description {
+          width: 48%;
+          margin-left: 2%;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+
+          h5 {
+            font-size: 1.2rem;
+            font-weight: 800;
+            padding-right: 10px;
+            margin-bottom: 20px;
+          }
+          p {
+            font-size: 0.9rem;
+            padding: 10px 10px 10px 25px;
+            border-left: 3px solid $purple;
+            text-align: left;
+          }
+          .button {
+            border: none;
+            border-radius: 5px;
+            background-color: #6D56E9;
+            color: white;
+            display: inline-block;
+            padding: 15px;
+            margin-top: 20px;
+            //transition: all 0.3s ease-in-out;
+            cursor: pointer;
+
+            &:hover {
+              transform: scale(1.1);
+            }
+
+            a {
+              font-size: 1vw;
+              font-weight: 600;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 321px) and (max-width: 480px) and (orientation: portrait) {
+  #aboutMe {
+    height: auto;
+    width: 100%;
+
+    .container {
+      width: 85%;
+      margin: 0 auto 7.5% auto;
+    }
+    .dynamic-flex {
+      height: auto;
+      flex-direction: column;
+
+      .titles {
+        flex-direction: column;
+        margin-bottom: 7.5%;
+
+        .title-gradient {
+          font-size: 3.5rem;
+          line-height: 50px;
+        }
+        .title-solid {
+          font-size: 3rem;
+          margin: 0;
+          line-height: 35px;
+        }
+      }
+      .content {
+        flex-direction: column;
+        gap: 20px;
+
+        .image {
+          width: 100%;
+          height: 200px;
+          border-radius: 3px;
+        }
+        .description {
+          flex-direction: column;
+
+          h5 {
+            font-size: 5vw;
+            font-weight: 800;
+            padding-right: 10px;
+            margin-bottom: 15px;
+          }
+          p {
+            font-size: 3.5vw;
+            padding: 5px 0 5px 15px;
+            margin-bottom: 20px;
+          }
+          .button {
+            font-size: 1rem;
+            padding: 15px 10px;
+            border-radius: 3px;
             font-weight: 600;
           }
         }
       }
     }
   }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) and (orientation: portrait) {
+
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) and (orientation: portrait) {
+
+}
+
+@media screen and (min-width: 320px) and (max-width: 655px) and (orientation: landscape) {
+
+}
+
+@media screen and (min-width: 656px) and (max-width: 1024px) and (orientation: landscape) {
+
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1200px) and (orientation: landscape) {
+
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1200px) and (orientation: portrait) {
+
+}
+
+@media screen and (min-width: 1201px) and (max-width: 1500px) {
+
+}
+
+@media screen and (min-width: 1501px) and (max-width: 2000px) {
+  #aboutMe {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .dynamic-flex {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      height: 90%;
+
+      .titles {
+        height: 25%;
+        max-height: 25%;
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        justify-content: center;
+
+        .title-gradient {
+          text-align: center;
+          font-size: 4.5rem;
+          font-weight: 800;
+          background: linear-gradient(to top, transparent 0%, $grey 70%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          opacity: 0.1;
+          line-height: 70px;
+        }
+        .title-solid {
+          text-align: center;
+          font-size: 3.5rem;
+          font-weight: 700;
+          position: relative;
+          margin: 0;
+          line-height: 35px;
+        }
+      }
+      .content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 75%;
+
+        .image {
+          background-image: url("../../../../public/assets/img/proflle-2.jpg");
+          background-position: center;
+          background-size: cover;
+          width: 48%;
+          margin-right: 2%;
+          height: 80%;
+          border-radius: 5px;
+          //box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+          //width: 0;
+          //height: 0;
+          //border-style: solid;
+          //border-width: 346.4px 200px 0 200px;
+          //border-color: #6D56E9 transparent transparent transparent;
+          //transform: rotate(0deg);
+        }
+        .description {
+          width: 48%;
+          margin-left: 2%;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+
+          h5 {
+            font-size: 1.2rem;
+            font-weight: 800;
+            padding-right: 10px;
+            margin-bottom: 20px;
+          }
+          p {
+            font-size: 0.9rem;
+            padding: 10px 10px 10px 25px;
+            border-left: 3px solid $purple;
+            text-align: left;
+          }
+          .button {
+            border: none;
+            border-radius: 5px;
+            background-color: #6D56E9;
+            color: white;
+            display: inline-block;
+            padding: 15px;
+            margin-top: 20px;
+            //transition: all 0.3s ease-in-out;
+            cursor: pointer;
+
+            &:hover {
+              transform: scale(1.1);
+            }
+
+            a {
+              font-size: 1vw;
+              font-weight: 600;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 2001px) {
+
 }

@@ -19,9 +19,7 @@ function AboutMe(props) {
                             Sono una persona socievole, organizzata, precisa e mi pongo sempre l'obbiettivo di raggiungere il miglior risultato possibile. <br/>
                             Quello che più mi motiva è sapere che il mondo della programmazione è in continua evoluzione e che quindi avrò sempre qualcosa da imparare, infatti, cerco sempre di approfondire la conoscenza dei linguaggi che già conosco e apprenderne di nuovi.
                         </p>
-                        <div className="button button-shadow">
-                            <a href={process.env.PUBLIC_URL + '/assets/cv/cv_lorenzo_calzi.pdf'} download>DOWNLOAD CV</a>
-                        </div>
+                        <a className="button button-shadow" href={process.env.PUBLIC_URL + '/assets/cv/cv_lorenzo_calzi.pdf'} download>DOWNLOAD CV</a>
                     </div>
                 </div>
             </div>

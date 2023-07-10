@@ -4,11 +4,7 @@ function Footer(props) {
 
     return (
         <div id="footer">
-            {/*<div className="credits">*/}
-            {/*    <span>Portfolio By</span>*/}
-            {/*    <a href="https://github.com/Lorenzo-Calzi">Lorenzo Calzi</a>*/}
-            {/*</div>*/}
-            <div className="copyright">
+            <div className="container copyright">
                 <span>
                     Copyright
                     <i className="fa-regular fa-copyright"></i>
