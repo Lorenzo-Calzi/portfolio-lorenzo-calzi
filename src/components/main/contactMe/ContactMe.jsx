@@ -1,31 +1,17 @@
 import * as React from "react"
-import {Form, LoaderSpinner, Popup} from "../../imports";
-import {useState} from "react";
+import {Form} from "../../imports";
 
-function ContactMe() {
-    const [loading, setLoading] = useState({
-        background: false,
-        bar: false,
-        popup: false
-    })
-
-    const handler = (setValue) => {
-        setLoading(setValue)
-    }
+function ContactMe(props) {
 
     return (
-        <section id="contactMe" style={{pointerEvents: loading.bar ? 'none' : 'auto', userSelect: loading.bar ? 'none' : 'auto'}}>
-            <LoaderSpinner loading={loading} />
-
-            <Popup loading={loading} handler={handler} />
-
+        <section id="contactMe" style={{pointerEvents: props.loading.bar ? 'none' : 'auto', userSelect: props.loading.bar ? 'none' : 'auto'}}>
             <div className="container dynamic-flex">
                 <div className="titles">
                     <h1 className="title-gradient">Contatti</h1>
                     <h2 className="title-solid">Contatti</h2>
                 </div>
 
-                <Form handler={handler}/>
+                <Form handler={props.handler}/>
             </div>
         </section>
     )
