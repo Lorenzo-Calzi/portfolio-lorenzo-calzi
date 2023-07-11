@@ -10,10 +10,12 @@ function Homepage() {
     const configArray = config
     const [theme, setTheme] = useState(false)
     const [language, setLanguage] = useState(true)
+    const [currentSection, setCurrentSection] = useState<any>()
     const [loading, setLoading] = useState({
         background: false,
         bar: false,
-        popup: false
+        modal: false,
+        navbar: false
     })
 
     useEffect(() => {
@@ -86,8 +88,12 @@ function Homepage() {
         el.style.transform = '';
     }
 
-    const handler = (setValue) => {
+    const handlerLoading = (setValue) => {
         setLoading(setValue)
+    }
+
+    const handlerCurrentSection = (setValue) => {
+        setCurrentSection(setValue)
     }
 
     const onChangeTheme = () => {
@@ -102,7 +108,7 @@ function Homepage() {
     const navbarManagement = () => {
         const sections = document.querySelectorAll("section");
         const navLi = document.querySelectorAll("#navbar .container .right ul li");
-        const dynamicTheme = theme ? '-dark' : '-light'
+
         let current = "";
 
         sections.forEach((section) => {
@@ -133,25 +139,18 @@ function Homepage() {
 
             if (top >= offset) {
                 current = section.getAttribute("id");
-
-                navLi.forEach((li) => {
-                    li.classList.remove(`li-active${dynamicTheme}`);
-                    if (li.classList.contains(current)) {
-                        li.className = ''
-                        li.classList.add(`${current}`, `li-active${dynamicTheme}`)
-                    }
-                });
+                setCurrentSection(section.getAttribute("id"))
             }
         });
     }
 
     return (
         <div id="homepage" className={theme ? "dark" : "light"}>
-            <Header theme={theme} onChangeTheme={onChangeTheme} language={language} onChangeLanguage={onChangeLanguage} configArray={configArray}/>
-            <Main theme={theme} language={language} configArray={configArray} loading={loading} handler={handler}/>
+            <Header theme={theme} onChangeTheme={onChangeTheme} language={language} onChangeLanguage={onChangeLanguage} configArray={configArray} loading={loading} handlerLoading={handlerLoading} handlerCurrentSection={handlerCurrentSection} currentSection={currentSection}/>
+            <Main theme={theme} language={language} configArray={configArray} loading={loading} handlerLoading={handlerLoading}/>
             <Footer />
 
-            <Popup loading={loading} handler={handler}/>
+            <Popup loading={loading} handlerLoading={handlerLoading} handlerCurrentSection={handlerCurrentSection} currentSection={currentSection} configArray={configArray}/>
 
             <div id="theme" className="button-shadow" onClick={onChangeTheme}>
                 <i className={`fa-solid fa-sun ${theme ? "opacity" : ''}`}></i>

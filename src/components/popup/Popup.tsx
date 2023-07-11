@@ -3,14 +3,16 @@ import {BarLoader} from "react-spinners";
 
 function Popup(props) {
 
+    const configArray = props.configArray.header.navbar
     const closePopup = () => {
         document.getElementById('popup').style.animation = "fade-out 1s ease-in-out both"
 
         const timer = setTimeout(() => {
-            props.handler({
+            props.handlerLoading({
                 background: false,
                 bar: false,
-                popup: false
+                modal: false,
+                navbar: false
             })
 
             document.body.style.overflow = "auto"
@@ -29,7 +31,7 @@ function Popup(props) {
                             )
                         }
                         {
-                            props.loading.popup && (
+                            props.loading.modal && (
                                 <div id="modal">
                                     <div className="top">
                                         <i className="fa-solid fa-check" />
@@ -42,6 +44,23 @@ function Popup(props) {
 
                                         <button onClick={closePopup}>Chiudi</button>
                                     </div>
+                                </div>
+                            )
+                        }
+                        {
+                            props.loading.navbar && (
+                                <div id="navbar">
+                                    <i className="fa-solid fa-xmark" onClick={closePopup}/>
+
+                                    <ul onClick={closePopup}>
+                                        {
+                                            configArray.listItems.ita.map((item) => (
+                                                <li key={item.value} className={`${item.href} ${item.href === props.currentSection ? 'li-active-light' : ''}`} onClick={() => props.handlerCurrentSection(item.href)}>
+                                                    <a href={`#${item.href}`}>{item.value}</a>
+                                                </li>
+                                            ))
+                                        }
+                                    </ul>
                                 </div>
                             )
                         }

@@ -1,7 +1,6 @@
 @import 'src/sass/common';
 
 #contactMe {
-  height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -15,7 +14,6 @@
     flex-direction: column;
     align-items: center;
     justify-content:  space-evenly;
-    height: 100%;
 
     .titles {
       max-height: 25%;
@@ -26,21 +24,16 @@
 
       .title-gradient {
         text-align: center;
-        font-size: 4.5rem;
         font-weight: 800;
         background: linear-gradient(to top, transparent 0%, $grey 70%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         opacity: 0.1;
-        line-height: 70px;
       }
       .title-solid {
         text-align: center;
-        font-size: 3.5rem;
         font-weight: 700;
         position: relative;
-        margin: 0;
-        line-height: 35px;
       }
     }
   }
@@ -52,8 +45,7 @@
 
 @media screen and (min-width: 321px) and (max-width: 480px) and (orientation: portrait) {
   #contactMe {
-    height: auto;
-    width: 100%;
+    min-height: 100vh;
 
     .container {
       width: 85%;
@@ -61,10 +53,8 @@
     }
     .dynamic-flex {
       height: auto;
-      flex-direction: column;
 
       .titles {
-        flex-direction: column;
         margin-bottom: 7.5%;
 
         .title-gradient {

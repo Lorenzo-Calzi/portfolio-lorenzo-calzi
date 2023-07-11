@@ -6,8 +6,50 @@
         "eng": "Portfolio"
       },
       "listItems": {
-        "ita": ["Home", "Su di me", "Abilità", "Progetti", "Contatti"],
-        "eng": ["Home", "About", "Skills", "Projects", "Contacts"]
+        "ita": [
+          {
+            "value": "Home",
+            "href": "header"
+          },
+          {
+            "value": "Su di me",
+            "href": "aboutMe"
+          },
+          {
+            "value": "Abilità",
+            "href": "skills"
+          },
+          {
+            "value": "Progetti",
+            "href": "projects"
+          },
+          {
+            "value": "Contatti",
+            "href": "contactMe"
+          }
+        ],
+        "eng": [
+          {
+            "value": "Home",
+            "href": "header"
+          },
+          {
+            "value": "About",
+            "href": "aboutMe"
+          },
+          {
+            "value": "Skills",
+            "href": "skills"
+          },
+          {
+            "value": "Projects",
+            "href": "projects"
+          },
+          {
+            "value": "Contacts",
+            "href": "contactMe"
+          }
+        ]
       }
     },
     "jumbotron": {

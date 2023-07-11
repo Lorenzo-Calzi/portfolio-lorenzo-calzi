@@ -126,10 +126,11 @@ function Form(props) {
             (errors.phone || !formValue.phone) ||
             (errors.message || !formValue.message)) {
         } else {
-            props.handler({
+            props.handlerLoading({
                 background: true,
                 bar: true,
-                popup: false
+                modal: false,
+                navbar: false
             })
 
             const initialState = {
@@ -144,17 +145,19 @@ function Form(props) {
                 emailjs.sendForm('service_ctu1qvq', 'template_hdkgqj9', form.current, '_8H8v9WlJx2oNsYXn')
                     .then((result) => {
                         setFormValue(initialState)
-                        props.handler({
+                        props.handlerLoading({
                             background: true,
                             bar: false,
-                            popup: true
+                            modal: true,
+                            navbar: false
                         })
                         document.body.style.overflow = "hidden"
                     }, (error) => {
-                        props.handler({
+                        props.handlerLoading({
                             background: true,
                             bar: false,
-                            popup: true
+                            modal: true,
+                            navbar: false
                         })
                     });
             }

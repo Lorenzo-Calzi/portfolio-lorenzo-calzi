@@ -179,11 +179,7 @@
     }
   }
   .divider {
-    width: 3px;
-    height: 40%;
     background-color: #6D56E9;
-    border-radius: 5px;
-    //transform: rotate(90deg);
   }
 }
 
@@ -193,8 +189,6 @@
 
 @media screen and (min-width: 321px) and (max-width: 480px) and (orientation: portrait) {
   #form {
-    height: auto;
-    width: 100%;
     border-radius: 3px;
     flex-direction: column;
     gap: 30px;
@@ -217,7 +211,6 @@
         .icon-container {
           width: 40px;
           height: 40px;
-          border-radius: 50%;
 
           i {
             font-size: 4.5vw;
@@ -237,7 +230,7 @@
       .groups {
         .input-group {
           position: relative;
-          width: 47.5%;
+          width: 100%;
           margin: 15px 0 10px 0;
 
           input {

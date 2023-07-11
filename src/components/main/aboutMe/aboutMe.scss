@@ -6,6 +6,7 @@
 
   .dynamic-flex {
     display: flex;
+    flex-direction: column;
 
     .titles {
       display: flex;
@@ -37,7 +38,6 @@
       }
       .description {
         display: flex;
-        flex-direction: column;
         align-items: flex-start;
 
         h5 {
@@ -174,7 +174,7 @@
 
 @media screen and (min-width: 321px) and (max-width: 480px) and (orientation: portrait) {
   #aboutMe {
-    height: auto;
+    min-height: 100vh;
     width: 100%;
 
     .container {
@@ -183,10 +183,8 @@
     }
     .dynamic-flex {
       height: auto;
-      flex-direction: column;
 
       .titles {
-        flex-direction: column;
         margin-bottom: 7.5%;
 
         .title-gradient {
@@ -213,7 +211,6 @@
 
           h5 {
             font-size: 5vw;
-            font-weight: 800;
             padding-right: 10px;
             margin-bottom: 15px;
           }
@@ -226,7 +223,6 @@
             font-size: 1rem;
             padding: 15px 10px;
             border-radius: 3px;
-            font-weight: 600;
           }
         }
       }

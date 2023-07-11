@@ -1,7 +1,7 @@
 @import 'src/sass/common';
 
 #header {
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -15,8 +15,9 @@
 
 @media screen and (min-width: 321px) and (max-width: 480px) and (orientation: portrait) {
   #header {
-    height: auto;
-    align-items: flex-start;
+    height: 100vh;
+    align-items: flex-end;
+    justify-content: flex-end;
   }
 }
 

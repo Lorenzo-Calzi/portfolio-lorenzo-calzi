@@ -5,6 +5,16 @@ function Navbar(props) {
     const flag = props.language ? "/assets/img/bandiera-regno-unito.jpg" : "/assets/img/bandiera-italia.png"
     const configArray = props.configArray.header.navbar
 
+    const toggleNavbar = () => {
+        props.handlerLoading({
+            background: true,
+            bar: false,
+            modal: false,
+            navbar: true
+        })
+        document.body.style.overflow = "hidden"
+    }
+
     return (
         <div id="navbar" className={props.theme ? "dark" : "light"}>
             <div className="container flex-row jc-between">
@@ -16,92 +26,28 @@ function Navbar(props) {
                     <ul>
                         {
                             props.language ? (
-                                    configArray.listItems.ita.map((value, index) => {
-                                        if(index === 0) {
-                                            return (
-                                                <li key={value} className={`header ${props.theme ? "li-active-dark" : "li-active-light"}`}>
-                                                    <a href="#header">{value}</a>
-                                                </li>
-                                            )
-                                        } else if (index === 1) {
-                                            return (
-                                                <li key={value} className={`aboutMe`}>
-                                                    <a href="#aboutMe">{value}</a>
-                                                </li>
-                                            )
-                                        } else if (index === 2) {
-                                            return (
-                                                <li key={value} className={`skills`}>
-                                                    <a href="#skills">{value}</a>
-                                                </li>
-                                            )
-                                        } else if (index === 3) {
-                                            return (
-                                                <li key={value} className={`projects`}>
-                                                    <a href="#projects">{value}</a>
-                                                </li>
-                                            )
-                                        } else if (index === 4) {
-                                            return (
-                                                <li key={value} className={`contactMe`}>
-                                                    <a href="#contactMe">{value}</a>
-                                                </li>
-                                            )
-                                        } else {
-                                            return (
-                                                <li key={value} className={`list-item`}>
-                                                    <a href={`#${value}`}>{value}</a>
-                                                </li>
-                                            )
-                                        }
-                                    })
-                                ) : (
-                                    configArray.listItems.eng.map((value, index) => {
-                                        if(index === 0) {
-                                            return (
-                                                <li key={value} className={`header ${props.theme ? "li-active-dark" : "li-active-light"}`}>
-                                                    <a href="#header">{value}</a>
-                                                </li>
-                                            )
-                                        } else if (index === 1) {
-                                            return (
-                                                <li key={value} className={`aboutMe`}>
-                                                    <a href="#aboutMe">{value}</a>
-                                                </li>
-                                            )
-                                        } else if (index === 2) {
-                                            return (
-                                                <li key={value} className={`skills`}>
-                                                    <a href="#skills">{value}</a>
-                                                </li>
-                                            )
-                                        } else if (index === 3) {
-                                            return (
-                                                <li key={value} className={`projects`}>
-                                                    <a href="#projects">{value}</a>
-                                                </li>
-                                            )
-                                        } else if (index === 4) {
-                                            return (
-                                                <li key={value} className={`contactMe`}>
-                                                    <a href="#contactMe">{value}</a>
-                                                </li>
-                                            )
-                                        } else {
-                                            return (
-                                                <li key={value} className={`list-item`}>
-                                                    <a href={`#${value}`}>{value}</a>
-                                                </li>
-                                            )
-                                        }
-                                    })
-                                )
+                                configArray.listItems.ita.map((item) => (
+                                    <li key={item.value} className={`${item.href} ${item.href === props.currentSection ? 'li-active-light' : ''}`} onClick={() => props.handlerCurrentSection(item.href)}>
+                                        <a href={`#${item.href}`}>{item.value}</a>
+                                    </li>
+                                ))
+                            ) : (
+                                configArray.listItems.eng.map((item) => (
+                                    <li key={item.value} className={`${item.href} ${item.href === props.currentSection ? 'li-active-light' : ''}`} onClick={() => props.handlerCurrentSection(item.href)}>
+                                        <a href={`#${item.href}`}>{item.value}</a>
+                                    </li>
+                                ))
+                            )
                         }
 
                         {/*<li className="language" onClick={props.onChangeLanguage}*/}
                         {/*    style={{backgroundImage: `url(${process.env.PUBLIC_URL + flag})`}}>*/}
                         {/*</li>*/}
                     </ul>
+
+                    <div className="menu" onClick={toggleNavbar}>
+                        <i className="fa-solid fa-bars"></i>
+                    </div>
                 </div>
             </div>
         </div>

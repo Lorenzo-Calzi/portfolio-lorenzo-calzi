@@ -6,13 +6,8 @@
   position: relative;
 
   #theme {
-    width: 45px;
-    height: 45px;
     position: fixed;
     bottom: 81%;
-    right: 2%;
-    margin: 0;
-    border-radius: 50%;
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -34,13 +29,8 @@
     }
   }
   #to-the-top {
-    width: 45px;
-    height: 45px;
     position: fixed;
     top: 91%;
-    right: 2%;
-    margin: 0;
-    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -70,15 +60,23 @@
 }
 
 @media screen and (min-width: 321px) and (max-width: 480px) and (orientation: portrait) {
-  .theme {
-    i {
-      font-size: 5vw;
-    }
+  #theme {
+    width: 40px;
+    height: 40px;
+    right: 0;
+    margin: 0;
+    border-radius: 3px 0 0 3px;
+    background-color: $lightPurple;
+    box-shadow: none;
   }
-  .to-the-top {
-    i {
-      font-size: 5vw;
-    }
+  #to-the-top {
+    width: 40px;
+    height: 40px;
+    right: 0;
+    margin: 0;
+    border-radius: 3px 0 0 3px;
+    background-color: $lightPurple;
+    box-shadow: none;
   }
 }
 
@@ -174,12 +172,55 @@
 }
 
 @media screen and (min-width: 1501px) and (max-width: 2000px) {
-  .theme {
+  #theme {
+    width: 45px;
+    height: 45px;
+    position: fixed;
+    bottom: 81%;
+    right: 2%;
+    margin: 0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
     i {
       font-size: 1vw;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: all 0.3s ease-in-out;
+    }
+    .opacity {
+      transition: all 0.3s ease-in-out;
+      opacity: 0;
     }
   }
-  .to-the-top {
+  #to-the-top {
+    width: 45px;
+    height: 45px;
+    position: fixed;
+    top: 91%;
+    right: 2%;
+    margin: 0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+
+    &:hover {
+      color: $purple;
+      transform: scale(1.1);
+    }
+
     i {
       font-size: 1vw;
     }

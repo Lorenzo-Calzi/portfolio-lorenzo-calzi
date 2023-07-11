@@ -11,7 +11,6 @@
     justify-content:  space-evenly;
 
     .titles {
-      max-height: 25%;
       display: flex;
       flex-direction: column;
       align-self: center;
@@ -19,21 +18,17 @@
 
       .title-gradient {
         text-align: center;
-        font-size: 4.5rem;
         font-weight: 800;
         background: linear-gradient(to top, transparent 0%, $grey 70%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         opacity: 0.1;
-        line-height: 70px;
       }
       .title-solid {
         text-align: center;
-        font-size: 3.5rem;
         font-weight: 700;
         position: relative;
         margin: 0;
-        line-height: 35px;
       }
     }
 
@@ -45,12 +40,10 @@
 
       .education, .skills, .experience {
         .subtitle {
-
           h3 {
             font-weight: 500;
             background-color: $purple;
             color: white;
-            width: fit-content;
           }
         }
         .cards {
@@ -63,7 +56,6 @@
           justify-content: flex-start;
           box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
           backdrop-filter: blur(7.9px);
-
 
           &::-webkit-scrollbar-track,
           &::-webkit-scrollbar-thumb {
@@ -130,7 +122,7 @@
 
 @media screen and (min-width: 321px) and (max-width: 480px) and (orientation: portrait) {
   #skills {
-    height: auto;
+    min-height: 100vh;
     width: 100%;
 
     .container {
@@ -138,11 +130,9 @@
       margin: 0 auto 7.5% auto;
     }
     .dynamic-flex {
-      flex-direction: column;
       height: auto;
 
       .titles {
-        flex-direction: column;
         margin-bottom: 7.5%;
 
         .title-gradient {
@@ -176,7 +166,6 @@
             }
           }
           .cards {
-            width: 100%;
             height: auto;
             border-radius: 3px;
             padding: 15px;
@@ -187,7 +176,6 @@
             }
 
             .box {
-              width: 100%;
               border-radius: 3px;
               padding: 15px;
               margin-bottom: 15px;
@@ -200,15 +188,7 @@
                 margin-top: 5px;
               }
               .information {
-                width: 100%;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-
                 .icons {
-                  display: flex;
-                  align-items: center;
-
                   i {
                     margin-left: 10px;
                   }

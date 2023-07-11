@@ -1,6 +1,7 @@
 @import 'src/sass/common';
 
 #projects {
+  width: 100%;
   display: flex;
   flex-direction: column;
 
@@ -42,7 +43,6 @@
 @media screen and (min-width: 321px) and (max-width: 480px) and (orientation: portrait) {
   #projects {
     height: auto;
-    width: 100%;
 
     .container {
       width: 85%;
@@ -50,10 +50,8 @@
     }
     .dynamic-flex {
       height: auto;
-      flex-direction: column;
 
       .titles {
-        flex-direction: column;
         margin-bottom: 7.5%;
 
         .title-gradient {

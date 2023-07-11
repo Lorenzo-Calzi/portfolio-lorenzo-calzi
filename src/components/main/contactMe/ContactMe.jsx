@@ -11,7 +11,7 @@ function ContactMe(props) {
                     <h2 className="title-solid">Contatti</h2>
                 </div>
 
-                <Form handler={props.handler}/>
+                <Form handlerLoading={props.handlerLoading}/>
             </div>
         </section>
     )

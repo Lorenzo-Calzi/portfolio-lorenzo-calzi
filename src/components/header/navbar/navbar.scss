@@ -17,7 +17,6 @@
     align-items: center;
 
     span {
-      font-size: 1.2vw;
       font-weight: 500;
     }
   }
@@ -53,6 +52,9 @@
         right: 0;
         margin: 0 10px 0 0;
       }
+    }
+    .menu {
+      display: none;
     }
   }
 }
@@ -91,31 +93,28 @@
 
 @media screen and (min-width: 321px) and (max-width: 480px) and (orientation: portrait) {
   #navbar {
-    display: none;
-    bottom: 0;
-    top: inherit;
+    top: 0;
+    left: 0;
+    right: 0;
     height: 10%;
-    //box-shadow: rgba(33, 35, 38, 0.1) 0 -10px 10px -10px ;
 
     .container {
       width: 90%;
 
       .left {
         span {
-          font-size: 5vw;
+          font-size: 5vw !important;
           font-weight: 500;
         }
       }
       .right {
         ul {
-          li {
-            display: none;
-          }
-          .language {
-            height: 5vw;
-            width: 5vw;
-            margin-left: 10vw;
-          }
+          display: none;
+        }
+        .menu {
+          display: flex;
+          cursor: pointer;
+          padding: 10px 0 10px 10px;
         }
       }
     }
