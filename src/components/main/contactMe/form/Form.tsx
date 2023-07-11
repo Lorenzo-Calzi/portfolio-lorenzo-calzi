@@ -71,7 +71,7 @@ function Form(props) {
 
     const nameRegex = new RegExp('^[\\w\'\\-,.][^0-9_!¡?÷?¿/\\\\+=@#$%ˆ&*(){}|~<>;:[\\]]{2,20}$')
     const emailRegex = new RegExp('^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$');
-    const phoneRegex = new RegExp('^(([+]|00)39)?((3[1-6][0-9]))(\\d{7})$')
+    const phoneRegex = new RegExp('^((00|\\+)39[\\. ]??)??3\\d{2}[\\. ]??\\d{6,7}$')
 
     const onChange = (e) => {
         setFormValue({...formValue, [e.target.name]: e.target.value})
