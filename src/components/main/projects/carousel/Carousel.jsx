@@ -1,4 +1,4 @@
-import React, {useEffect, useRef} from "react";
+import React, {useEffect, useLayoutEffect, useRef} from "react";
 
 function Carousel(props) {
     const data = [
@@ -26,7 +26,7 @@ function Carousel(props) {
 
     let slide = '';
     let slideTotal = data.length - 1;
-    let slideCurrent = -1;
+    let slideCurrent = 0;
 
     const carousel = useRef(null);
 
@@ -65,6 +65,10 @@ function Carousel(props) {
         let afterSlide;
         let activeSlide;
 
+        if(!slide) {
+            slide = document.querySelectorAll('.slider-single')
+        }
+
         if (type === 'initial') {
             slideCurrent = 0;
             beforeSlide = slide[slideTotal];
@@ -86,7 +90,6 @@ function Carousel(props) {
         else if (type === 'right') {
             if (slideCurrent < slideTotal) {
                 slideCurrent++;
-
             } else {
                 slideCurrent = 0;
             }
@@ -104,6 +107,7 @@ function Carousel(props) {
             } else {
                 afterSlide = slide[0];
             }
+
             slide.forEach((elem) => {
                 let thisSlide = elem;
                 if (thisSlide.classList.contains('before-hidden')) {
