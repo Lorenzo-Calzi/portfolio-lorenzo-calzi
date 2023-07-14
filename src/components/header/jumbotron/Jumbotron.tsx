@@ -22,20 +22,20 @@ function Jumbotron(props) {
     useEffect(() => {
         setImageHeight('DEFAULT')
 
-        const typed = new Typed(el.current, {
-            strings: props.language ? configArray.subtitle.ita : configArray.subtitle.eng,
-            startDelay: 300,
-            typeSpeed: 100,
-            backSpeed: 100,
-            backDelay: 1000,
-            loop: true
-        });
+        // const typed = new Typed(el.current, {
+        //     strings: props.language ? configArray.subtitle.ita : configArray.subtitle.eng,
+        //     startDelay: 300,
+        //     typeSpeed: 100,
+        //     backSpeed: 100,
+        //     backDelay: 1000,
+        //     loop: true
+        // });
 
         window.addEventListener("resize", () => setImageHeight)
 
-        return () => {
-            typed.destroy();
-        };
+        // return () => {
+        //     typed.destroy();
+        // };
     }, [props.language])
 
     return (
@@ -58,7 +58,9 @@ function Jumbotron(props) {
                 <div className="content">
                     <div className="description">
                         <h1 className={`title ${props.theme ? "white" : "black"}`}>{props.language ? configArray.title.ita : configArray.title.eng}</h1>
-                        <h3 className={`subtitle ${props.theme ? "white" : "grey"}`}><span ref={el}></span></h3>
+                        {/*<h3 className={`subtitle ${props.theme ? "white" : "grey"}`}><span ref={el}></span></h3>*/}
+                        <h3 className={`subtitle ${props.theme ? "white" : "grey"}`}><span>Appassionato di Tecnologia</span></h3>
+
                         <p className={`paragraph ${props.theme ? "white" : "grey"}`}>{props.language ? configArray.paragraph.ita : configArray.paragraph.eng}</p>
                         <a className="contact button-shadow" href="#contactMe">
                             {props.language ? configArray.button.ita : configArray.button.eng} <i className="fa-solid fa-paper-plane"></i>

@@ -120,20 +120,20 @@ function Homepage() {
                 document.getElementById("theme").style.bottom = "86%";
                 document.getElementById("to-the-top").style.opacity = "1";
 
-                document.querySelector<HTMLElement>(".left span").style.fontSize = "1vw";
+                // document.querySelector<HTMLElement>(".left span").style.fontSize = "1vw";
 
                 navLi.forEach((li: HTMLElement) => {
-                    li.style.fontSize = "0.8vw";
+                    // li.style.fontSize = "0.8vw";
                 });
             } else {
                 document.getElementById("navbar").style.height = "10%";
                 document.getElementById("theme").style.bottom = "81%";
                 document.getElementById("to-the-top").style.opacity = "0";
 
-                document.querySelector<HTMLElement>(".left span").style.fontSize = "1.2vw";
+                // document.querySelector<HTMLElement>(".left span").style.fontSize = "1.2vw";
 
                 navLi.forEach((li: HTMLElement) => {
-                    li.style.fontSize = "1vw";
+                    // li.style.fontSize = "1vw";
                 });
             }
 

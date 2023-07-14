@@ -61,30 +61,28 @@
 
 @media screen and (max-width: 320px) and (orientation: portrait) {
   #navbar {
-    bottom: 0;
-    top: inherit;
+    top: 0;
+    left: 0;
+    right: 0;
     height: 10%;
-    //box-shadow: rgba(33, 35, 38, 0.1) 0 -10px 10px -10px ;
 
     .container {
-      width: 90%;
+      width: 85%;
 
       .left {
         span {
-          font-size: 5vw;
+          font-size: clamp(1.0625rem, 0.684rem + 1.8868vw, 1.25rem);
           font-weight: 500;
         }
       }
       .right {
         ul {
-          li {
-            display: none;
-          }
-          .language {
-            height: 5vw;
-            width: 5vw;
-            margin-left: 10vw;
-          }
+          display: none;
+        }
+        .menu {
+          display: flex;
+          cursor: pointer;
+          padding: 10px 0 10px 10px;
         }
       }
     }
@@ -103,7 +101,7 @@
 
       .left {
         span {
-          font-size: 5vw !important;
+          font-size: clamp(1.0625rem, 0.684rem + 1.8868vw, 1.25rem);
           font-weight: 500;
         }
       }
@@ -123,30 +121,28 @@
 
 @media screen and (min-width: 481px) and (max-width: 768px) and (orientation: portrait) {
   #navbar {
-    bottom: 0;
-    top: inherit;
+    top: 0;
+    left: 0;
+    right: 0;
     height: 10%;
-    //box-shadow: rgba(33, 35, 38, 0.1) 0 -10px 10px -10px ;
 
     .container {
-      width: 80%;
+      width: 85%;
 
       .left {
         span {
-          font-size: 4vw;
+          font-size: clamp(1.0625rem, 0.684rem + 1.8868vw, 1.25rem);
           font-weight: 500;
         }
       }
       .right {
         ul {
-          li {
-            display: none;
-          }
-          .language {
-            height: 5vw;
-            width: 5vw;
-            margin-left: 10vw;
-          }
+          display: none;
+        }
+        .menu {
+          display: flex;
+          cursor: pointer;
+          padding: 10px 0 10px 10px;
         }
       }
     }
@@ -155,30 +151,28 @@
 
 @media screen and (min-width: 769px) and (max-width: 1024px) and (orientation: portrait) {
   #navbar {
-    bottom: 0;
-    top: inherit;
+    top: 0;
+    left: 0;
+    right: 0;
     height: 10%;
-    //box-shadow: rgba(33, 35, 38, 0.1) 0 -10px 10px -10px ;
 
     .container {
-      width: 80%;
+      width: 85%;
 
       .left {
         span {
-          font-size: 4vw;
+          font-size: clamp(1.0625rem, 0.684rem + 1.8868vw, 1.25rem);
           font-weight: 500;
         }
       }
       .right {
         ul {
-          li {
-            display: none;
-          }
-          .language {
-            height: 5vw;
-            width: 5vw;
-            margin-left: 10vw;
-          }
+          display: none;
+        }
+        .menu {
+          display: flex;
+          cursor: pointer;
+          padding: 10px 0 10px 10px;
         }
       }
     }
@@ -190,25 +184,22 @@
     top: 0;
     left: 0;
     right: 0;
-    height: 15%;
-    //box-shadow: rgba(33, 35, 38, 0.1) 0 10px 10px -10px;
+    height: 10%;
 
     .left {
       span {
-        font-size: 1.5vw;
+        //font-size: 1.2vw;
       }
     }
     .right {
       ul {
-        display: flex;
-        align-items: center;
         li {
-          font-size: 1.4vw;
-          margin: 0 10px;
+          //font-size: 1vw;
+          margin: 0 30px;
         }
         .language {
-          height: 1.4vw;
-          width: 1.4vw;
+          height: 20px;
+          width: 20px;
         }
       }
     }
@@ -220,25 +211,22 @@
     top: 0;
     left: 0;
     right: 0;
-    height: 15%;
-    //box-shadow: rgba(33, 35, 38, 0.1) 0 10px 10px -10px;
+    height: 10%;
 
     .left {
       span {
-        font-size: 1.5vw;
+        //font-size: 1.2vw;
       }
     }
     .right {
       ul {
-        display: flex;
-        align-items: center;
         li {
-          font-size: 1.4vw;
-          margin: 0 15px;
+          //font-size: 1vw;
+          margin: 0 30px;
         }
         .language {
-          height: 1.4vw;
-          width: 1.4vw;
+          height: 20px;
+          width: 20px;
         }
       }
     }
@@ -251,24 +239,21 @@
     left: 0;
     right: 0;
     height: 10%;
-    //box-shadow: rgba(33, 35, 38, 0.1) 0 10px 10px -10px;
 
     .left {
       span {
-        font-size: 1.5vw;
+        //font-size: 1.2vw;
       }
     }
     .right {
       ul {
-        display: flex;
-        align-items: center;
         li {
-          font-size: 1.4vw;
-          margin: 0 20px;
+          //font-size: 1vw;
+          margin: 0 30px;
         }
         .language {
-          height: 1.4vw;
-          width: 1.4vw;
+          height: 20px;
+          width: 20px;
         }
       }
     }
@@ -277,30 +262,28 @@
 
 @media screen and (min-width: 1025px) and (max-width: 1200px) and (orientation: portrait) {
   #navbar {
-    bottom: 0;
-    top: inherit;
+    top: 0;
+    left: 0;
+    right: 0;
     height: 10%;
-    //box-shadow: rgba(33, 35, 38, 0.1) 0 -10px 10px -10px ;
 
     .container {
-      width: 80%;
+      width: 85%;
 
       .left {
         span {
-          font-size: 4vw;
+          font-size: clamp(1.0625rem, 0.684rem + 1.8868vw, 1.25rem);
           font-weight: 500;
         }
       }
       .right {
         ul {
-          li {
-            display: none;
-          }
-          .language {
-            height: 5vw;
-            width: 5vw;
-            margin-left: 10vw;
-          }
+          display: none;
+        }
+        .menu {
+          display: flex;
+          cursor: pointer;
+          padding: 10px 0 10px 10px;
         }
       }
     }
@@ -313,22 +296,21 @@
     left: 0;
     right: 0;
     height: 10%;
-    //box-shadow: rgba(33, 35, 38, 0.1) 0 10px 10px -10px;
 
     .left {
       span {
-        font-size: 1.6vw;
+        //font-size: 1.2vw;
       }
     }
     .right {
       ul {
         li {
-          font-size: 1.4vw;
-          margin: 0 25px;
+          //font-size: 1vw;
+          margin: 0 30px;
         }
         .language {
-          height: 1.4vw;
-          width: 1.4vw;
+          height: 20px;
+          width: 20px;
         }
       }
     }
@@ -341,7 +323,6 @@
     left: 0;
     right: 0;
     height: 10%;
-    //box-shadow: rgba(33, 35, 38, 0.1) 0 10px 10px -10px;
 
     .left {
       span {
@@ -369,22 +350,21 @@
     left: 0;
     right: 0;
     height: 10%;
-    //box-shadow: rgba(33, 35, 38, 0.1) 0 10px 10px -10px;
 
     .left {
       span {
-        font-size: 1.2vw;
+        //font-size: 1.2vw;
       }
     }
     .right {
       ul {
         li {
-          font-size: 1vw;
+          //font-size: 1vw;
           margin: 0 30px;
         }
         .language {
-          height: 1.4vw;
-          width: 1.4vw;
+          height: 20px;
+          width: 20px;
         }
       }
     }

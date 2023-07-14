@@ -4,6 +4,9 @@
   height: auto;
   overflow: hidden;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 
   #theme {
     position: fixed;
@@ -45,17 +48,26 @@
   }
 }
 
-
 @media screen and (max-width: 320px) and (orientation: portrait) {
-  .theme {
-    i {
-      font-size: 5vw;
-    }
+  #theme {
+    width: 35px;
+    height: 35px;
+    right: 0;
+    margin: 0;
+    border-radius: 3px 0 0 3px;
+    background-color: $lightPurple;
+    box-shadow: none;
+    font-size: 14px;
   }
-  .to-the-top {
-    i {
-      font-size: 5vw;
-    }
+  #to-the-top {
+    width: 35px;
+    height: 35px;
+    right: 0;
+    margin: 0;
+    border-radius: 3px 0 0 3px;
+    background-color: $lightPurple;
+    box-shadow: none;
+    font-size: 14px;
   }
 }
 
@@ -68,6 +80,7 @@
     border-radius: 3px 0 0 3px;
     background-color: $lightPurple;
     box-shadow: none;
+    font-size: 15px;
   }
   #to-the-top {
     width: 40px;
@@ -77,165 +90,255 @@
     border-radius: 3px 0 0 3px;
     background-color: $lightPurple;
     box-shadow: none;
+    font-size: 15px;
   }
 }
 
 @media screen and (min-width: 481px) and (max-width: 768px) and (orientation: portrait) {
-  .theme {
-    i {
-      font-size: 5vw;
-    }
+  #theme {
+    width: 50px;
+    height: 50px;
+    right: 0;
+    margin: 0;
+    border-radius: 3px 0 0 3px;
+    background-color: $lightPurple;
+    box-shadow: none;
+    font-size: 18px;
   }
-  .to-the-top {
-    i {
-      font-size: 5vw;
-    }
+  #to-the-top {
+    width: 50px;
+    height: 50px;
+    right: 0;
+    margin: 0;
+    border-radius: 3px 0 0 3px;
+    background-color: $lightPurple;
+    box-shadow: none;
+    font-size: 18px;
   }
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) and (orientation: portrait) {
-  .theme {
-    i {
-      font-size: 5vw;
-    }
+  #theme {
+    width: 75px;
+    height: 75px;
+    right: 0;
+    margin: 0;
+    border-radius: 5px 0 0 5px;
+    background-color: $lightPurple;
+    box-shadow: none;
+    font-size: 23px;
   }
-  .to-the-top {
-    i {
-      font-size: 5vw;
-    }
+  #to-the-top {
+    width: 75px;
+    height: 75px;
+    right: 0;
+    margin: 0;
+    border-radius: 5px 0 0 5px;
+    background-color: $lightPurple;
+    box-shadow: none;
+    font-size: 23px;
   }
 }
 
 @media screen and (min-width: 320px) and (max-width: 655px) and (orientation: landscape) {
-  .theme {
+  #theme {
+    width: 30px;
+    height: 30px;
+    bottom: 81%;
+    right: 2%;
+    margin: 0;
+    border-radius: 50%;
+
     i {
-      font-size: 1.4vw;
+      font-size: 10px;
+      top: 50%;
+      left: 50%;
     }
   }
-  .to-the-top {
+  #to-the-top {
+    width: 30px;
+    height: 30px;
+    top: 91%;
+    right: 2%;
+    margin: 0;
+    border-radius: 50%;
+
     i {
-      font-size: 1.4vw;
+      font-size: 10px;
     }
   }
 }
 
 @media screen and (min-width: 656px) and (max-width: 1024px) and (orientation: landscape) {
-  .theme {
+  #theme {
+    width: 35px;
+    height: 35px;
+    bottom: 81%;
+    right: 2%;
+    margin: 0;
+    border-radius: 50%;
+
     i {
-      font-size: 1.4vw;
+      font-size: 12px;
+      top: 50%;
+      left: 50%;
     }
   }
-  .to-the-top {
+  #to-the-top {
+    width: 35px;
+    height: 35px;
+    top: 91%;
+    right: 2%;
+    margin: 0;
+    border-radius: 50%;
+
     i {
-      font-size: 1.4vw;
+      font-size: 12px;
     }
   }
 }
 
 @media screen and (min-width: 1025px) and (max-width: 1200px) and (orientation: landscape) {
-  .theme {
+  #theme {
+    width: 45px;
+    height: 45px;
+    bottom: 81%;
+    right: 2%;
+    margin: 0;
+    border-radius: 50%;
+
     i {
-      font-size: 1.4vw;
+      font-size: 14px;
+      top: 50%;
+      left: 50%;
     }
   }
-  .to-the-top {
+  #to-the-top {
+    width: 45px;
+    height: 45px;
+    top: 91%;
+    right: 2%;
+    margin: 0;
+    border-radius: 50%;
+
     i {
-      font-size: 1.4vw;
+      font-size: 14px;
     }
   }
 }
 
 @media screen and (min-width: 1025px) and (max-width: 1200px) and (orientation: portrait) {
-  .theme {
-    i {
-      font-size: 5vw;
-    }
+  #theme {
+    width: 75px;
+    height: 75px;
+    right: 0;
+    margin: 0;
+    border-radius: 5px 0 0 5px;
+    background-color: $lightPurple;
+    box-shadow: none;
+    font-size: 23px;
   }
-  .to-the-top {
-    i {
-      font-size: 5vw;
-    }
+  #to-the-top {
+    width: 75px;
+    height: 75px;
+    right: 0;
+    margin: 0;
+    border-radius: 5px 0 0 5px;
+    background-color: $lightPurple;
+    box-shadow: none;
+    font-size: 23px;
   }
 }
 
 @media screen and (min-width: 1201px) and (max-width: 1500px) {
-  .theme {
+  #theme {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    bottom: 81%;
+    right: 2%;
+    margin: 0;
+    border-radius: 50%;
+
     i {
-      font-size: 1.4vw;
+      font-size: 18px;
+      top: 50%;
+      left: 50%;
     }
   }
-  .to-the-top {
+  #to-the-top {
+    width: 50px;
+    height: 50px;
+    top: 91%;
+    right: 2%;
+    margin: 0;
+    border-radius: 50%;
+    opacity: 0;
+
     i {
-      font-size: 1.4vw;
+      font-size: 18px;
     }
   }
 }
 
 @media screen and (min-width: 1501px) and (max-width: 2000px) {
   #theme {
-    width: 45px;
-    height: 45px;
+    width: 50px;
+    height: 50px;
     position: fixed;
     bottom: 81%;
     right: 2%;
     margin: 0;
     border-radius: 50%;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-
-    &:hover {
-      transform: scale(1.1);
-    }
 
     i {
-      font-size: 1vw;
-      position: absolute;
+      font-size: 18px;
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -50%);
-      transition: all 0.3s ease-in-out;
-    }
-    .opacity {
-      transition: all 0.3s ease-in-out;
-      opacity: 0;
     }
   }
   #to-the-top {
-    width: 45px;
-    height: 45px;
-    position: fixed;
+    width: 50px;
+    height: 50px;
     top: 91%;
     right: 2%;
     margin: 0;
     border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
     opacity: 0;
 
-    &:hover {
-      color: $purple;
-      transform: scale(1.1);
-    }
-
     i {
-      font-size: 1vw;
+      font-size: 18px;
     }
   }
 }
 
 @media screen and (min-width: 2001px) {
-  .theme {
+  #theme {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    bottom: 81%;
+    right: 2%;
+    margin: 0;
+    border-radius: 50%;
+
     i {
-      font-size: 1.4vw;
+      font-size: 18px;
+      top: 50%;
+      left: 50%;
     }
   }
-  .to-the-top {
+  #to-the-top {
+    width: 50px;
+    height: 50px;
+    top: 91%;
+    right: 2%;
+    margin: 0;
+    border-radius: 50%;
+    opacity: 0;
+
     i {
-      font-size: 1.4vw;
+      font-size: 18px;
     }
   }
 }

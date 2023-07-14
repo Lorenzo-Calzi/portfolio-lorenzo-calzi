@@ -10,8 +10,9 @@
 
   .copyright {
     text-align: center;
-    i {
-    }
+    line-height: 100%;
+
+    i {}
     a {
       color: $purple;
       font-weight: 600;
@@ -21,19 +22,38 @@
 
 
 @media screen and (max-width: 320px) and (orientation: portrait) {
-
-}
-
-@media screen and (min-width: 321px) and (max-width: 480px) and (orientation: portrait) {
   #footer {
-    padding-bottom: 20px;
+    padding-bottom: 30px;
 
     .container {
       width: 85%;
     }
     .copyright {
       span {
-        font-size: 3vw;
+        font-size: clamp(0.65rem, -0.1321rem + 4vw, 1rem);
+
+        i {
+          margin: 0 5px;
+        }
+        a {
+          margin: 0 5px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 321px) and (max-width: 480px) and (orientation: portrait) {
+  #footer {
+    padding-bottom: 30px;
+
+    .container {
+      width: 85%;
+    }
+    .copyright {
+      span {
+        font-size: clamp(0.625rem, -0.1321rem + 4vw, 1rem);
 
         i {
           margin: 0 5px;
@@ -48,58 +68,208 @@
 }
 
 @media screen and (min-width: 481px) and (max-width: 768px) and (orientation: portrait) {
+  #footer {
+    padding-bottom: 30px;
 
+    .container {
+      width: 85%;
+    }
+    .copyright {
+      span {
+        font-size: clamp(0.625rem, -0.1321rem + 4vw, 1.1rem);
+
+        i {
+          margin: 0 5px;
+        }
+        a {
+          margin: 0 5px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) and (orientation: portrait) {
+  #footer {
+    padding-bottom: 30px;
 
+    .container {
+      width: 85%;
+    }
+    .copyright {
+      span {
+        font-size: clamp(1.3125rem, 0.7471rem + 1.1765vw, 1.5rem);
+
+        i {
+          margin: 0 5px;
+        }
+        a {
+          margin: 0 5px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 320px) and (max-width: 655px) and (orientation: landscape) {
+  #footer {
+    padding-bottom: 30px;
 
+    .container {
+      width: 85%;
+    }
+    .copyright {
+      span {
+        font-size: 1.2vw;
+
+        i {
+          margin: 0 5px;
+        }
+        a {
+          margin: 0 5px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 656px) and (max-width: 1024px) and (orientation: landscape) {
+  #footer {
+    padding-bottom: 30px;
 
+    .container {
+      width: 85%;
+    }
+    .copyright {
+      span {
+        font-size: clamp(0.625rem, 0.4022rem + 0.5435vw, 0.75rem);
+
+        i {
+          margin: 0 5px;
+        }
+        a {
+          margin: 0 5px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 1025px) and (max-width: 1200px) and (orientation: landscape) {
+  #footer {
+    padding-bottom: 30px;
 
+    .container {
+      width: 85%;
+    }
+    .copyright {
+      span {
+        font-size: clamp(1.3125rem, 0.2143rem + 1.7143vw, 1.5rem);
+
+        i {
+          margin: 0 5px;
+        }
+        a {
+          margin: 0 5px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 1025px) and (max-width: 1200px) and (orientation: portrait) {
+  #footer {
+    padding-bottom: 30px;
 
+    .container {
+      width: 85%;
+    }
+    .copyright {
+      span {
+        font-size: clamp(1.3125rem, 0.7471rem + 1.1765vw, 1.5rem);
+
+        i {
+          margin: 0 5px;
+        }
+        a {
+          margin: 0 5px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 1201px) and (max-width: 1500px) {
+  #footer {
+    padding-bottom: 30px;
 
+    .container {
+      width: 85%;
+    }
+    .copyright {
+      span {
+        font-size: clamp(1.0625rem, 0.5604rem + 0.6689vw, 1.1875rem);
+
+        i {
+          margin: 0 5px;
+        }
+        a {
+          margin: 0 5px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 1501px) and (max-width: 2000px) {
   #footer {
-    height: auto;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
+    padding-bottom: 30px;
 
+    .container {
+      width: 85%;
+    }
     .copyright {
-      padding: 20px;
+      span {
+        font-size: clamp(1.1875rem, 0.0595rem + 1.2024vw, 1.5625rem);
 
-      i {
-        margin: 0 5px;
-      }
-      a {
-        color: $purple;
-        margin: 0 5px;
-        font-weight: 600;
+        i {
+          margin: 0 5px;
+        }
+        a {
+          margin: 0 5px;
+          font-weight: 600;
+        }
       }
     }
   }
 }
 
 @media screen and (min-width: 2001px) {
+  #footer {
+    padding-bottom: 30px;
 
+    .container {
+      width: 85%;
+    }
+    .copyright {
+      span {
+        font-size: clamp(1.5em, 0.0595rem + 1.2024vw, 2rem);
+
+        i {
+          margin: 0 5px;
+        }
+        a {
+          margin: 0 5px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
 }

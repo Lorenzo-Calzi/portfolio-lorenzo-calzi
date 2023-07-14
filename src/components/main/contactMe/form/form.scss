@@ -23,6 +23,7 @@
       width: 100%;
       color: $darkPurple;
       font-weight: 700;
+      line-height: 100%;
     }
     .information {
       display: flex;
@@ -184,7 +185,114 @@
 }
 
 @media screen and (max-width: 320px) and (orientation: portrait) {
+  #form {
+    border-radius: 3px;
+    flex-direction: column;
+    gap: 20px;
 
+    .informations {
+      height: 100%;
+      width: 100%;
+      border-radius: 3px;
+      padding: 10px 25px;
+
+      .title {
+        padding: 10px 0;
+        font-size: clamp(0.85rem, -0.4505rem + 6.9182vw, 1.625rem);
+      }
+      .information {
+        margin: 10px 0;
+        border-radius: 3px;
+        gap: 20px;
+
+        .icon-container {
+          width: 20%;
+          aspect-ratio: 1/1;
+
+          i {
+            font-size: 15px;
+          }
+        }
+        span {
+          font-size: clamp(0.8rem, -0.0071rem + 3.7736vw, 1.125rem);
+          width: 80%;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+    }
+    .inputs {
+      width: 100%;
+      padding: 25px;
+      border-radius: 3px;
+
+      .groups {
+        gap: 25px;
+
+        .input-group, .textarea-group {
+          input, textarea {
+            font-size: clamp(0.8rem, -0.0071rem + 3.7736vw, 1.125rem);
+            padding: 10px;
+            border-radius: 3px;
+
+            &:focus ~ label {
+              top: -21px;
+              font-size: clamp(0.8rem, -0.0071rem + 3.7736vw, 1.125rem);
+            }
+          }
+          label {
+            font-size: clamp(0.65rem, -0.1321rem + 4vw, 1rem);
+            top: 8px;
+            left: 11px;
+          }
+          .upper {
+            top: -21px;
+            font-size: clamp(0.8rem, -0.0071rem + 3.7736vw, 1.125rem);
+          }
+          .error-container {
+            margin: 5px 5px 0 11px;
+
+            i {
+              font-size: clamp(0.65rem, -0.1321rem + 4vw, 1rem);
+            }
+            .error {
+              font-size: clamp(0.65rem, -0.1321rem + 4vw, 1rem);
+              margin-left: 5px;
+            }
+          }
+        }
+        .input-group {
+          position: relative;
+          width: 100%;
+
+          input {
+            height: 50px;
+          }
+        }
+        .textarea-group {
+          margin-bottom: 25px;
+
+          textarea {
+            height: 100px;
+          }
+        }
+      }
+      .submit {
+        font-size: clamp(0.8rem, -0.0071rem + 3.7736vw, 1.125rem);
+        height: 50px;
+        border-radius: 3px;
+
+        &:hover {
+          font-size: clamp(0.9rem, -0.0071rem + 3.8736vw, 1.225rem);
+        }
+      }
+    }
+    .divider {
+      width: 70%;
+      height: 5px;
+      border-radius: 3px;
+    }
+  }
 }
 
 @media screen and (min-width: 321px) and (max-width: 480px) and (orientation: portrait) {
@@ -197,11 +305,11 @@
       height: 100%;
       width: 100%;
       border-radius: 3px;
-      padding: 10px 20px;
+      padding: 10px 30px;
 
       .title {
         padding: 10px 0;
-        font-size: 5vw;
+        font-size: clamp(0.9375rem, -0.4505rem + 6.9182vw, 1.625rem);
       }
       .information {
         margin: 10px 0;
@@ -209,106 +317,84 @@
         gap: 20px;
 
         .icon-container {
-          width: 40px;
-          height: 40px;
+          width: 20%;
+          aspect-ratio: 1/1;
 
           i {
-            font-size: 4.5vw;
+            font-size: 18px;
           }
         }
         span {
-          font-size: 4vw;
-          font-weight: 500;
+          font-size: clamp(0.75rem, -0.0071rem + 3.7736vw, 1.125rem);
+          width: 80%;
+          overflow: hidden;
+          text-overflow: ellipsis;
         }
       }
     }
     .inputs {
       width: 100%;
-      padding: 10px 25px 25px 25px;
+      padding: 30px;
       border-radius: 3px;
 
       .groups {
-        .input-group {
-          position: relative;
-          width: 100%;
-          margin: 15px 0 10px 0;
+        gap: 30px;
 
-          input {
-            font-size: 4vw;
-            padding: 2%;
-            height: 70px;
+        .input-group, .textarea-group {
+          input, textarea {
+            font-size: clamp(0.75rem, -0.0071rem + 3.7736vw, 1.125rem);
+            padding: 10px;
             border-radius: 3px;
 
             &:focus ~ label {
-              top: -20px;
-              font-size: 3.5vw;
+              top: -25px;
+              font-size: clamp(0.75rem, -0.0071rem + 3.7736vw, 1.125rem);
             }
           }
           label {
-            font-size: 3vw;
-            top: 5px;
-            left: 3%;
+            font-size: clamp(0.625rem, -0.1321rem + 4vw, 1rem);
+            top: 8px;
+            left: 11px;
           }
           .upper {
-            top: -20px;
-            font-size: 3vw;
+            top: -25px;
+            font-size: clamp(0.75rem, -0.0071rem + 3.7736vw, 1.125rem);
           }
           .error-container {
-            margin: 5px 5px 0 3%;
+            margin: 5px 5px 0 11px;
 
             i {
-              font-size: 2.5vw;
+              font-size: clamp(0.625rem, -0.1321rem + 4vw, 1rem);
             }
             .error {
-              font-size: 2.5vw;
+              font-size: clamp(0.625rem, -0.1321rem + 4vw, 1rem);
               margin-left: 5px;
             }
           }
         }
+        .input-group {
+          position: relative;
+          width: 100%;
+
+          input {
+            height: 70px;
+          }
+        }
         .textarea-group {
-          margin: 15px 0 25px 0;
+          margin-bottom: 30px;
 
           textarea {
-            font-size: 3vw;
-            padding: 2% 1.5% 2% 1.5%;
-            height: 100px;
-            border-radius: 3px;
-
-            &:focus ~ label {
-              top: -20px;
-              font-size: 3vw;
-            }
-          }
-          label {
-            font-size: 3vw;
-            top: 5px;
-            left: 1.5%;
-          }
-          .upper {
-            top: -20px;
-            font-size: 3vw;
-          }
-          .error-container {
-            margin: 5px 5px 0 1.5%;
-
-            i {
-              font-size: 2.5vw;
-            }
-            .error {
-              font-size: 2.5vw;
-              margin-left: 5px;
-            }
+            height: 130px;
           }
         }
       }
       .submit {
-        font-size: 3.5vw;
-        padding: 10px 5%;
+        font-size: clamp(0.75rem, -0.0071rem + 3.7736vw, 1.125rem);
         height: 70px;
         border-radius: 3px;
 
         &:hover {
-          font-size: 4vw;
+          font-size: clamp(0.75rem, -0.0071rem + 3.7736vw, 1.125rem);
         }
       }
     }
@@ -321,276 +407,1001 @@
 }
 
 @media screen and (min-width: 481px) and (max-width: 768px) and (orientation: portrait) {
+  #form {
+    border-radius: 3px;
+    flex-direction: column;
+    gap: 40px;
 
+    .informations {
+      height: 100%;
+      width: 100%;
+      border-radius: 3px;
+      padding: 10px 35px;
+
+      .title {
+        padding: 10px 0;
+        font-size: clamp(0.9375rem, -0.4505rem + 6.9182vw, 1.625rem);
+      }
+      .information {
+        margin: 10px 0;
+        border-radius: 3px;
+        gap: 20px;
+
+        .icon-container {
+          width: 60px;
+          height: 60px;
+
+          i {
+            font-size: 22px;
+          }
+        }
+        span {
+          font-size: clamp(0.75rem, -0.0071rem + 3.7736vw, 1.2rem);
+          width: 80%;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+    }
+    .inputs {
+      width: 100%;
+      padding: 35px;
+      border-radius: 3px;
+
+      .groups {
+        gap: 35px;
+
+        .input-group, .textarea-group {
+          input, textarea {
+            font-size: clamp(0.75rem, -0.0071rem + 3.7736vw, 1.2rem);
+            padding: 10px;
+            border-radius: 3px;
+
+            &:focus ~ label {
+              top: -30px;
+              font-size: clamp(0.75rem, -0.0071rem + 3.7736vw, 1.2rem);
+            }
+          }
+          label {
+            font-size: clamp(0.625rem, -0.1321rem + 4vw, 1.1rem);
+            top: 8px;
+            left: 11px;
+          }
+          .upper {
+            top: -30px;
+            font-size: clamp(0.75rem, -0.0071rem + 3.7736vw, 1.2rem);
+          }
+          .error-container {
+            margin: 5px 5px 0 11px;
+
+            i {
+              font-size: clamp(0.625rem, -0.1321rem + 4vw, 1.1rem);
+            }
+            .error {
+              font-size: clamp(0.625rem, -0.1321rem + 4vw, 1.1rem);
+              margin-left: 5px;
+            }
+          }
+        }
+        .input-group {
+          position: relative;
+          width: 100%;
+
+          input {
+            height: 100px;
+          }
+        }
+        .textarea-group {
+          margin-bottom: 35px;
+
+          textarea {
+            height: 160px;
+          }
+        }
+      }
+      .submit {
+        font-size: clamp(0.75rem, -0.0071rem + 3.7736vw, 1.2rem);
+        height: 100px;
+        border-radius: 3px;
+
+        &:hover {
+          font-size: clamp(0.78rem, -0.0071rem + 3.8736vw, 1.3rem);
+        }
+      }
+    }
+    .divider {
+      width: 70%;
+      height: 5px;
+      border-radius: 3px;
+    }
+  }
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) and (orientation: portrait) {
+  #form {
+    border-radius: 3px;
+    flex-direction: column;
+    gap: 60px;
 
+    .informations {
+      height: 100%;
+      width: 100%;
+      border-radius: 3px;
+      padding: 10px 35px;
+
+      .title {
+        padding: 10px 0;
+        font-size: clamp(2.1875rem, 0.6797rem + 3.1373vw, 2.6875rem);
+      }
+      .information {
+        margin: 10px 0;
+        border-radius: 3px;
+        gap: 40px;
+
+        .icon-container {
+          width: 70px;
+          height: 70px;
+
+          i {
+            font-size: 28px;
+          }
+        }
+        span {
+          font-size: clamp(1.4375rem, 0.6836rem + 1.5686vw, 1.6875rem);
+          width: 80%;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+    }
+    .inputs {
+      width: 100%;
+      padding: 50px;
+      border-radius: 3px;
+
+      .groups {
+        gap: 50px;
+
+        .input-group, .textarea-group {
+          input, textarea {
+            font-size: clamp(1.4375rem, 0.6836rem + 1.5686vw, 1.6875rem);
+            padding: 10px;
+            border-radius: 3px;
+
+            &:focus ~ label {
+              top: -40px;
+              font-size: clamp(1.4375rem, 0.6836rem + 1.5686vw, 1.6875rem);
+            }
+          }
+          label {
+            font-size: clamp(1.3125rem, 0.7471rem + 1.1765vw, 1.5rem);
+            top: 8px;
+            left: 11px;
+          }
+          .upper {
+            top: -40px;
+            font-size: clamp(1.4375rem, 0.6836rem + 1.5686vw, 1.6875rem);
+          }
+          .error-container {
+            margin: 5px 5px 0 11px;
+
+            i {
+              font-size: clamp(0.625rem, -0.1321rem + 4vw, 1.1rem);
+            }
+            .error {
+              font-size: clamp(0.625rem, -0.1321rem + 4vw, 1.1rem);
+              margin-left: 5px;
+            }
+          }
+        }
+        .input-group {
+          position: relative;
+          width: 100%;
+
+          input {
+            height: 100px;
+          }
+        }
+        .textarea-group {
+          margin-bottom: 50px;
+
+          textarea {
+            height: 160px;
+          }
+        }
+      }
+      .submit {
+        font-size: clamp(1.4375rem, 0.6836rem + 1.5686vw, 1.6875rem);
+        height: 100px;
+        border-radius: 3px;
+
+        &:hover {
+          font-size: clamp(1.5375rem, 0.6836rem + 1.6686vw, 1.7875rem);
+        }
+      }
+    }
+    .divider {
+      width: 70%;
+      height: 5px;
+      border-radius: 3px;
+    }
+  }
 }
 
 @media screen and (min-width: 320px) and (max-width: 655px) and (orientation: landscape) {
+  #form {
+    border-radius: 3px;
+    flex-direction: column;
+    gap: 20px;
 
+    .informations {
+      height: 100%;
+      width: 100%;
+      border-radius: 3px;
+      padding: 15px;
+      gap: 15px;
+
+      .title {
+        font-size: 2vw;
+      }
+      .information {
+        border-radius: 3px;
+        gap: 20px;
+
+        .icon-container {
+          width: 35px;
+          height: 35px;
+          aspect-ratio: 1/1;
+
+          i {
+            font-size: 15px;
+          }
+        }
+        span {
+          font-size: 1.2vw;
+          width: 80%;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+    }
+    .inputs {
+      width: 100%;
+      padding: 15px;
+      border-radius: 3px;
+
+      .groups {
+        gap: 15px;
+
+        .input-group, .textarea-group {
+          input, textarea {
+            font-size: 1.2vw;
+            padding: 10px;
+            border-radius: 3px;
+
+            &:focus ~ label {
+              top: -13px;
+              font-size: 1.2vw;
+            }
+          }
+          label {
+            font-size: 1.2vw;
+            top: 8px;
+            left: 11px;
+          }
+          .upper {
+            top: -13px;
+            font-size: 1.2vw;
+          }
+          .error-container {
+            margin: 5px 5px 0 11px;
+
+            i {
+              font-size: 1.2vw;
+            }
+            .error {
+              font-size: 1.2vw;
+              margin-left: 5px;
+            }
+          }
+        }
+        .input-group {
+          position: relative;
+          width: 100%;
+
+          input {
+            height: 40px;
+          }
+        }
+        .textarea-group {
+          margin-bottom: 15px;
+
+          textarea {
+            height: 70px;
+          }
+        }
+      }
+      .submit {
+        font-size: 1.2vw;
+        height: 40px;
+        border-radius: 3px;
+
+        &:hover {
+          font-size: 1.3vw;
+        }
+      }
+    }
+    .divider {
+      width: 40%;
+      height: 5px;
+      border-radius: 3px;
+    }
+  }
 }
 
 @media screen and (min-width: 656px) and (max-width: 1024px) and (orientation: landscape) {
+  #form {
+    border-radius: 3px;
+    flex-direction: column;
+    gap: 30px;
 
+    .informations {
+      height: 100%;
+      width: 100%;
+      border-radius: 3px;
+      padding: 25px;
+      gap: 15px;
+
+      .title {
+        font-size: clamp(0.875rem, 0.2065rem + 1.6304vw, 1.25rem);
+      }
+      .information {
+        border-radius: 3px;
+        gap: 20px;
+
+        .icon-container {
+          width: 40px;
+          height: 40px;
+          aspect-ratio: 1/1;
+
+          i {
+            font-size: 15px;
+          }
+        }
+        span {
+          font-size: clamp(0.625rem, 0.2908rem + 0.8152vw, 0.8125rem);
+          width: 80%;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+    }
+    .inputs {
+      width: 100%;
+      padding: 25px;
+      border-radius: 3px;
+
+      .groups {
+        gap: 25px;
+
+        .input-group, .textarea-group {
+          input, textarea {
+            font-size: clamp(0.625rem, 0.2908rem + 0.8152vw, 0.8125rem);
+            padding: 10px;
+
+            &:focus ~ label {
+              top: -17px;
+              font-size: clamp(0.625rem, 0.2908rem + 0.8152vw, 0.8125rem);
+            }
+          }
+          label {
+            font-size: clamp(0.625rem, 0.4022rem + 0.5435vw, 0.75rem);
+            top: 8px;
+            left: 11px;
+          }
+          .upper {
+            top: -17px;
+            font-size: clamp(0.625rem, 0.4022rem + 0.5435vw, 0.75rem);
+          }
+          .error-container {
+            margin: 5px 5px 0 11px;
+
+            i {
+              font-size: clamp(0.625rem, 0.4022rem + 0.5435vw, 0.75rem);
+            }
+            .error {
+              font-size: clamp(0.625rem, 0.4022rem + 0.5435vw, 0.75rem);
+              margin-left: 5px;
+            }
+          }
+        }
+        .input-group {
+          position: relative;
+          width: 100%;
+
+          input {
+            height: 50px;
+          }
+        }
+        .textarea-group {
+          margin-bottom: 25px;
+
+          textarea {
+            height: 80px;
+          }
+        }
+      }
+      .submit {
+        font-size: clamp(0.625rem, 0.2908rem + 0.8152vw, 0.8125rem);
+        height: 50px;
+        border-radius: 3px;
+
+        &:hover {
+          font-size: clamp(0.725rem, 0.2908rem + 0.9152vw, 0.9125rem);
+        }
+      }
+    }
+    .divider {
+      width: 40%;
+      height: 5px;
+      border-radius: 3px;
+    }
+  }
 }
 
 @media screen and (min-width: 1025px) and (max-width: 1200px) and (orientation: landscape) {
+  #form {
+    border-radius: 3px;
+    flex-direction: column;
+    gap: 40px;
 
+    .informations {
+      height: 100%;
+      width: 100%;
+      border-radius: 3px;
+      padding: 40px;
+      gap: 20px;
+
+      .title {
+        font-size: clamp(1.3125rem, 0.2143rem + 1.7143vw, 1.5rem);
+      }
+      .information {
+        border-radius: 3px;
+        gap: 30px;
+
+        .icon-container {
+          width: 50px;
+          height: 50px;
+          aspect-ratio: 1/1;
+
+          i {
+            font-size: 18px;
+          }
+        }
+        span {
+          font-size: clamp(0.9375rem, 0.2054rem + 1.1429vw, 1.0625rem);
+          width: 80%;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+    }
+    .inputs {
+      width: 100%;
+      padding: 40px;
+      border-radius: 3px;
+
+      .groups {
+        gap: 40px;
+
+        .input-group, .textarea-group {
+          input, textarea {
+            font-size: clamp(0.9375rem, 0.2054rem + 1.1429vw, 1.0625rem);
+            padding: 10px;
+
+            &:focus ~ label {
+              top: -17px;
+              font-size: clamp(0.9375rem, 0.2054rem + 1.1429vw, 1.0625rem);
+            }
+          }
+          label {
+            font-size: clamp(0.9375rem, 0.2054rem + 1.1429vw, 1.0625rem);
+            top: 8px;
+            left: 11px;
+          }
+          .upper {
+            top: -17px;
+            font-size: clamp(0.9375rem, 0.2054rem + 1.1429vw, 1.0625rem);
+          }
+          .error-container {
+            margin: 5px 5px 0 11px;
+
+            i {
+              font-size: clamp(0.9375rem, 0.2054rem + 1.1429vw, 1.0625rem);
+            }
+            .error {
+              font-size: clamp(0.9375rem, 0.2054rem + 1.1429vw, 1.0625rem);
+              margin-left: 5px;
+            }
+          }
+        }
+        .input-group {
+          position: relative;
+          width: 100%;
+
+          input {
+            height: 70px;
+          }
+        }
+        .textarea-group {
+          margin-bottom: 25px;
+
+          textarea {
+            height: 100px;
+          }
+        }
+      }
+      .submit {
+        font-size: clamp(0.9375rem, 0.2054rem + 1.1429vw, 1.0625rem);
+        height: 70px;
+        border-radius: 3px;
+
+        &:hover {
+          font-size: clamp(0.9575rem, 0.2054rem + 1.2429vw, 1.1625rem);
+        }
+      }
+    }
+    .divider {
+      width: 40%;
+      height: 5px;
+      border-radius: 3px;
+    }
+  }
 }
 
 @media screen and (min-width: 1025px) and (max-width: 1200px) and (orientation: portrait) {
+  #form {
+    border-radius: 3px;
+    flex-direction: column;
+    gap: 60px;
 
+    .informations {
+      height: 100%;
+      width: 100%;
+      border-radius: 3px;
+      padding: 10px 35px;
+
+      .title {
+        padding: 10px 0;
+        font-size: clamp(2.1875rem, 0.6797rem + 3.1373vw, 2.6875rem);
+      }
+      .information {
+        margin: 10px 0;
+        border-radius: 3px;
+        gap: 40px;
+
+        .icon-container {
+          width: 70px;
+          height: 70px;
+
+          i {
+            font-size: 28px;
+          }
+        }
+        span {
+          font-size: clamp(1.4375rem, 0.6836rem + 1.5686vw, 1.6875rem);
+          width: 80%;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+    }
+    .inputs {
+      width: 100%;
+      padding: 50px;
+      border-radius: 3px;
+
+      .groups {
+        gap: 50px;
+
+        .input-group, .textarea-group {
+          input, textarea {
+            font-size: clamp(1.4375rem, 0.6836rem + 1.5686vw, 1.6875rem);
+            padding: 10px;
+            border-radius: 3px;
+
+            &:focus ~ label {
+              top: -40px;
+              font-size: clamp(1.4375rem, 0.6836rem + 1.5686vw, 1.6875rem);
+            }
+          }
+          label {
+            font-size: clamp(1.3125rem, 0.7471rem + 1.1765vw, 1.5rem);
+            top: 8px;
+            left: 11px;
+          }
+          .upper {
+            top: -40px;
+            font-size: clamp(1.4375rem, 0.6836rem + 1.5686vw, 1.6875rem);
+          }
+          .error-container {
+            margin: 5px 5px 0 11px;
+
+            i {
+              font-size: clamp(0.625rem, -0.1321rem + 4vw, 1.1rem);
+            }
+            .error {
+              font-size: clamp(0.625rem, -0.1321rem + 4vw, 1.1rem);
+              margin-left: 5px;
+            }
+          }
+        }
+        .input-group {
+          position: relative;
+          width: 100%;
+
+          input {
+            height: 100px;
+          }
+        }
+        .textarea-group {
+          margin-bottom: 50px;
+
+          textarea {
+            height: 160px;
+          }
+        }
+      }
+      .submit {
+        font-size: clamp(1.4375rem, 0.6836rem + 1.5686vw, 1.6875rem);
+        height: 100px;
+        border-radius: 3px;
+
+        &:hover {
+          font-size: clamp(1.5375rem, 0.6836rem + 1.6686vw, 1.7875rem);
+        }
+      }
+    }
+    .divider {
+      width: 70%;
+      height: 5px;
+      border-radius: 3px;
+    }
+  }
 }
 
 @media screen and (min-width: 1201px) and (max-width: 1500px) {
-
-}
-
-@media screen and (min-width: 1501px) and (max-width: 2000px) {
   #form {
     height: auto;
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     border-radius: 5px;
 
     .informations {
       height: 100%;
       width: 45%;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: space-between;
       border-radius: 5px;
-      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-      backdrop-filter: blur(7.9px);
-      background-color: $white;
-      padding: 10px 20px 10px 20px;
-      background-image: url("../../../../../public/assets/img/waves-form.svg");
-      background-size: cover;
-      background-position: center;
+      padding: 30px;
+      gap: 20px;
 
       .title {
-        padding: 10px 0;
         width: 100%;
-        color: $darkPurple;
-        font-size: 1.3rem;
-        font-weight: 700;
+        font-size: clamp(1.5625rem, -0.1948rem + 2.3411vw, 2rem);
       }
       .information {
-        display: flex;
-        align-items: center;
-        margin: 10px 0;
-        width: 100%;
+        gap: 20px;
         border-radius: 5px;
-        resize: none;
 
         .icon-container {
-          width: 50px;
-          height: 50px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
+          width: 60px;
+          height: 60px;
           border-radius: 50%;
           margin-right: 20px;
-          box-shadow: 0 0 10px 0 #eeedfa;
-          border: 2px dashed $lightPurple;
 
           i {
-            font-size: 1.2rem;
-            color: $purple;
+            font-size: 23px;
           }
         }
         span {
-          font-size: 1.1rem;
-          font-weight: 500;
-          color: $darkPurple;
+          font-size: clamp(0.9375rem, -0.3177rem + 1.6722vw, 1.25rem);
         }
       }
     }
     .inputs {
-      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-      backdrop-filter: blur(7.9px);
       height: 100%;
       width: 45%;
-      padding: 10px 25px 25px 25px;
-      display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
       border-radius: 5px;
+      padding: 30px;
 
       .groups {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: flex-start;
-        justify-content: space-between;
+        gap: 30px;
 
-        .input-group {
-          position: relative;
-          width: 47.5%;
-          margin: 15px 0 10px 0;
-
-          input {
-            font-size: .8rem;
-            margin-left: auto;
-            margin-right: auto;
-            padding: 2%;
-            display: block;
-            height: 70px;
-            width: 100%;
+        .input-group, .textarea-group {
+          input, textarea {
+            font-size: clamp(0.9375rem, -0.3177rem + 1.6722vw, 1.25rem);
+            padding: 8px;
             border-radius: 5px;
-            resize: none;
-            box-shadow: 0 0 10px 0 #eeedfa;
-            border: 2px dashed $lightPurple;
 
-            &:focus {
-              outline: none;
-            }
             &:focus ~ label {
-              top: -20px;
-              font-size: .8rem;
-              font-weight: 700;
-              color: $purple;
+              top: -25px;
+              font-size: clamp(0.9375rem, -0.3177rem + 1.6722vw, 1.25rem);
             }
           }
           label {
-            color: $darkPurple;
-            font-size: .8rem;
-            font-weight: normal;
-            position: absolute;
-            pointer-events: none;
+            font-size: clamp(0.1875rem, 0.0595rem + 1.024vw, 1.3625rem);
             top: 5px;
-            left: 3%;
-            transition: 0.2s ease all;
-            -moz-transition: 0.2s ease all;
-            -webkit-transition: 0.2s ease all;
+            left: 10px;
           }
           .upper {
-            top: -20px;
-            font-size: .8rem;
-            font-weight: 700;
-            color: $purple;
+            top: -25px;
+            font-size: clamp(0.9375rem, -0.3177rem + 1.6722vw, 1.25rem);
           }
           .error-container {
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            margin: 5px 5px 0 3%;
+            margin: 5px 5px 0 10px;
 
             i {
-              color: $red;
-              font-size: 10px;
+              font-size: clamp(0.1875rem, 0.0595rem + 1.024vw, 1.3625rem);
             }
             .error {
-              color: $red;
-              font-weight: 700;
-              font-size: 10px;
+              font-size: clamp(0.1875rem, 0.0595rem + 1.024vw, 1.3625rem);
               margin-left: 5px;
             }
           }
         }
-        .textarea-group {
+        .input-group {
           position: relative;
-          margin: 15px 0 25px 0;
-          width: 100%;
+          width: calc(50% - 20px);
+
+          input {
+            height: 70px;
+          }
+        }
+        .textarea-group {
+          margin-bottom: 30px;
 
           textarea {
-            font-size: .8rem;
-            margin-left: auto;
-            margin-right: auto;
-            padding: 2% 1.5% 2% 1.5%;
-            display: block;
             height: 100px;
             width: 100%;
-            border-radius: 5px;
-            resize: none;
-            box-shadow: 0 0 10px 0 #eeedfa;
-            border: 2px dashed $lightPurple;
-
-            &:focus {
-              outline: none;
-            }
-            &:focus ~ label {
-              top: -20px;
-              font-weight: 700;
-              font-size: .8rem;
-              color: $purple;
-            }
-          }
-          label {
-            color: $darkPurple;
-            font-size: .8rem;
-            font-weight: normal;
-            position: absolute;
-            pointer-events: none;
-            top: 5px;
-            left: 1.5%;
-            transition: 0.2s ease all;
-            -moz-transition: 0.2s ease all;
-            -webkit-transition: 0.2s ease all;
-          }
-          .upper {
-            top: -20px;
-            font-size: .8rem;
-            font-weight: 700;
-            color: $purple;
-          }
-          .error-container {
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            margin: 5px 5px 0 1.5%;
-
-            i {
-              color: $red;
-              font-size: 10px;
-            }
-            .error {
-              color: $red;
-              font-weight: 700;
-              font-size: 10px;
-              margin-left: 5px;
-            }
           }
         }
       }
       .submit {
-        font-size: .9rem;
-        padding: 10px 5%;
-        display: block;
+        font-size: clamp(0.9375rem, -0.3177rem + 1.6722vw, 1.25rem);
         height: 70px;
-        border: none;
         border-radius: 5px;
-        resize: none;
-        width: 100%;
-        align-self: flex-start;
-        cursor: pointer;
-        background-color: $lightPurple;
-        color: $purple;
-        font-weight: 700;
 
         &:hover {
-          background-color: $purple;
-          color: white;
-          font-size: 1rem;
+          font-size: clamp(0.1rem, -0.3177rem + 1.6722vw, 1.35rem);
         }
       }
     }
     .divider {
       width: 3px;
       height: 40%;
-      background-color: #6D56E9;
       border-radius: 5px;
-      //transform: rotate(90deg);
+    }
+  }
+}
+
+@media screen and (min-width: 1501px) and (max-width: 2000px) {
+  #form {
+    height: auto;
+    width: 100%;
+    border-radius: 5px;
+
+    .informations {
+      height: 100%;
+      width: 45%;
+      border-radius: 5px;
+      padding: 30px;
+      gap: 20px;
+
+      .title {
+        width: 100%;
+        font-size: clamp(2rem, 0.12rem + 2.004vw, 2.625rem);
+      }
+      .information {
+        gap: 20px;
+        border-radius: 5px;
+
+        .icon-container {
+          width: 55px;
+          height: 55px;
+          border-radius: 50%;
+          margin-right: 20px;
+
+          i {
+            font-size: 22px;
+          }
+        }
+        span {
+          font-size: clamp(1.25rem, -0.066rem + 1.4028vw, 1.6875rem);
+        }
+      }
+    }
+    .inputs {
+      height: 100%;
+      width: 45%;
+      border-radius: 5px;
+      padding: 30px;
+
+      .groups {
+        gap: 30px;
+
+        .input-group, .textarea-group {
+          input, textarea {
+            font-size: clamp(0.1875rem, 0.0595rem + 1.024vw, 1.3625rem);
+            padding: 8px;
+            border-radius: 5px;
+
+            &:focus ~ label {
+              top: -25px;
+              font-size: clamp(0.1875rem, 0.0595rem + 1.024vw, 1.3625rem);
+            }
+          }
+          label {
+            font-size: clamp(0.1875rem, 0.0595rem + 1.024vw, 1.3625rem);
+            top: 5px;
+            left: 10px;
+          }
+          .upper {
+            top: -25px;
+            font-size: clamp(0.1875rem, 0.0595rem + 1.024vw, 1.3625rem);
+          }
+          .error-container {
+            margin: 5px 5px 0 10px;
+
+            i {
+              font-size: clamp(0.1875rem, 0.0595rem + 1.024vw, 1.3625rem);
+            }
+            .error {
+              font-size: clamp(0.1875rem, 0.0595rem + 1.024vw, 1.3625rem);
+              margin-left: 5px;
+            }
+          }
+        }
+        .input-group {
+          position: relative;
+          width: calc(50% - 20px);
+
+          input {
+            height: 80px;
+          }
+        }
+        .textarea-group {
+          margin-bottom: 30px;
+
+          textarea {
+            height: 110px;
+            width: 100%;
+          }
+        }
+      }
+      .submit {
+        font-size: clamp(1.25rem, -0.066rem + 1.4028vw, 1.6875rem);
+        height: 80px;
+        border-radius: 5px;
+
+        &:hover {
+          font-size: clamp(1.35rem, -0.066rem + 1.4028vw, 1.7875rem);
+        }
+      }
+    }
+    .divider {
+      width: 3px;
+      height: 40%;
+      border-radius: 5px;
     }
   }
 }
 
 @media screen and (min-width: 2001px) {
+  #form {
+    height: auto;
+    width: 100%;
+    border-radius: 5px;
 
+    .informations {
+      height: 100%;
+      width: 45%;
+      border-radius: 5px;
+      padding: 40px;
+      gap: 40px;
+
+      .title {
+        width: 100%;
+        font-size: clamp(2rem, 0.12rem + 2.004vw, 2.625rem);
+      }
+      .information {
+        gap: 20px;
+        border-radius: 5px;
+
+        .icon-container {
+          width: 65px;
+          height: 65px;
+          border-radius: 50%;
+          margin-right: 20px;
+
+          i {
+            font-size: 25px;
+          }
+        }
+        span {
+          font-size: clamp(0.1875rem, 0.0595rem + 1.024vw, 1.3625rem);
+        }
+      }
+    }
+    .inputs {
+      height: 100%;
+      width: 45%;
+      border-radius: 5px;
+      padding: 40px;
+
+      .groups {
+        gap: 40px;
+
+        .input-group, .textarea-group {
+          input, textarea {
+            font-size: clamp(0.1875rem, 0.0595rem + 1.024vw, 1.3625rem);
+            padding: 8px;
+            border-radius: 5px;
+
+            &:focus ~ label {
+              top: -30px;
+              font-size: clamp(0.1875rem, 0.0595rem + 1.024vw, 1.3625rem);
+            }
+          }
+          label {
+            font-size: clamp(0.1875rem, 0.0595rem + 1.024vw, 1.3625rem);
+            top: 5px;
+            left: 10px;
+          }
+          .upper {
+            top: -30px;
+            font-size: clamp(0.1875rem, 0.0595rem + 1.024vw, 1.3625rem);
+          }
+          .error-container {
+            margin: 5px 5px 0 10px;
+
+            i {
+              font-size: clamp(0.1875rem, 0.0595rem + 1.024vw, 1.3625rem);
+            }
+            .error {
+              font-size: clamp(0.1875rem, 0.0595rem + 1.024vw, 1.3625rem);
+              margin-left: 5px;
+            }
+          }
+        }
+        .input-group {
+          position: relative;
+          width: calc(50% - 20px);
+
+          input {
+            height: 110px;
+          }
+        }
+        .textarea-group {
+          margin-bottom: 30px;
+
+          textarea {
+            height: 140px;
+            width: 100%;
+          }
+        }
+      }
+      .submit {
+        font-size: clamp(0.1875rem, 0.0595rem + 1.024vw, 1.3625rem);
+        height: 110px;
+        border-radius: 5px;
+
+        &:hover {
+          font-size: clamp(1.35rem, -0.066rem + 1.4028vw, 1.7875rem);
+        }
+      }
+    }
+    .divider {
+      width: 5px;
+      height: 50%;
+      border-radius: 5px;
+    }
+  }
 }

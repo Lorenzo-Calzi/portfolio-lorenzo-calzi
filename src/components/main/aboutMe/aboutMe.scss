@@ -39,6 +39,7 @@
       .description {
         display: flex;
         align-items: flex-start;
+        flex-direction: column;
 
         h5 {
           font-weight: 800;
@@ -66,105 +67,55 @@
 
 @media screen and (max-width: 320px) and (orientation: portrait) {
   #aboutMe {
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
-    display: flex;
-    flex-direction: column;
 
+    .container {
+      width: 85%;
+    }
     .dynamic-flex {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-evenly;
-      height: 90%;
+      height: auto;
 
       .titles {
-        height: 25%;
-        max-height: 25%;
-        display: flex;
-        flex-direction: column;
-        align-self: center;
-        justify-content: center;
+        margin-bottom: 7.5%;
 
         .title-gradient {
-          text-align: center;
-          font-size: 4.5rem;
-          font-weight: 800;
-          background: linear-gradient(to top, transparent 0%, $grey 70%);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          opacity: 0.1;
-          line-height: 70px;
+          font-size: clamp(2.3125rem, 0.75rem + 12.5vw, 3.25rem);
+          line-height: 100%;
         }
         .title-solid {
-          text-align: center;
-          font-size: 3.5rem;
-          font-weight: 700;
-          position: relative;
-          margin: 0;
-          line-height: 35px;
+          font-size: clamp(1.9375rem, 0.5833rem + 10.8333vw, 2.75rem);
+          line-height: 100%;
         }
       }
       .content {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 75%;
+        flex-direction: column;
+        gap: 15px;
 
         .image {
-          background-image: url("../../../../public/assets/img/proflle-2.jpg");
-          background-position: center;
-          background-size: cover;
-          width: 48%;
-          margin-right: 2%;
-          height: 80%;
-          border-radius: 5px;
-          //box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
-          //width: 0;
-          //height: 0;
-          //border-style: solid;
-          //border-width: 346.4px 200px 0 200px;
-          //border-color: #6D56E9 transparent transparent transparent;
-          //transform: rotate(0deg);
+          width: 100%;
+          height: auto;
+          aspect-ratio: 1/1;
+          border-radius: 3px;
         }
         .description {
-          width: 48%;
-          margin-left: 2%;
-          display: flex;
           flex-direction: column;
-          align-items: flex-start;
 
           h5 {
-            font-size: 1.2rem;
-            font-weight: 800;
+            font-size: clamp(0.85rem, -0.4505rem + 6.9182vw, 1.625rem);
             padding-right: 10px;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
+            line-height: 100%;
           }
           p {
-            font-size: 0.9rem;
-            padding: 10px 10px 10px 25px;
-            border-left: 3px solid $purple;
-            text-align: left;
+            font-size: clamp(0.65rem, -0.1321rem + 4vw, 1rem);
+            padding: 5px 0 5px 15px;
+            margin-bottom: 15px;
           }
           .button {
-            border: none;
-            border-radius: 5px;
-            background-color: #6D56E9;
-            color: white;
-            display: inline-block;
-            padding: 15px;
-            margin-top: 20px;
-            //transition: all 0.3s ease-in-out;
-            cursor: pointer;
-
-            &:hover {
-              transform: scale(1.1);
-            }
-
-            a {
-              font-size: 1vw;
-              font-weight: 600;
-            }
+            font-size: clamp(0.8rem, -0.0071rem + 3.7736vw, 1.125rem);
+            padding: 13px;
+            border-radius: 3px;
           }
         }
       }
@@ -179,7 +130,6 @@
 
     .container {
       width: 85%;
-      margin: 0 auto 7.5% auto;
     }
     .dynamic-flex {
       height: auto;
@@ -188,13 +138,12 @@
         margin-bottom: 7.5%;
 
         .title-gradient {
-          font-size: 3.5rem;
-          line-height: 50px;
+          font-size: clamp(2.3125rem, 0.75rem + 12.5vw, 3.25rem);
+          line-height: 100%;
         }
         .title-solid {
-          font-size: 3rem;
-          margin: 0;
-          line-height: 35px;
+          font-size: clamp(1.9375rem, 0.5833rem + 10.8333vw, 2.75rem);
+          line-height: 100%;
         }
       }
       .content {
@@ -203,25 +152,27 @@
 
         .image {
           width: 100%;
-          height: 200px;
+          height: auto;
+          aspect-ratio: 1/1;
           border-radius: 3px;
         }
         .description {
           flex-direction: column;
 
           h5 {
-            font-size: 5vw;
+            font-size: clamp(0.9375rem, -0.4505rem + 6.9182vw, 1.625rem);
             padding-right: 10px;
             margin-bottom: 15px;
+            line-height: 100%;
           }
           p {
-            font-size: 3.5vw;
+            font-size: clamp(0.625rem, -0.1321rem + 4vw, 1rem);
             padding: 5px 0 5px 15px;
             margin-bottom: 20px;
           }
           .button {
-            font-size: 1rem;
-            padding: 15px 10px;
+            font-size: clamp(0.75rem, -0.0071rem + 3.7736vw, 1.125rem);
+            padding: 15px;
             border-radius: 3px;
           }
         }
@@ -231,134 +182,462 @@
 }
 
 @media screen and (min-width: 481px) and (max-width: 768px) and (orientation: portrait) {
+  #aboutMe {
+    min-height: 100vh;
+    width: 100%;
 
+    .container {
+      width: 85%;
+    }
+    .dynamic-flex {
+      height: auto;
+
+      .titles {
+        margin-bottom: 7.5%;
+
+        .title-gradient {
+          font-size: clamp(3.75rem, 2.1788rem + 5.2265vw, 4.6875rem);
+          line-height: 100%;
+        }
+        .title-solid {
+          font-size: clamp(2.8125rem, 1.2413rem + 5.2265vw, 3.75rem);
+          line-height: 100%;
+        }
+      }
+      .content {
+        flex-direction: column;
+        gap: 20px;
+
+        .image {
+          width: 100%;
+          height: auto;
+          aspect-ratio: 16/9;
+          border-radius: 3px;
+        }
+        .description {
+          flex-direction: column;
+
+          h5 {
+            font-size: clamp(0.9375rem, -0.4505rem + 6.9182vw, 1.625rem);
+            padding-right: 10px;
+            margin-bottom: 15px;
+            line-height: 100%;
+          }
+          p {
+            font-size: clamp(0.625rem, -0.1321rem + 4vw, 1.1rem);
+            padding: 5px 0 5px 15px;
+            margin-bottom: 20px;
+          }
+          .button {
+            font-size: clamp(0.75rem, -0.0071rem + 3.7736vw, 1.2rem);
+            padding: 15px;
+            border-radius: 3px;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) and (orientation: portrait) {
+  #aboutMe {
+    min-height: 100vh;
+    width: 100%;
 
+    .container {
+      width: 85%;
+    }
+    .dynamic-flex {
+      height: auto;
+
+      .titles {
+        margin-bottom: 7.5%;
+
+        .title-gradient {
+          font-size: clamp(5.3125rem, 3.7413rem + 5.2265vw, 6.25rem);
+          line-height: 100%;
+        }
+        .title-solid {
+          font-size: clamp(4.375rem, 2.8038rem + 5.2265vw, 5.3125rem);
+          line-height: 100%;
+        }
+      }
+      .content {
+        flex-direction: column;
+        gap: 20px;
+
+        .image {
+          width: 100%;
+          height: auto;
+          aspect-ratio: 16/9;
+          border-radius: 3px;
+        }
+        .description {
+          flex-direction: column;
+
+          h5 {
+            font-size: clamp(2.1875rem, 0.6797rem + 3.1373vw, 2.6875rem);
+            padding-right: 10px;
+            margin-bottom: 15px;
+            line-height: 100%;
+          }
+          p {
+            font-size: clamp(1.3125rem, 0.7471rem + 1.1765vw, 1.5rem);
+            padding: 5px 0 5px 15px;
+            margin-bottom: 30px;
+          }
+          .button {
+            font-size: clamp(1.4375rem, 0.6836rem + 1.5686vw, 1.6875rem);
+            padding: 20px;
+            border-radius: 3px;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 320px) and (max-width: 655px) and (orientation: landscape) {
+  #aboutMe {
+    min-height: 100vh;
+    width: 100%;
+    justify-content: center;
 
+    .container {
+      width: 85%;
+    }
+    .dynamic-flex {
+      height: auto;
+
+      .titles {
+        margin-bottom: 7.5%;
+
+        .title-gradient {
+          font-size: clamp(2.1875rem, 1.292rem + 4.4776vw, 3.125rem);
+          line-height: 100%;
+        }
+        .title-solid {
+          font-size: clamp(1.25rem, 0.3545rem + 4.4776vw, 2.1875rem);
+          line-height: 100%;
+        }
+      }
+      .content {
+        gap: 30px;
+
+        .image {
+          width: 50%;
+          height: auto;
+          aspect-ratio: 1/1;
+          border-radius: 3px;
+          line-height: 100%;
+        }
+        .description {
+          width: 50%;
+
+          h5 {
+            font-size: 2vw;
+            padding-right: 10px;
+            margin-bottom: 10px;
+          }
+          p {
+            font-size: 1.2vw;
+            padding: 5px 0 5px 15px;
+            margin-bottom: 15px;
+          }
+          .button {
+            font-size: 1.2vw;
+            padding: 10px;
+            border-radius: 3px;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 656px) and (max-width: 1024px) and (orientation: landscape) {
+  #aboutMe {
+    min-height: 100vh;
+    width: 100%;
+    justify-content: center;
 
+    .container {
+      width: 85%;
+    }
+    .dynamic-flex {
+      height: auto;
+
+      .titles {
+        margin-bottom: 7.5%;
+
+        .title-gradient {
+          font-size: clamp(2.1875rem, 1.292rem + 4.4776vw, 3.125rem);
+          line-height: 100%;
+        }
+        .title-solid {
+          font-size: clamp(1.25rem, 0.3545rem + 4.4776vw, 2.1875rem);
+          line-height: 100%;
+        }
+      }
+      .content {
+        gap: 40px;
+
+        .image {
+          width: 50%;
+          height: auto;
+          aspect-ratio: 1/1;
+          border-radius: 3px;
+        }
+        .description {
+          flex-direction: column;
+          width: 50%;
+
+          h5 {
+            font-size: clamp(0.875rem, 0.2065rem + 1.6304vw, 1.25rem);
+            padding-right: 10px;
+            margin-bottom: 15px;
+            line-height: 100%;
+          }
+          p {
+            font-size: clamp(0.625rem, 0.4022rem + 0.5435vw, 0.75rem);
+            padding: 5px 0 5px 15px;
+            margin-bottom: 20px;
+          }
+          .button {
+            font-size: clamp(0.625rem, 0.2908rem + 0.8152vw, 0.8125rem);
+            padding: 10px;
+            border-radius: 3px;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 1025px) and (max-width: 1200px) and (orientation: landscape) {
+  #aboutMe {
+    min-height: 100vh;
+    width: 100%;
+    justify-content: center;
 
+    .container {
+      width: 85%;
+    }
+    .dynamic-flex {
+      height: auto;
+
+      .titles {
+        margin-bottom: 7.5%;
+
+        .title-gradient {
+          font-size: clamp(2.1875rem, -0.7976rem + 14.9254vw, 5.3125rem);
+          line-height: 100%;
+        }
+        .title-solid {
+          font-size: clamp(1.25rem, -1.7351rem + 14.9254vw, 4.375rem);
+          line-height: 100%;
+        }
+      }
+      .content {
+        gap: 50px;
+
+        .image {
+          width: 50%;
+          height: auto;
+          aspect-ratio: 1/1;
+          border-radius: 3px;
+        }
+        .description {
+          flex-direction: column;
+          width: 50%;
+
+          h5 {
+            font-size: clamp(1.3125rem, 0.2143rem + 1.7143vw, 1.5rem);
+            padding-right: 10px;
+            margin-bottom: 15px;
+            line-height: 100%;
+          }
+          p {
+            font-size: clamp(0.875rem, 0.5089rem + 0.5714vw, 0.9375rem);
+            padding: 5px 0 5px 15px;
+            margin-bottom: 20px;
+          }
+          .button {
+            font-size: clamp(0.9375rem, 0.2054rem + 1.1429vw, 1.0625rem);
+            padding: 10px;
+            border-radius: 3px;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 1025px) and (max-width: 1200px) and (orientation: portrait) {
+  #aboutMe {
+    min-height: 100vh;
+    width: 100%;
 
+    .container {
+      width: 85%;
+    }
+    .dynamic-flex {
+      height: auto;
+
+      .titles {
+        margin-bottom: 7.5%;
+
+        .title-gradient {
+          font-size: clamp(5.3125rem, 3.7413rem + 5.2265vw, 6.25rem);
+          line-height: 100%;
+        }
+        .title-solid {
+          font-size: clamp(4.375rem, 2.8038rem + 5.2265vw, 5.3125rem);
+          line-height: 100%;
+        }
+      }
+      .content {
+        flex-direction: column;
+        gap: 20px;
+
+        .image {
+          width: 100%;
+          height: auto;
+          aspect-ratio: 16/9;
+          border-radius: 3px;
+        }
+        .description {
+          flex-direction: column;
+
+          h5 {
+            font-size: clamp(2.1875rem, 0.6797rem + 3.1373vw, 2.6875rem);
+            padding-right: 10px;
+            margin-bottom: 15px;
+            line-height: 100%;
+          }
+          p {
+            font-size: clamp(1.3125rem, 0.7471rem + 1.1765vw, 1.5rem);
+            padding: 5px 0 5px 15px;
+            margin-bottom: 30px;
+          }
+          .button {
+            font-size: clamp(1.4375rem, 0.6836rem + 1.5686vw, 1.6875rem);
+            padding: 20px;
+            border-radius: 3px;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 1201px) and (max-width: 1500px) {
+  #aboutMe {
+    min-height: 100vh;
+    width: 100%;
+    justify-content: center;
 
+    .container {
+      width: 85%;
+    }
+    .dynamic-flex {
+      height: auto;
+
+      .titles {
+        margin-bottom: 7.5%;
+
+        .title-gradient {
+          font-size: clamp(2.1875rem, -0.7976rem + 14.9254vw, 5.3125rem);
+          line-height: 100%;
+        }
+        .title-solid {
+          font-size: clamp(1.25rem, -1.7351rem + 14.9254vw, 4.375rem);
+          line-height: 100%;
+        }
+      }
+      .content {
+        gap: 20px;
+
+        .image {
+          width: 50%;
+          height: auto;
+          aspect-ratio: 1/1;
+          border-radius: 3px;
+        }
+        .description {
+          width: 50%;
+          flex-direction: column;
+
+          h5 {
+            font-size: clamp(1.3125rem, 0.2143rem + 1.7143vw, 1.5rem);
+            padding-right: 10px;
+            margin-bottom: 15px;
+            line-height: 100%;
+          }
+          p {
+            font-size: clamp(0.875rem, 0.5089rem + 0.5714vw, 0.9375rem);
+            padding: 5px 0 5px 15px;
+            margin-bottom: 20px;
+          }
+          .button {
+            font-size: clamp(0.9375rem, 0.2054rem + 1.1429vw, 1.0625rem);
+            padding: 10px;
+            border-radius: 3px;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 1501px) and (max-width: 2000px) {
   #aboutMe {
     height: 100vh;
     width: 100%;
-    display: flex;
-    flex-direction: column;
 
     .dynamic-flex {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-evenly;
       height: 90%;
 
       .titles {
         height: 25%;
         max-height: 25%;
-        display: flex;
-        flex-direction: column;
-        align-self: center;
-        justify-content: center;
 
         .title-gradient {
-          text-align: center;
-          font-size: 4.5rem;
-          font-weight: 800;
-          background: linear-gradient(to top, transparent 0%, $grey 70%);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          opacity: 0.1;
-          line-height: 70px;
+          font-size: clamp(4.6875rem, 1.875rem + 3vw, 5.625rem);
+          line-height: 100%;
         }
         .title-solid {
-          text-align: center;
-          font-size: 3.5rem;
-          font-weight: 700;
-          position: relative;
-          margin: 0;
-          line-height: 35px;
+          font-size: clamp(3.75rem, 0.9375rem + 3vw, 4.6875rem);
+          line-height: 100%;
         }
       }
       .content {
-        display: flex;
-        align-items: center;
-        justify-content: center;
         height: 75%;
+        gap: 4%;
 
         .image {
-          background-image: url("../../../../public/assets/img/proflle-2.jpg");
-          background-position: center;
-          background-size: cover;
-          width: 48%;
-          margin-right: 2%;
-          height: 80%;
+          width: 50%;
+          height: 70%;
           border-radius: 5px;
-          //box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
-          //width: 0;
-          //height: 0;
-          //border-style: solid;
-          //border-width: 346.4px 200px 0 200px;
-          //border-color: #6D56E9 transparent transparent transparent;
-          //transform: rotate(0deg);
         }
         .description {
-          width: 48%;
-          margin-left: 2%;
-          display: flex;
-          flex-direction: column;
-          align-items: flex-start;
+          width: 50%;
 
           h5 {
-            font-size: 1.2rem;
-            font-weight: 800;
-            padding-right: 10px;
+            font-size: clamp(1.5rem, 0.12rem + 1.004vw, 2.3rem);
             margin-bottom: 20px;
+            line-height: 100%;
           }
           p {
-            font-size: 0.9rem;
+            font-size: clamp(0.1875rem, 0.0595rem + 1.024vw, 1.3625rem);
             padding: 10px 10px 10px 25px;
             border-left: 3px solid $purple;
-            text-align: left;
           }
           .button {
-            border: none;
+            font-size: clamp(1.25rem, -0.066rem + 1.4028vw, 1.6875rem);
             border-radius: 5px;
-            background-color: #6D56E9;
-            color: white;
-            display: inline-block;
             padding: 15px;
             margin-top: 20px;
-            //transition: all 0.3s ease-in-out;
-            cursor: pointer;
-
-            &:hover {
-              transform: scale(1.1);
-            }
-
-            a {
-              font-size: 1vw;
-              font-weight: 600;
-            }
           }
         }
       }
@@ -367,5 +646,56 @@
 }
 
 @media screen and (min-width: 2001px) {
+  #aboutMe {
+    height: 100vh;
+    width: 100%;
 
+    .dynamic-flex {
+      height: 90%;
+
+      .titles {
+        height: 25%;
+        max-height: 25%;
+
+        .title-gradient {
+          font-size: clamp(5.5rem, -0.0715rem + 3.6vw, 7rem);
+          line-height: 100%;
+        }
+        .title-solid {
+          font-size: clamp(4.5rem, -2.9375rem + 4.8vw, 6.0625rem);
+          line-height: 100%;
+        }
+      }
+      .content {
+        height: 75%;
+        gap: 4%;
+
+        .image {
+          width: 50%;
+          height: 70%;
+          border-radius: 5px;
+        }
+        .description {
+          width: 50%;
+
+          h5 {
+            font-size: clamp(1.5rem, 0.12rem + 1.004vw, 2.3rem);
+            margin-bottom: 20px;
+            line-height: 100%;
+          }
+          p {
+            font-size: clamp(0.1875rem, 0.0595rem + 1.024vw, 1.3625rem);
+            padding: 10px 10px 10px 25px;
+            border-left: 3px solid $purple;
+          }
+          .button {
+            font-size: clamp(1.25rem, -0.066rem + 1.4028vw, 1.6875rem);
+            border-radius: 5px;
+            padding: 15px;
+            margin-top: 20px;
+          }
+        }
+      }
+    }
+  }
 }
