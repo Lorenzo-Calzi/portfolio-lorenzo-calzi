@@ -27,14 +27,14 @@ function Navbar(props) {
                         {
                             props.language ? (
                                 configArray.listItems.ita.map((item) => (
-                                    <li key={item.value} className={`${item.href} ${item.href === props.currentSection ? 'li-active-light' : ''}`} onClick={() => props.handlerCurrentSection(item.href)}>
-                                        <a href={`#${item.href}`}>{item.value}</a>
+                                    <li key={item.value} onClick={() => props.handlerCurrentSection(item.href)}>
+                                        <a href={`#${item.href}`} className={`${item.href} ${item.href === props.currentSection ? 'li-active-light' : ''}`}>{item.value}</a>
                                     </li>
                                 ))
                             ) : (
                                 configArray.listItems.eng.map((item) => (
-                                    <li key={item.value} className={`${item.href} ${item.href === props.currentSection ? 'li-active-light' : ''}`} onClick={() => props.handlerCurrentSection(item.href)}>
-                                        <a href={`#${item.href}`}>{item.value}</a>
+                                    <li key={item.value} onClick={() => props.handlerCurrentSection(item.href)}>
+                                        <a href={`#${item.href}`} className={`${item.href} ${item.href === props.currentSection ? 'li-active-light' : ''}`}>{item.value}</a>
                                     </li>
                                 ))
                             )

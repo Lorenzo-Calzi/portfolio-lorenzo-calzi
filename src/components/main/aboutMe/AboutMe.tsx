@@ -11,7 +11,7 @@ function AboutMe(props) {
                 </div>
 
                 <div className="content">
-                    <div className="image"></div>
+                    <div className="image" />
                     <div className="description">
                         <h5>Racconto un po' di me</h5>
                         <p>"Mi chiamo Lorenzo Calzi, ho 23 anni e sono di Milano. <br/>

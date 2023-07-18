@@ -24,7 +24,7 @@ function Homepage() {
 
         // NAVBAR REVEAL
         if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {} else {
-            ScrollReveal().reveal('#navbar .left span', { delay: 25, origin: 'top' });
+            ScrollReveal().reveal('#navbar .left span', { delay: 25, origin: 'top', afterReveal: removeRevealEffects });
             ScrollReveal().reveal('#navbar .right ul', { delay: 25, origin: 'top', afterReveal: removeRevealEffects });
         }
 
@@ -120,20 +120,20 @@ function Homepage() {
                 document.getElementById("theme").style.bottom = "86%";
                 document.getElementById("to-the-top").style.opacity = "1";
 
-                // document.querySelector<HTMLElement>(".left span").style.fontSize = "1vw";
+                document.querySelector<HTMLElement>(".left span").style.fontSize = "0.8vw";
 
                 navLi.forEach((li: HTMLElement) => {
-                    // li.style.fontSize = "0.8vw";
+                    li.style.fontSize = "0.8vw";
                 });
             } else {
                 document.getElementById("navbar").style.height = "10%";
                 document.getElementById("theme").style.bottom = "81%";
                 document.getElementById("to-the-top").style.opacity = "0";
 
-                // document.querySelector<HTMLElement>(".left span").style.fontSize = "1.2vw";
+                document.querySelector<HTMLElement>(".left span").style.fontSize = "inherit";
 
                 navLi.forEach((li: HTMLElement) => {
-                    // li.style.fontSize = "1vw";
+                    li.style.fontSize = "inherit";
                 });
             }
 

@@ -85,7 +85,6 @@
     .dynamic-flex {
       flex-direction: column-reverse;
       justify-content: center;
-      height: auto;
 
       .icons {
         flex-direction: row;
@@ -103,7 +102,7 @@
       .content {
         height: 100%;
         flex-direction: column-reverse;
-        justify-content: space-between;
+        justify-content: space-evenly;
 
         .images {
           width: 100%;
@@ -152,7 +151,7 @@
 
 @media screen and (min-width: 321px) and (max-width: 480px) and (orientation: portrait) {
   #jumbotron {
-    height: 85%;
+    height: 90%;
     width: 100%;
     display: flex;
 
@@ -162,7 +161,6 @@
     .dynamic-flex {
       flex-direction: column-reverse;
       justify-content: center;
-      height: auto;
 
       .icons {
         flex-direction: row;
@@ -180,7 +178,7 @@
       .content {
         height: 100%;
         flex-direction: column-reverse;
-        justify-content: space-between;
+        justify-content: space-evenly;
 
         .images {
           width: 100%;
@@ -239,7 +237,6 @@
     .dynamic-flex {
       flex-direction: column-reverse;
       justify-content: center;
-      height: auto;
 
       .icons {
         flex-direction: row;
@@ -257,7 +254,7 @@
       .content {
         height: 100%;
         flex-direction: column-reverse;
-        justify-content: space-between;
+        justify-content: space-evenly;
 
         .images {
           width: 80%;
@@ -334,7 +331,7 @@
       .content {
         height: 100%;
         flex-direction: column-reverse;
-        justify-content: space-between;
+        justify-content: space-evenly;
 
         .images {
           width: 80%;
@@ -615,7 +612,6 @@
     .dynamic-flex {
       flex-direction: column-reverse;
       justify-content: center;
-      height: auto;
 
       .icons {
         flex-direction: row;
@@ -633,7 +629,7 @@
       .content {
         height: 100%;
         flex-direction: column-reverse;
-        justify-content: space-between;
+        justify-content: space-evenly;
 
         .images {
           width: 80%;
