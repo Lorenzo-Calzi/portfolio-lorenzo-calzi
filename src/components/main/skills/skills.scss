@@ -8,7 +8,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content:  space-evenly;
+    justify-content: space-evenly;
 
     .titles {
       display: flex;
@@ -24,6 +24,7 @@
         -webkit-text-fill-color: transparent;
         opacity: 0.1;
       }
+
       .title-solid {
         text-align: center;
         font-weight: 700;
@@ -46,6 +47,7 @@
             color: white;
           }
         }
+
         .cards {
           width: 100%;
           overflow-y: auto;
@@ -64,8 +66,6 @@
 
           .box {
             width: 100%;
-            box-shadow: 0 0 10px 0 #eeedfa;
-            border: 2px dashed $lightPurple;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
@@ -73,14 +73,17 @@
             &:hover {
               transform: scale(1.03);
             }
+
             &:last-child {
               margin: 0;
             }
 
             .period {
             }
+
             .description {
             }
+
             .information {
               width: 100%;
               display: flex;
@@ -94,12 +97,15 @@
                 i {
                 }
               }
+
               .title {
                 font-weight: 600;
               }
+
               .percentage {
               }
             }
+
             .bar {
               width: 100%;
               background-color: #f3f3f3;
@@ -124,6 +130,7 @@
     .container {
       width: 85%;
     }
+
     .dynamic-flex {
       height: auto;
 
@@ -134,11 +141,13 @@
           font-size: clamp(2.3125rem, 0.75rem + 12.5vw, 3.25rem);
           line-height: 100%;
         }
+
         .title-solid {
           font-size: clamp(1.9375rem, 0.5833rem + 10.8333vw, 2.75rem);
           line-height: 100%;
         }
       }
+
       .cards-container {
         height: auto;
         width: 100%;
@@ -159,6 +168,7 @@
               border-radius: 3px;
             }
           }
+
           .cards {
             height: auto;
             border-radius: 3px;
@@ -177,23 +187,28 @@
               .period {
                 font-size: clamp(0.63rem, -0.1321rem + 4vw, 1rem);
               }
+
               .description {
                 font-size: clamp(0.8rem, -0.0071rem + 3.7736vw, 1.125rem);
                 margin-top: 5px;
               }
+
               .information {
                 .icons {
                   i {
                     margin-left: 10px;
                   }
                 }
+
                 .title {
                   font-size: clamp(0.625rem, -0.1321rem + 4vw, 1rem);
                 }
+
                 .percentage {
                   font-size: clamp(0.625rem, -0.1321rem + 4vw, 1rem);
                 }
               }
+
               .bar {
                 height: 15px;
                 margin-top: 10px;
@@ -219,6 +234,7 @@
     .container {
       width: 85%;
     }
+
     .dynamic-flex {
       height: auto;
 
@@ -229,11 +245,13 @@
           font-size: clamp(2.3125rem, 0.75rem + 12.5vw, 3.25rem);
           line-height: 100%;
         }
+
         .title-solid {
           font-size: clamp(1.9375rem, 0.5833rem + 10.8333vw, 2.75rem);
           line-height: 100%;
         }
       }
+
       .cards-container {
         height: auto;
         width: 100%;
@@ -254,6 +272,7 @@
               border-radius: 3px;
             }
           }
+
           .cards {
             height: auto;
             border-radius: 3px;
@@ -272,23 +291,28 @@
               .period {
                 font-size: clamp(0.60rem, -0.1321rem + 3.8vw, 1rem);
               }
+
               .description {
                 font-size: clamp(0.625rem, -0.1321rem + 4vw, 1rem);
                 margin-top: 5px;
               }
+
               .information {
                 .icons {
                   i {
                     margin-left: 10px;
                   }
                 }
+
                 .title {
                   font-size: clamp(0.625rem, -0.1321rem + 4vw, 1rem);
                 }
+
                 .percentage {
                   font-size: clamp(0.625rem, -0.1321rem + 4vw, 1rem);
                 }
               }
+
               .bar {
                 height: 15px;
                 margin-top: 10px;
@@ -314,6 +338,7 @@
     .container {
       width: 85%;
     }
+
     .dynamic-flex {
       height: auto;
 
@@ -324,11 +349,13 @@
           font-size: clamp(3.75rem, 2.1788rem + 5.2265vw, 4.6875rem);
           line-height: 100%;
         }
+
         .title-solid {
           font-size: clamp(2.8125rem, 1.2413rem + 5.2265vw, 3.75rem);
           line-height: 100%;
         }
       }
+
       .cards-container {
         height: auto;
         width: 100%;
@@ -349,6 +376,7 @@
               border-radius: 3px;
             }
           }
+
           .cards {
             height: auto;
             border-radius: 3px;
@@ -367,23 +395,28 @@
               .period {
                 font-size: clamp(0.6rem, -0.1321rem + 3.8vw, 1rem);
               }
+
               .description {
                 font-size: clamp(0.625rem, -0.1321rem + 4vw, 1rem);
                 margin-top: 5px;
               }
+
               .information {
                 .icons {
                   i {
                     margin-left: 10px;
                   }
                 }
+
                 .title {
                   font-size: clamp(0.625rem, -0.1321rem + 4vw, 1rem);
                 }
+
                 .percentage {
                   font-size: clamp(0.625rem, -0.1321rem + 4vw, 1rem);
                 }
               }
+
               .bar {
                 height: 15px;
                 margin-top: 10px;
@@ -409,6 +442,7 @@
     .container {
       width: 85%;
     }
+
     .dynamic-flex {
       height: auto;
 
@@ -419,11 +453,13 @@
           font-size: clamp(5.3125rem, 3.7413rem + 5.2265vw, 6.25rem);
           line-height: 100%;
         }
+
         .title-solid {
           font-size: clamp(4.375rem, 2.8038rem + 5.2265vw, 5.3125rem);
           line-height: 100%;
         }
       }
+
       .cards-container {
         height: auto;
         width: 100%;
@@ -444,6 +480,7 @@
               border-radius: 3px;
             }
           }
+
           .cards {
             height: auto;
             border-radius: 3px;
@@ -462,23 +499,28 @@
               .period {
                 font-size: clamp(1.2125rem, 0.7471rem + 1vw, 1.5rem);
               }
+
               .description {
                 font-size: clamp(1.3125rem, 0.7471rem + 1.1765vw, 1.5rem);
                 margin-top: 5px;
               }
+
               .information {
                 .icons {
                   i {
                     margin-left: 10px;
                   }
                 }
+
                 .title {
                   font-size: clamp(1.3125rem, 0.7471rem + 1.1765vw, 1.5rem);
                 }
+
                 .percentage {
                   font-size: clamp(1.3125rem, 0.7471rem + 1.1765vw, 1.5rem);
                 }
               }
+
               .bar {
                 height: 15px;
                 margin-top: 10px;
@@ -504,6 +546,7 @@
     .container {
       width: 85%;
     }
+
     .dynamic-flex {
       height: auto;
 
@@ -514,11 +557,13 @@
           font-size: clamp(2.1875rem, 1.292rem + 4.4776vw, 3.125rem);
           line-height: 100%;
         }
+
         .title-solid {
           font-size: clamp(1.25rem, 0.3545rem + 4.4776vw, 2.1875rem);
           line-height: 100%;
         }
       }
+
       .cards-container {
         height: auto;
         width: 100%;
@@ -539,6 +584,7 @@
               border-radius: 3px;
             }
           }
+
           .cards {
             height: auto;
             border-radius: 3px;
@@ -557,23 +603,28 @@
               .period {
                 font-size: 1.4vw;
               }
+
               .description {
                 font-size: 1.5vw;
                 margin-top: 5px;
               }
+
               .information {
                 .icons {
                   i {
                     margin-left: 10px;
                   }
                 }
+
                 .title {
                   font-size: 1.5vw;
                 }
+
                 .percentage {
                   font-size: 1.5vw;
                 }
               }
+
               .bar {
                 height: 15px;
                 margin-top: 10px;
@@ -599,6 +650,7 @@
     .container {
       width: 85%;
     }
+
     .dynamic-flex {
       height: auto;
 
@@ -609,11 +661,13 @@
           font-size: clamp(2.1875rem, 1.292rem + 4.4776vw, 3.125rem);
           line-height: 100%;
         }
+
         .title-solid {
           font-size: clamp(1.25rem, 0.3545rem + 4.4776vw, 2.1875rem);
           line-height: 100%;
         }
       }
+
       .cards-container {
         height: auto;
         width: 100%;
@@ -634,6 +688,7 @@
               border-radius: 3px;
             }
           }
+
           .cards {
             height: auto;
             border-radius: 3px;
@@ -652,23 +707,28 @@
               .period {
                 font-size: clamp(0.525rem, 0.4022rem + 0.5435vw, 0.65rem);
               }
+
               .description {
                 font-size: clamp(0.625rem, 0.4022rem + 0.5435vw, 0.75rem);
                 margin-top: 5px;
               }
+
               .information {
                 .icons {
                   i {
                     margin-left: 10px;
                   }
                 }
+
                 .title {
                   font-size: clamp(0.625rem, 0.4022rem + 0.5435vw, 0.75rem);
                 }
+
                 .percentage {
                   font-size: clamp(0.625rem, 0.4022rem + 0.5435vw, 0.75rem);
                 }
               }
+
               .bar {
                 height: 15px;
                 margin-top: 10px;
@@ -694,6 +754,7 @@
     .container {
       width: 85%;
     }
+
     .dynamic-flex {
       height: auto;
 
@@ -704,11 +765,13 @@
           font-size: clamp(2.1875rem, -0.7976rem + 14.9254vw, 5.3125rem);
           line-height: 100%;
         }
+
         .title-solid {
           font-size: clamp(1.25rem, -1.7351rem + 14.9254vw, 4.375rem);
           line-height: 100%;
         }
       }
+
       .cards-container {
         height: auto;
         width: 100%;
@@ -729,6 +792,7 @@
               border-radius: 3px;
             }
           }
+
           .cards {
             height: auto;
             border-radius: 3px;
@@ -747,23 +811,28 @@
               .period {
                 font-size: clamp(0.775rem, 0.5089rem + 0.5714vw, 0.7375rem);
               }
+
               .description {
                 font-size: clamp(0.1875rem, 0.0595rem + 1.024vw, 1.3625rem);
                 margin-top: 5px;
               }
+
               .information {
                 .icons {
                   i {
                     margin-left: 10px;
                   }
                 }
+
                 .title {
                   font-size: clamp(0.1875rem, 0.0595rem + 1.024vw, 1.3625rem);
                 }
+
                 .percentage {
                   font-size: clamp(0.1875rem, 0.0595rem + 1.024vw, 1.3625rem);
                 }
               }
+
               .bar {
                 height: 15px;
                 margin-top: 10px;
@@ -789,6 +858,7 @@
     .container {
       width: 85%;
     }
+
     .dynamic-flex {
       height: auto;
 
@@ -799,11 +869,13 @@
           font-size: clamp(5.5rem, -0.0715rem + 3.6vw, 7rem);
           line-height: 100%;
         }
+
         .title-solid {
           font-size: clamp(4.5rem, -2.9375rem + 4.8vw, 6.0625rem);
           line-height: 100%;
         }
       }
+
       .cards-container {
         height: auto;
         width: 100%;
@@ -824,6 +896,7 @@
               border-radius: 3px;
             }
           }
+
           .cards {
             height: auto;
             border-radius: 3px;
@@ -842,23 +915,28 @@
               .period {
                 font-size: clamp(0.1575rem, 0.0595rem + 1.004vw, 1.2625rem);
               }
+
               .description {
                 font-size: clamp(0.1875rem, 0.0595rem + 1.024vw, 1.3625rem);
                 margin-top: 5px;
               }
+
               .information {
                 .icons {
                   i {
                     margin-left: 10px;
                   }
                 }
+
                 .title {
                   font-size: clamp(0.1875rem, 0.0595rem + 1.024vw, 1.3625rem);
                 }
+
                 .percentage {
                   font-size: clamp(0.1875rem, 0.0595rem + 1.024vw, 1.3625rem);
                 }
               }
+
               .bar {
                 height: 15px;
                 margin-top: 10px;
@@ -893,6 +971,7 @@
           font-size: clamp(2.1875rem, -0.7976rem + 14.9254vw, 5.3125rem);
           line-height: 100%;
         }
+
         .title-solid {
           font-size: clamp(1.25rem, -1.7351rem + 14.9254vw, 4.375rem);
           line-height: 100%;
@@ -918,6 +997,7 @@
               border-radius: 5px;
             }
           }
+
           .cards {
             width: 100%;
             max-height: 92%;
@@ -933,10 +1013,12 @@
               .period {
                 font-size: clamp(0.1875rem, 0.0595rem + 1.024vw, 1.3625rem);
               }
+
               .description {
                 font-size: clamp(0.1875rem, 0.0595rem + 1.024vw, 1.3625rem);
                 margin-top: 5px;
               }
+
               .information {
                 width: 100%;
 
@@ -945,11 +1027,13 @@
                     margin-left: 10px;
                   }
                 }
+
                 .title {
                   font-size: clamp(0.1875rem, 0.0595rem + 1.024vw, 1.3625rem);
                   font-weight: 600;
                 }
               }
+
               .bar {
                 width: 100%;
                 height: 15px;
@@ -987,6 +1071,7 @@
           font-size: clamp(2.1875rem, -0.7976rem + 14.9254vw, 5.3125rem);
           line-height: 100%;
         }
+
         .title-solid {
           font-size: clamp(1.25rem, -1.7351rem + 14.9254vw, 4.375rem);
           line-height: 100%;
@@ -1012,6 +1097,7 @@
               border-radius: 5px;
             }
           }
+
           .cards {
             width: 100%;
             max-height: 92%;
@@ -1027,10 +1113,12 @@
               .period {
                 font-size: clamp(0.1875rem, 0.0595rem + 1.024vw, 1.3625rem);
               }
+
               .description {
                 font-size: clamp(0.1875rem, 0.0595rem + 1.024vw, 1.3625rem);
                 margin-top: 5px;
               }
+
               .information {
                 width: 100%;
 
@@ -1039,11 +1127,13 @@
                     margin-left: 10px;
                   }
                 }
+
                 .title {
                   font-size: clamp(0.1875rem, 0.0595rem + 1.024vw, 1.3625rem);
                   font-weight: 600;
                 }
               }
+
               .bar {
                 width: 100%;
                 height: 15px;
@@ -1081,6 +1171,7 @@
           font-size: clamp(4.6875rem, 1.875rem + 3vw, 5.625rem);
           line-height: 100%;
         }
+
         .title-solid {
           font-size: clamp(3.75rem, 0.9375rem + 3vw, 4.6875rem);
           line-height: 100%;
@@ -1106,6 +1197,7 @@
               border-radius: 5px;
             }
           }
+
           .cards {
             width: 100%;
             max-height: 92%;
@@ -1121,10 +1213,12 @@
               .period {
                 font-size: clamp(0.1475rem, 0.0595rem + 1.002vw, 1.1625rem);
               }
+
               .description {
                 font-size: clamp(0.1875rem, 0.0595rem + 1.024vw, 1.3625rem);
                 margin-top: 5px;
               }
+
               .information {
                 width: 100%;
 
@@ -1133,11 +1227,13 @@
                     margin-left: 10px;
                   }
                 }
+
                 .title {
                   font-size: clamp(0.1875rem, 0.0595rem + 1.024vw, 1.3625rem);
                   font-weight: 600;
                 }
               }
+
               .bar {
                 width: 100%;
                 height: 15px;

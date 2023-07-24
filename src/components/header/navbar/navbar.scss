@@ -18,9 +18,9 @@
 
     span {
       font-weight: 500;
-      transition: all 0.3s ease-in-out;
     }
   }
+
   .right {
     display: flex;
     align-items: center;
@@ -30,24 +30,30 @@
       align-items: center;
       height: 100%;
 
-      li {
-        font-weight: 500;
-        cursor: pointer;
-        border-bottom: 2px solid transparent;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+      a {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
-        &:last-child {
-          margin-right: 0;
+        &:hover {
+          color: $purple;
         }
 
-        a {
-          &:hover {
-            border-bottom: 2px solid $lightPurple;
+        li {
+          font-weight: 500;
+          cursor: pointer;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          text-align: center;
+
+          &:last-child {
+            margin-right: 0;
           }
         }
       }
+
       .language {
         background-size: cover;
         background-position: center;
@@ -58,6 +64,7 @@
         margin: 0 10px 0 0;
       }
     }
+
     .menu {
       display: none;
     }
@@ -77,12 +84,14 @@
       .left {
         font-size: clamp(0.65rem, -0.1321rem + 4vw, 1rem);
       }
+
       .right {
         font-size: clamp(0.65rem, -0.1321rem + 4vw, 1rem);
 
         ul {
           display: none;
         }
+
         .menu {
           display: flex;
           cursor: pointer;
@@ -107,10 +116,12 @@
       .left {
         font-size: clamp(0.625rem, -0.1321rem + 4vw, 1rem);
       }
+
       .right {
         ul {
           display: none;
         }
+
         .menu {
           display: flex;
           cursor: pointer;
@@ -135,10 +146,12 @@
       .left {
         font-size: clamp(0.625rem, -0.1321rem + 4vw, 1.1rem);
       }
+
       .right {
         ul {
           display: none;
         }
+
         .menu {
           display: flex;
           cursor: pointer;
@@ -163,10 +176,12 @@
       .left {
         font-size: clamp(1.4375rem, 0.6836rem + 1.5686vw, 1.6875rem);
       }
+
       .right {
         ul {
           display: none;
         }
+
         .menu {
           display: flex;
           cursor: pointer;
@@ -188,10 +203,12 @@
     .container {
       width: 85%;
     }
+
     .left {
       margin-right: 5%;
       font-size: 1.2vw;
     }
+
     .right {
       width: 80%;
 
@@ -199,10 +216,11 @@
         width: 100%;
         font-size: 1.2vw;
 
-        li {
-          width: calc(100%/5);
+        a {
+          width: calc(100% / 5);
           margin: 0 30px;
         }
+
         .language {
           height: 20px;
           width: 20px;
@@ -222,10 +240,12 @@
     .container {
       width: 85%;
     }
+
     .left {
       margin-right: 5%;
       font-size: 1.2vw;
     }
+
     .right {
       width: 70%;
 
@@ -233,10 +253,11 @@
         width: 100%;
         font-size: 1.2vw;
 
-        li {
-          width: calc(100%/5);
+        a {
+          width: calc(100% / 5);
           margin: 0 30px;
         }
+
         .language {
           height: 20px;
           width: 20px;
@@ -256,10 +277,12 @@
     .container {
       width: 85%;
     }
+
     .left {
       margin-right: 5%;
       font-size: clamp(0.875rem, 0.5089rem + 0.5714vw, 0.9375rem);
     }
+
     .right {
       width: 70%;
 
@@ -267,10 +290,11 @@
         width: 100%;
         font-size: clamp(0.875rem, 0.5089rem + 0.5714vw, 0.9375rem);
 
-        li {
-          width: calc(100%/5);
+        a {
+          width: calc(100% / 5);
           margin: 0 30px;
         }
+
         .language {
           height: 20px;
           width: 20px;
@@ -293,10 +317,12 @@
       .left {
         font-size: clamp(1.0625rem, 0.684rem + 1.8868vw, 1.25rem);
       }
+
       .right {
         ul {
           display: none;
         }
+
         .menu {
           display: flex;
           cursor: pointer;
@@ -318,10 +344,12 @@
     .container {
       width: 85%;
     }
+
     .left {
       margin-right: 5%;
       font-size: clamp(1.0625rem, 0.5604rem + 0.6689vw, 1.1875rem);
     }
+
     .right {
       width: 70%;
 
@@ -329,10 +357,11 @@
         width: 100%;
         font-size: clamp(1.0625rem, 0.5604rem + 0.6689vw, 1.1875rem);
 
-        li {
-          width: calc(100%/5);
+        a {
+          width: calc(100% / 5);
           margin: 0 30px;
         }
+
         .language {
           height: 20px;
           width: 20px;
@@ -352,10 +381,12 @@
     .container {
       width: 85%;
     }
+
     .left {
       margin-right: 5%;
       font-size: clamp(1rem, 0.0595rem + 1.1024vw, 1.3625rem);
     }
+
     .right {
       width: 60%;
 
@@ -363,10 +394,11 @@
         width: 100%;
         font-size: clamp(1rem, 0.0595rem + 1.1024vw, 1.3625rem);
 
-        li {
-          width: calc(100%/5);
+        a {
+          width: calc(100% / 5);
           margin: 0 30px;
         }
+
         .language {
           height: 20px;
           width: 20px;
@@ -386,10 +418,12 @@
     .container {
       width: 85%;
     }
+
     .left {
       margin-right: 5%;
       font-size: clamp(1rem, 0.0595rem + 1.1024vw, 1.3625rem);
     }
+
     .right {
       width: 60%;
 
@@ -397,10 +431,11 @@
         width: 100%;
         font-size: clamp(1rem, 0.0595rem + 1.1024vw, 1.3625rem);
 
-        li {
-          width: calc(100%/5);
+        a {
+          width: calc(100% / 5);
           margin: 0 30px;
         }
+
         .language {
           height: 20px;
           width: 20px;

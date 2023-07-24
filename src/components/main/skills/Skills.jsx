@@ -1,4 +1,5 @@
 import * as React from "react";
+
 function Skills(props) {
 
     const educationCopies = [
@@ -61,15 +62,16 @@ function Skills(props) {
                 <div className="cards-container">
                     <div className="education">
                         <div className="subtitle">
-                            <h3 className="button-shadow">Studi</h3>
+                            <h3 className={`button shadow-${props.theme ? "light" : "dark"}`}>Studi</h3>
                         </div>
 
-                        <div className="cards">
+                        <div className={`cards shadow-${props.theme ? "light" : "dark"}`}>
                             {
                                 educationCopies.map((copy, index) => (
-                                    <div className="box" key={index}>
+                                    <div className={`box shadow-${props.theme ? "light" : "dark"}`} key={index}>
                                         <span className="period">{copy.period}</span>
-                                        <span className="description"><strong>{copy.strong}</strong> - {copy.description}</span>
+                                        <span
+                                            className="description"><strong>{copy.strong}</strong> - {copy.description}</span>
                                     </div>
                                 ))
                             }
@@ -78,13 +80,13 @@ function Skills(props) {
 
                     <div className="skills">
                         <div className="subtitle">
-                            <h3 className="button-shadow">Skills</h3>
+                            <h3 className={`button shadow-${props.theme ? "light" : "dark"}`}>Skills</h3>
                         </div>
 
-                        <div className="cards">
+                        <div className={`cards shadow-${props.theme ? "light" : "dark"}`}>
                             {
                                 skillsCopies.map((copy, index) => (
-                                    <div className="box" key={index}>
+                                    <div className={`box shadow-${props.theme ? "light" : "dark"}`} key={index}>
                                         <div className="information">
                                             <div className="icons">
                                                 <span className="title">{copy.title}</span>
@@ -104,23 +106,22 @@ function Skills(props) {
 
                     <div className="experience">
                         <div className="subtitle">
-                            <h3 className="button-shadow">Esperienze</h3>
+                            <h3 className={`button shadow-${props.theme ? "light" : "dark"}`}>Esperienze</h3>
                         </div>
-                        
-                        <div className="cards">
+
+                        <div className={`cards shadow-${props.theme ? "light" : "dark"}`}>
                             {
                                 jobsCopies.map((copy, index) => (
-                                    <div className="box" key={index}>
+                                    <div className={`box shadow-${props.theme ? "light" : "dark"}`} key={index}>
                                         <span className="period">{copy.period}</span>
-                                        <span className="description"><strong>{copy.strong}</strong> - {copy.description}</span>
+                                        <span
+                                            className="description"><strong>{copy.strong}</strong> - {copy.description}</span>
                                     </div>
                                 ))
                             }
                         </div>
                     </div>
                 </div>
-
-                {/*<VoidSpace/>*/}
             </div>
         </section>
     )

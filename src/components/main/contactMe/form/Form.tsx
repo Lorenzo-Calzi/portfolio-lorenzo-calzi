@@ -78,26 +78,26 @@ function Form(props) {
     }
 
     const formFieldsCheck = (e) => {
-        if(e.target.name === 'name' || e.target.name === 'surname') {
-            if(nameRegex.test(e.target.value)) {
+        if (e.target.name === 'name' || e.target.name === 'surname') {
+            if (nameRegex.test(e.target.value)) {
                 setErrors({...errors, [e.target.name]: false})
             } else {
                 setErrors({...errors, [e.target.name]: true})
             }
         } else if (e.target.name === 'email') {
-            if(emailRegex.test(e.target.value)) {
+            if (emailRegex.test(e.target.value)) {
                 setErrors({...errors, [e.target.name]: false})
             } else {
                 setErrors({...errors, [e.target.name]: true})
             }
         } else if (e.target.name === 'phone') {
-            if(phoneRegex.test(e.target.value)) {
+            if (phoneRegex.test(e.target.value)) {
                 setErrors({...errors, [e.target.name]: false})
             } else {
                 setErrors({...errors, [e.target.name]: true})
             }
         } else if (e.target.name === 'message') {
-            if(e.target.value.length > 5) {
+            if (e.target.value.length > 5) {
                 setErrors({...errors, [e.target.name]: false})
             } else {
                 setErrors({...errors, [e.target.name]: true})
@@ -108,11 +108,11 @@ function Form(props) {
     const sendEmail = (e) => {
         e.preventDefault();
 
-        let newState:any = {}
+        let newState: any = {}
         Object.keys(errors).filter((key) => {
-            if(!formValue[key]) {
+            if (!formValue[key]) {
                 newState = {...newState, [key]: true}
-            } else if(errors[key] === true) {
+            } else if (errors[key] === true) {
                 newState = {...newState, [key]: true}
             } else {
                 newState = {...newState, [key]: false}
@@ -120,7 +120,7 @@ function Form(props) {
         })
         setErrors(newState)
 
-        if( (errors.name || !formValue.name) ||
+        if ((errors.name || !formValue.name) ||
             (errors.surname || !formValue.surname) ||
             (errors.email || !formValue.email) ||
             (errors.phone || !formValue.phone) ||
@@ -171,43 +171,43 @@ function Form(props) {
 
                 <div className="information">
                     <div className="icon-container">
-                        <i className="fa-solid fa-address-card" />
+                        <i className="fa-solid fa-address-card"/>
                     </div>
                     <span>Lorenzo Calzi</span>
                 </div>
 
                 <div className="information">
                     <div className="icon-container">
-                        <i className="fa-solid fa-cake-candles" />
+                        <i className="fa-solid fa-cake-candles"/>
                     </div>
                     <span>23 Anni</span>
                 </div>
 
                 <div className="information">
                     <div className="icon-container">
-                        <i className="fa-solid fa-map-location-dot" />
+                        <i className="fa-solid fa-map-location-dot"/>
                     </div>
                     <span>Milano</span>
                 </div>
 
                 <div className="information">
                     <div className="icon-container">
-                        <i className="fa-solid fa-envelope" />
+                        <i className="fa-solid fa-envelope"/>
                     </div>
                     <span>lorenzocalzi@gmail.com</span>
                 </div>
 
                 <div className="information">
                     <div className="icon-container">
-                        <i className="fa-solid fa-phone" />
+                        <i className="fa-solid fa-phone"/>
                     </div>
                     <span>3451559558</span>
                 </div>
             </div>
 
-            <div className="divider" />
+            <div className="divider"/>
 
-            <div className="inputs">
+            <div className={`inputs shadow-${props.theme ? "light" : "dark"}`}>
                 <div className="groups">
                     {
                         inputs.map((input, index) => (
@@ -217,14 +217,16 @@ function Form(props) {
                                        value={formValue[input.name]}
                                        onChange={onChange}
                                        onBlur={formFieldsCheck}
+                                       className={`box shadow-${props.theme ? "light" : "dark"}`}
                                 />
                                 <label className={formValue[input.name] !== '' ? 'upper' : ''}>{input.label}</label>
 
                                 {
                                     errors[input.name] && (
                                         <div className="error-container">
-                                            <i className="fa-solid fa-circle-exclamation" />
-                                            <span className='error'>{formValue[input.name] === '' ? input.emptyError : input.invalidError}</span>
+                                            <i className="fa-solid fa-circle-exclamation"/>
+                                            <span
+                                                className='error'>{formValue[input.name] === '' ? input.emptyError : input.invalidError}</span>
                                         </div>
                                     )
                                 }
@@ -238,21 +240,24 @@ function Form(props) {
                                       value={formValue.message}
                                       onChange={onChange}
                                       onBlur={formFieldsCheck}
+                                      className={`box shadow-${props.theme ? "light" : "dark"}`}
                             />
                         <label className={formValue.message !== '' ? 'upper' : ''}>Messaggio *</label>
 
                         {
                             errors.message && (
                                 <div className="error-container">
-                                    <i className="fa-solid fa-circle-exclamation" />
-                                    <span className='error'>{formValue.message === '' ? 'Inserire un messaggio' : 'Inserire un messaggio di almeno 5 caratteri'}</span>
+                                    <i className="fa-solid fa-circle-exclamation"/>
+                                    <span
+                                        className='error'>{formValue.message === '' ? 'Inserire un messaggio' : 'Inserire un messaggio di almeno 5 caratteri'}</span>
                                 </div>
                             )
                         }
                     </div>
                 </div>
 
-                <input type="submit" value="Invia" className="submit" />
+                <input type="submit" value="Invia"
+                       className={`submit shadow-${props.theme ? "light" : "dark"}`}/>
             </div>
         </form>
     )

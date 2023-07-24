@@ -10,7 +10,6 @@
 
   #theme {
     position: fixed;
-    bottom: 81%;
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -33,13 +32,13 @@
   }
   #to-the-top {
     position: fixed;
-    top: 91%;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     opacity: 0;
+    bottom: 3%;
 
     &:hover {
       color: $purple;
@@ -158,7 +157,6 @@
   #to-the-top {
     width: 30px;
     height: 30px;
-    top: 91%;
     right: 2%;
     margin: 0;
     border-radius: 50%;
@@ -173,7 +171,6 @@
   #theme {
     width: 35px;
     height: 35px;
-    bottom: 81%;
     right: 2%;
     margin: 0;
     border-radius: 50%;
@@ -187,7 +184,6 @@
   #to-the-top {
     width: 35px;
     height: 35px;
-    top: 91%;
     right: 2%;
     margin: 0;
     border-radius: 50%;
@@ -202,7 +198,6 @@
   #theme {
     width: 45px;
     height: 45px;
-    bottom: 81%;
     right: 2%;
     margin: 0;
     border-radius: 50%;
@@ -216,7 +211,6 @@
   #to-the-top {
     width: 45px;
     height: 45px;
-    top: 91%;
     right: 2%;
     margin: 0;
     border-radius: 50%;
@@ -269,7 +263,6 @@
   #to-the-top {
     width: 50px;
     height: 50px;
-    top: 91%;
     right: 2%;
     margin: 0;
     border-radius: 50%;
@@ -286,7 +279,6 @@
     width: 50px;
     height: 50px;
     position: fixed;
-    bottom: 81%;
     right: 2%;
     margin: 0;
     border-radius: 50%;
@@ -300,7 +292,6 @@
   #to-the-top {
     width: 50px;
     height: 50px;
-    top: 91%;
     right: 2%;
     margin: 0;
     border-radius: 50%;
@@ -331,7 +322,6 @@
   #to-the-top {
     width: 50px;
     height: 50px;
-    top: 91%;
     right: 2%;
     margin: 0;
     border-radius: 50%;

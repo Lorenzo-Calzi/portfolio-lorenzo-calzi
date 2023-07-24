@@ -37,7 +37,7 @@ function Carousel(props) {
     }, [props.theme])
 
     const resizeCarousel = () => {
-        if(carousel.current.offsetWidth) {
+        if (carousel.current.offsetWidth) {
             document.getElementById('slider-content').style.height = `${carousel.current.offsetWidth * 0.5625}px`;
         }
         slide = document.querySelectorAll('.slider-single')
@@ -65,7 +65,7 @@ function Carousel(props) {
         let afterSlide;
         let activeSlide;
 
-        if(!slide) {
+        if (!slide) {
             slide = document.querySelectorAll('.slider-single')
         }
 
@@ -86,8 +86,7 @@ function Carousel(props) {
                     thisSlide.classList.add('before-hidden');
                 }
             });
-        }
-        else if (type === 'right') {
+        } else if (type === 'right') {
             if (slideCurrent < slideTotal) {
                 slideCurrent++;
             } else {
@@ -119,8 +118,7 @@ function Carousel(props) {
                     thisSlide.classList.add('before-hidden');
                 }
             });
-        }
-        else if (type === 'left') {
+        } else if (type === 'left') {
             if (slideCurrent > 0) {
                 slideCurrent--;
             } else {
@@ -154,15 +152,15 @@ function Carousel(props) {
             });
         }
 
-        if(beforeSlide) {
+        if (beforeSlide) {
             beforeSlide.className = 'slider-single';
             beforeSlide.classList.add('before');
         }
-        if(activeSlide) {
+        if (activeSlide) {
             activeSlide.className = 'slider-single';
             activeSlide.classList.add('active');
         }
-        if(afterSlide) {
+        if (afterSlide) {
             afterSlide.className = 'slider-single';
             afterSlide.classList.add('after');
         }
@@ -172,8 +170,9 @@ function Carousel(props) {
 
     return (
         <div id="slider-container">
-            <a className="slider-left" style={{color: props.theme ? 'white' : 'black'}} onClick={() => changeSlide('left')}>
-                <i className="fa-solid fa-circle-chevron-left" />
+            <a className="slider-left" style={{color: props.theme ? 'white' : 'black'}}
+               onClick={() => changeSlide('left')}>
+                <i className="fa-solid fa-circle-chevron-left"/>
             </a>
 
             <div className="slider-center-content">
@@ -185,9 +184,9 @@ function Carousel(props) {
                                     <img className="slider-single-image" src={element.src} alt={element.alt}/>
                                 </a>
                                 <a href={element.url} target="_blank">
-                                    <h1 className="slider-single-title button-shadow">
+                                    <h1 className={`slider-single-title shadow-${!props.theme ? "light" : "dark"}`}>
                                         {element.alt}
-                                        <i className="fa-solid fa-arrow-up-right-from-square" />
+                                        <i className="fa-solid fa-arrow-up-right-from-square"/>
                                     </h1>
                                 </a>
                             </div>
@@ -198,14 +197,17 @@ function Carousel(props) {
                 <div className="bullet-container">
                     {
                         data.map((element, index) => (
-                            <div className="bullet" onClick={() => goToIndexSlide(index)} id={`bullet-index-${index}`} key={index}></div>
+                            <div className={`bullet shadow-${!props.theme ? "light" : "dark"}`}
+                                 onClick={() => goToIndexSlide(index)} id={`bullet-index-${index}`}
+                                 key={index}></div>
                         ))
                     }
                 </div>
             </div>
 
-            <a className="slider-right" style={{color: props.theme ? 'white' : 'black'}} onClick={() => changeSlide('right')}>
-                <i className="fa-solid fa-circle-chevron-right" />
+            <a className="slider-right" style={{color: props.theme ? 'white' : 'black'}}
+               onClick={() => changeSlide('right')}>
+                <i className="fa-solid fa-circle-chevron-right"/>
             </a>
         </div>
     );
