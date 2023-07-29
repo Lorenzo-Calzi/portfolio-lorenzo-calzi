@@ -4,12 +4,17 @@ function Skills(props) {
 
     const educationCopies = [
         {
-            period: '2020 - 2021',
+            period: '10/2021 - Current',
+            strong: 'Formazione',
+            description: 'Rimango aggiornato approfondendo e facendo corsi formativi'
+        },
+        {
+            period: '03/2020 - 09/2021',
             strong: 'Web developer',
             description: 'Boolean Careers'
         },
         {
-            period: '2013 - 2019',
+            period: '09/2013 - 06/2019',
             strong: 'Diploma',
             description: 'Erasmo Da Rotterdam'
         }
@@ -24,13 +29,54 @@ function Skills(props) {
         {
             title: 'CSS',
             icon: 'devicon-css3-plain colored',
-            percentage: '90%',
+            percentage: '95%',
         },
         {
             title: 'Javascript',
             icon: 'devicon-javascript-plain colored',
+            percentage: '90%',
+        },
+        {
+            title: 'Typescript',
+            icon: 'devicon-typescript-plain colored',
+            percentage: '85%',
+        },
+        {
+            title: 'React',
+            icon: 'devicon-react-original colored',
+            percentage: '90%',
+        },
+        {
+            title: 'Angular',
+            icon: 'devicon-angularjs-plain colored',
+            percentage: '60%',
+        },
+        {
+            title: 'Sass',
+            icon: 'devicon-sass-original colored',
+            percentage: '95%',
+        },
+        {
+            title: 'Tailwind',
+            icon: 'devicon-tailwindcss-plain colored',
+            percentage: '75%',
+        },
+        {
+            title: 'Bootstrap',
+            icon: 'devicon-bootstrap-plain colored',
+            percentage: '65%',
+        },
+        {
+            title: 'Git',
+            icon: 'devicon-git-plain colored',
             percentage: '80%',
         },
+        {
+            title: 'Figma',
+            icon: 'devicon-figma-plain colored',
+            percentage: '40%',
+        },
+
     ]
 
     const jobsCopies = [
@@ -48,6 +94,11 @@ function Skills(props) {
             period: '11/2019 - 11/2020',
             strong: 'Tecnico Help Desk',
             description: 'Sielte S.p.a'
+        },
+        {
+            period: '10/2018 - 02/2029',
+            strong: 'Wordpress developer trainee',
+            description: 'Lavoratore Autonomo'
         }
     ]
 

@@ -73,6 +73,24 @@ function Jumbotron(props) {
                     </div>
 
                     <div className="images">
+                        <div className="icons-sm">
+                            <a href="https://www.linkedin.com/in/lorenzo-calzi-9a12101a0/" target="_blank"
+                               aria-label="linkedin-button"
+                               className={`icon shadow-${!props.theme ? "light" : "dark"}`}>
+                                <i className={`fa-brands fa-linkedin-in ${props.theme ? "white" : "purple"}`}></i>
+                            </a>
+
+                            <a href="https://www.instagram.com/lorenzo_calzi/" target="_blank"
+                               aria-label="instagram-button"
+                               className={`icon shadow-${!props.theme ? "light" : "dark"}`}>
+                                <i className={`fa-brands fa-instagram ${props.theme ? "white" : "purple"}`}></i>
+                            </a>
+
+                            <a href="https://github.com/Lorenzo-Calzi" target="_blank" aria-label="github-button"
+                               className={`icon shadow-${!props.theme ? "light" : "dark"}`}>
+                                <i className={`fa-brands fa-github-alt ${props.theme ? "white" : "purple"}`}></i>
+                            </a>
+                        </div>
                         <div id="image"
                              style={{backgroundImage: `url("${process.env.PUBLIC_URL}/assets/img/${!props.theme ? "jumbo-image-light.webp" : "jumbo-image-light.webp"}")`}}/>
                     </div>

@@ -47,6 +47,12 @@ function Homepage() {
             interval: 75,
             afterReveal: removeRevealEffects
         });
+        ScrollReveal().reveal('#jumbotron .icons-sm a', {
+            delay: 25,
+            origin: 'bottom',
+            interval: 75,
+            afterReveal: removeRevealEffects
+        });
         ScrollReveal().reveal('#jumbotron #image', {delay: 100, origin: 'right'});
         ScrollReveal().reveal('#theme', {delay: 25, origin: 'right', afterReveal: removeRevealEffects});
 
