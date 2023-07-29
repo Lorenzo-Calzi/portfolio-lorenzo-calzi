@@ -60,7 +60,7 @@ function Homepage() {
         ScrollReveal().reveal('#aboutMe .title-gradient', {delay: 25, origin: 'left'});
         ScrollReveal().reveal('#aboutMe .title-solid', {delay: 50, origin: 'right'});
         ScrollReveal().reveal('#aboutMe .image', {delay: 50, origin: 'left'});
-        ScrollReveal().reveal('#aboutMe .description h5', {delay: 75, origin: 'right'});
+        ScrollReveal().reveal('#aboutMe .description h3', {delay: 75, origin: 'right'});
         ScrollReveal().reveal('#aboutMe .description p', {delay: 100, origin: 'right'});
         ScrollReveal().reveal('#aboutMe .description .button', {
             delay: 100,

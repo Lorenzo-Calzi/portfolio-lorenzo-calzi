@@ -7,7 +7,7 @@ function Main(props) {
     return (
         <div id="main">
             <AboutMe theme={props.theme} language={props.language} configArray={props.configArray}/>
-            <Skills theme={props.theme}/>
+            <Skills theme={props.theme} configArray={props.configArray}/>
             <Projects theme={props.theme}/>
             <ContactMe theme={props.theme} language={props.language} configArray={props.configArray}
                        loading={props.loading} handlerLoading={props.handlerLoading}/>

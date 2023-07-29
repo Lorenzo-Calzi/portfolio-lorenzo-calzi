@@ -58,8 +58,18 @@
         "eng": "Hi, I'm Lorenzo"
       },
       "subtitle": {
-        "ita": ["Sviluppatore Web", "Progettista UI/UX", "Videogiocatore", "Appassionato di Tecnologia"],
-        "eng": ["Web Developer", "UI/UX Designer", "Video Gamer", "Tech Enthusiast"]
+        "ita": [
+          "Sviluppatore Web",
+          "Progettista UI/UX",
+          "Videogiocatore",
+          "Appassionato di Tecnologia"
+        ],
+        "eng": [
+          "Web Developer",
+          "UI/UX Designer",
+          "Video Gamer",
+          "Tech Enthusiast"
+        ]
       },
       "paragraph": {
         "ita": "Esperienza di alto livello nel web design e conoscenza dello sviluppo, producendo un lavoro di qualità.",
@@ -69,6 +79,128 @@
         "ita": "Contattami",
         "eng": "Contact Me"
       }
+    }
+  },
+  "main": {
+    "aboutMe": {
+      "title": {
+        "ita": "Su di me",
+        "eng": "About me"
+      },
+      "subtitle": {
+        "ita": "Racconto un po' di me",
+        "eng": "I tell a little about myself"
+      },
+      "paragraph": {
+        "ita": "Mi chiamo Lorenzo Calzi, ho 23 anni e sono di Milano. Sono un appassionato di tecnologia in tutti i suoi ambiti e rimango costantemente aggiornato sulle novità introdotte. Sono una persona socievole, organizzata, precisa e mi pongo sempre l'obbiettivo di raggiungere il miglior risultato possibile. Quello che più mi motiva è sapere che il mondo della programmazione è in continua evoluzione e che quindi avrò sempre qualcosa da imparare, infatti, cerco sempre di approfondire la conoscenza dei linguaggi che già conosco e apprenderne di nuovi.",
+        "eng": "My name is Lorenzo Calzi, I'm 23 and I'm from Milan. I am passionate about technology in all its fields and I am constantly updated on the new features introduced. I am a sociable, organized, precise person and I always set myself the goal of achieving the best possible result. What motivates me most is knowing that the world of programming is constantly evolving and that therefore I will always have something to learn, in fact, I always try to deepen my knowledge of the languages I already know and learn new ones."
+      },
+      "button": {
+        "ita": "DOWNLOAD CV",
+        "eng": "DOWNLOAD CV"
+      }
+    },
+    "skills": {
+      "title": {
+        "ita": "Abilità",
+        "eng": "Skills"
+      },
+      "educations": [
+        {
+          "period": "10/2021 - Current",
+          "strong": "Formazione",
+          "description": "Rimango aggiornato approfondendo e facendo corsi formativi"
+        },
+        {
+          "period": "03/2020 - 09/2021",
+          "strong": "Web developer",
+          "description": "Boolean Careers"
+        },
+        {
+          "period": "09/2013 - 06/2019",
+          "strong": "Diploma",
+          "description": "Erasmo Da Rotterdam"
+        }
+      ],
+      "skills": [
+        {
+          "title": "HTML",
+          "icon": "devicon-html5-plain colored",
+          "percentage": "95%"
+        },
+        {
+          "title": "CSS",
+          "icon": "devicon-css3-plain colored",
+          "percentage": "95%"
+        },
+        {
+          "title": "Javascript",
+          "icon": "devicon-javascript-plain colored",
+          "percentage": "90%"
+        },
+        {
+          "title": "Typescript",
+          "icon": "devicon-typescript-plain colored",
+          "percentage": "85%"
+        },
+        {
+          "title": "React",
+          "icon": "devicon-react-original colored",
+          "percentage": "90%"
+        },
+        {
+          "title": "Angular",
+          "icon": "devicon-angularjs-plain colored",
+          "percentage": "60%"
+        },
+        {
+          "title": "Sass",
+          "icon": "devicon-sass-original colored",
+          "percentage": "95%"
+        },
+        {
+          "title": "Tailwind",
+          "icon": "devicon-tailwindcss-plain colored",
+          "percentage": "75%"
+        },
+        {
+          "title": "Bootstrap",
+          "icon": "devicon-bootstrap-plain colored",
+          "percentage": "65%"
+        },
+        {
+          "title": "Git",
+          "icon": "devicon-git-plain colored",
+          "percentage": "80%"
+        },
+        {
+          "title": "Figma",
+          "icon": "devicon-figma-plain colored",
+          "percentage": "40%"
+        }
+      ],
+      "jobs": [
+        {
+          "period": "11/2021 - Current",
+          "strong": "Full Stack Web Developer",
+          "description": "ANYT1ME"
+        },
+        {
+          "period": "03/2021 - 09/2021",
+          "strong": "Jr. Full Stack Web Developer Trainee",
+          "description": "Boolean Careers"
+        },
+        {
+          "period": "11/2019 - 11/2020",
+          "strong": "Tecnico Help Desk",
+          "description": "Sielte S.p.a"
+        },
+        {
+          "period": "10/2018 - 02/2029",
+          "strong": "Wordpress developer trainee",
+          "description": "Lavoratore Autonomo"
+        }
+      ]
     }
   }
 }
