@@ -72,7 +72,7 @@ function Jumbotron(props) {
 
                     <div className="images">
                         <div id="image"
-                             style={{backgroundImage: `url("${process.env.PUBLIC_URL}/assets/img/${!props.theme ? "jumbo-image-light.jpg" : "jumbo-image-dark.jpg"}")`}}/>
+                             style={{backgroundImage: `url("${process.env.PUBLIC_URL}/assets/img/${!props.theme ? "jumbo-image-light.png" : "jumbo-image-light.png"}")`}}/>
                     </div>
                 </div>
             </div>

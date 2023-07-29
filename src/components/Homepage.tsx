@@ -1,6 +1,6 @@
 import * as React from "react";
 import {Header, Main, Footer, Popup} from "./imports";
-import {useEffect, useLayoutEffect, useState} from "react";
+import {useEffect, useState} from "react";
 import ScrollReveal from 'scrollreveal'
 
 // @ts-ignore
@@ -128,6 +128,11 @@ function Homepage() {
     const onChangeTheme = () => {
         setTheme(!theme)
         document.body.style.backgroundColor = theme ? "#FFFFFF" : '#211d3a'
+        const titles = document.querySelectorAll('.title-gradient')
+
+        titles.forEach((title: HTMLElement) => {
+            title.style.background = `linear-gradient(to top, transparent 0%, ${!theme ? "#FFFFFF" : '#211d3a'} 70%)`
+        });
     }
 
     const onChangeLanguage = () => {

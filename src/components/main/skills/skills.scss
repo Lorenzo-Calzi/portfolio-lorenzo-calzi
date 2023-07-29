@@ -19,8 +19,8 @@
       .title-gradient {
         text-align: center;
         font-weight: 800;
-        background: linear-gradient(to top, transparent 0%, $grey 70%);
-        -webkit-background-clip: text;
+        background: linear-gradient(to top, transparent 0%, $darkPurple 70%);
+        -webkit-background-clip: text !important;
         -webkit-text-fill-color: transparent;
         opacity: 0.1;
       }

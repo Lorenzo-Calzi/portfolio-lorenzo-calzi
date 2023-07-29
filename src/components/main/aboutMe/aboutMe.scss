@@ -16,28 +16,31 @@
 
       .title-gradient {
         text-align: center;
-        background: linear-gradient(to top, transparent 0%, $grey 70%);
-        -webkit-background-clip: text;
+        background: linear-gradient(to top, transparent 0%, $darkPurple 70%);
+        -webkit-background-clip: text !important;
         -webkit-text-fill-color: transparent;
         opacity: 0.1;
       }
+
       .title-solid {
         text-align: center;
         position: relative;
       }
     }
+
     .content {
       display: flex;
       align-items: center;
       justify-content: center;
 
       .image {
-        background-image: url("../../../../public/assets/img/about-me.jpg");
+        background-image: url("../../../../public/assets/img/about-me.png");
         background-position: center;
         background-size: contain;
         background-repeat: no-repeat;
         position: relative;
       }
+
       .description {
         display: flex;
         align-items: flex-start;
@@ -46,10 +49,12 @@
         h5 {
           font-weight: 800;
         }
+
         p {
           text-align: left;
           border-left: 3px solid $purple;
         }
+
         .button {
           border: none;
           background-color: #6D56E9;
@@ -75,6 +80,7 @@
     .container {
       width: 85%;
     }
+
     .dynamic-flex {
       height: auto;
 
@@ -85,11 +91,13 @@
           font-size: clamp(2.3125rem, 0.75rem + 12.5vw, 3.25rem);
           line-height: 100%;
         }
+
         .title-solid {
           font-size: clamp(1.9375rem, 0.5833rem + 10.8333vw, 2.75rem);
           line-height: 100%;
         }
       }
+
       .content {
         flex-direction: column;
         gap: 15px;
@@ -100,6 +108,7 @@
           aspect-ratio: 1/1;
           border-radius: 3px;
         }
+
         .description {
           flex-direction: column;
 
@@ -109,11 +118,13 @@
             margin-bottom: 10px;
             line-height: 100%;
           }
+
           p {
             font-size: clamp(0.65rem, -0.1321rem + 4vw, 1rem);
             padding: 5px 0 5px 15px;
             margin-bottom: 15px;
           }
+
           .button {
             font-size: clamp(0.8rem, -0.0071rem + 3.7736vw, 1.125rem);
             padding: 13px;
@@ -133,6 +144,7 @@
     .container {
       width: 85%;
     }
+
     .dynamic-flex {
       height: auto;
 
@@ -143,11 +155,13 @@
           font-size: clamp(2.3125rem, 0.75rem + 12.5vw, 3.25rem);
           line-height: 100%;
         }
+
         .title-solid {
           font-size: clamp(1.9375rem, 0.5833rem + 10.8333vw, 2.75rem);
           line-height: 100%;
         }
       }
+
       .content {
         flex-direction: column;
         gap: 20px;
@@ -158,6 +172,7 @@
           aspect-ratio: 1/1;
           border-radius: 3px;
         }
+
         .description {
           flex-direction: column;
 
@@ -167,11 +182,13 @@
             margin-bottom: 15px;
             line-height: 100%;
           }
+
           p {
             font-size: clamp(0.625rem, -0.1321rem + 4vw, 1rem);
             padding: 5px 0 5px 15px;
             margin-bottom: 20px;
           }
+
           .button {
             font-size: clamp(0.75rem, -0.0071rem + 3.7736vw, 1.125rem);
             padding: 15px;
@@ -191,6 +208,7 @@
     .container {
       width: 85%;
     }
+
     .dynamic-flex {
       height: auto;
 
@@ -201,11 +219,13 @@
           font-size: clamp(3.75rem, 2.1788rem + 5.2265vw, 4.6875rem);
           line-height: 100%;
         }
+
         .title-solid {
           font-size: clamp(2.8125rem, 1.2413rem + 5.2265vw, 3.75rem);
           line-height: 100%;
         }
       }
+
       .content {
         flex-direction: column;
         gap: 20px;
@@ -216,6 +236,7 @@
           aspect-ratio: 16/9;
           border-radius: 3px;
         }
+
         .description {
           flex-direction: column;
 
@@ -225,11 +246,13 @@
             margin-bottom: 15px;
             line-height: 100%;
           }
+
           p {
             font-size: clamp(0.625rem, -0.1321rem + 4vw, 1.1rem);
             padding: 5px 0 5px 15px;
             margin-bottom: 20px;
           }
+
           .button {
             font-size: clamp(0.75rem, -0.0071rem + 3.7736vw, 1.2rem);
             padding: 15px;
@@ -249,6 +272,7 @@
     .container {
       width: 85%;
     }
+
     .dynamic-flex {
       height: auto;
 
@@ -259,11 +283,13 @@
           font-size: clamp(5.3125rem, 3.7413rem + 5.2265vw, 6.25rem);
           line-height: 100%;
         }
+
         .title-solid {
           font-size: clamp(4.375rem, 2.8038rem + 5.2265vw, 5.3125rem);
           line-height: 100%;
         }
       }
+
       .content {
         flex-direction: column;
         gap: 20px;
@@ -274,6 +300,7 @@
           aspect-ratio: 16/9;
           border-radius: 3px;
         }
+
         .description {
           flex-direction: column;
 
@@ -283,11 +310,13 @@
             margin-bottom: 15px;
             line-height: 100%;
           }
+
           p {
             font-size: clamp(1.3125rem, 0.7471rem + 1.1765vw, 1.5rem);
             padding: 5px 0 5px 15px;
             margin-bottom: 30px;
           }
+
           .button {
             font-size: clamp(1.4375rem, 0.6836rem + 1.5686vw, 1.6875rem);
             padding: 20px;
@@ -308,6 +337,7 @@
     .container {
       width: 85%;
     }
+
     .dynamic-flex {
       height: auto;
 
@@ -318,11 +348,13 @@
           font-size: clamp(2.1875rem, 1.292rem + 4.4776vw, 3.125rem);
           line-height: 100%;
         }
+
         .title-solid {
           font-size: clamp(1.25rem, 0.3545rem + 4.4776vw, 2.1875rem);
           line-height: 100%;
         }
       }
+
       .content {
         gap: 30px;
 
@@ -333,6 +365,7 @@
           border-radius: 3px;
           line-height: 100%;
         }
+
         .description {
           width: 50%;
 
@@ -341,11 +374,13 @@
             padding-right: 10px;
             margin-bottom: 10px;
           }
+
           p {
             font-size: 1.2vw;
             padding: 5px 0 5px 15px;
             margin-bottom: 15px;
           }
+
           .button {
             font-size: 1.2vw;
             padding: 10px;
@@ -366,6 +401,7 @@
     .container {
       width: 85%;
     }
+
     .dynamic-flex {
       height: auto;
 
@@ -376,11 +412,13 @@
           font-size: clamp(2.1875rem, 1.292rem + 4.4776vw, 3.125rem);
           line-height: 100%;
         }
+
         .title-solid {
           font-size: clamp(1.25rem, 0.3545rem + 4.4776vw, 2.1875rem);
           line-height: 100%;
         }
       }
+
       .content {
         gap: 40px;
 
@@ -390,6 +428,7 @@
           aspect-ratio: 1/1;
           border-radius: 3px;
         }
+
         .description {
           flex-direction: column;
           width: 50%;
@@ -400,11 +439,13 @@
             margin-bottom: 15px;
             line-height: 100%;
           }
+
           p {
             font-size: clamp(0.625rem, 0.4022rem + 0.5435vw, 0.75rem);
             padding: 5px 0 5px 15px;
             margin-bottom: 20px;
           }
+
           .button {
             font-size: clamp(0.625rem, 0.2908rem + 0.8152vw, 0.8125rem);
             padding: 10px;
@@ -425,6 +466,7 @@
     .container {
       width: 85%;
     }
+
     .dynamic-flex {
       height: auto;
 
@@ -435,11 +477,13 @@
           font-size: clamp(2.1875rem, -0.7976rem + 14.9254vw, 5.3125rem);
           line-height: 100%;
         }
+
         .title-solid {
           font-size: clamp(1.25rem, -1.7351rem + 14.9254vw, 4.375rem);
           line-height: 100%;
         }
       }
+
       .content {
         gap: 50px;
 
@@ -449,6 +493,7 @@
           aspect-ratio: 1/1;
           border-radius: 3px;
         }
+
         .description {
           flex-direction: column;
           width: 50%;
@@ -459,11 +504,13 @@
             margin-bottom: 15px;
             line-height: 100%;
           }
+
           p {
             font-size: clamp(0.875rem, 0.5089rem + 0.5714vw, 0.9375rem);
             padding: 5px 0 5px 15px;
             margin-bottom: 20px;
           }
+
           .button {
             font-size: clamp(0.9375rem, 0.2054rem + 1.1429vw, 1.0625rem);
             padding: 10px;
@@ -483,6 +530,7 @@
     .container {
       width: 85%;
     }
+
     .dynamic-flex {
       height: auto;
 
@@ -493,11 +541,13 @@
           font-size: clamp(5.3125rem, 3.7413rem + 5.2265vw, 6.25rem);
           line-height: 100%;
         }
+
         .title-solid {
           font-size: clamp(4.375rem, 2.8038rem + 5.2265vw, 5.3125rem);
           line-height: 100%;
         }
       }
+
       .content {
         flex-direction: column;
         gap: 20px;
@@ -508,6 +558,7 @@
           aspect-ratio: 16/9;
           border-radius: 3px;
         }
+
         .description {
           flex-direction: column;
 
@@ -517,11 +568,13 @@
             margin-bottom: 15px;
             line-height: 100%;
           }
+
           p {
             font-size: clamp(1.3125rem, 0.7471rem + 1.1765vw, 1.5rem);
             padding: 5px 0 5px 15px;
             margin-bottom: 30px;
           }
+
           .button {
             font-size: clamp(1.4375rem, 0.6836rem + 1.5686vw, 1.6875rem);
             padding: 20px;
@@ -542,6 +595,7 @@
     .container {
       width: 85%;
     }
+
     .dynamic-flex {
       height: auto;
 
@@ -552,11 +606,13 @@
           font-size: clamp(2.1875rem, -0.7976rem + 14.9254vw, 5.3125rem);
           line-height: 100%;
         }
+
         .title-solid {
           font-size: clamp(1.25rem, -1.7351rem + 14.9254vw, 4.375rem);
           line-height: 100%;
         }
       }
+
       .content {
         gap: 20px;
 
@@ -566,6 +622,7 @@
           aspect-ratio: 1/1;
           border-radius: 3px;
         }
+
         .description {
           width: 50%;
           flex-direction: column;
@@ -576,11 +633,13 @@
             margin-bottom: 15px;
             line-height: 100%;
           }
+
           p {
             font-size: clamp(0.875rem, 0.5089rem + 0.5714vw, 0.9375rem);
             padding: 5px 0 5px 15px;
             margin-bottom: 20px;
           }
+
           .button {
             font-size: clamp(0.9375rem, 0.2054rem + 1.1429vw, 1.0625rem);
             padding: 10px;
@@ -609,20 +668,22 @@
           font-size: clamp(4.6875rem, 1.875rem + 3vw, 5.625rem);
           line-height: 100%;
         }
+
         .title-solid {
           font-size: clamp(3.75rem, 0.9375rem + 3vw, 4.6875rem);
           line-height: 100%;
         }
       }
+
       .content {
-        //height: 75%;
-        gap: 4%;
+        gap: 5%;
 
         .image {
           width: 50%;
           height: 100%;
           border-radius: 5px;
         }
+
         .description {
           width: 50%;
 
@@ -631,11 +692,13 @@
             margin-bottom: 20px;
             line-height: 100%;
           }
+
           p {
             font-size: clamp(0.1875rem, 0.0595rem + 1.024vw, 1.3625rem);
             padding: 10px 10px 10px 25px;
             border-left: 3px solid $purple;
           }
+
           .button {
             font-size: clamp(1.25rem, -0.066rem + 1.4028vw, 1.6875rem);
             border-radius: 5px;
@@ -664,11 +727,13 @@
           font-size: clamp(5.5rem, -0.0715rem + 3.6vw, 7rem);
           line-height: 100%;
         }
+
         .title-solid {
           font-size: clamp(4.5rem, -2.9375rem + 4.8vw, 6.0625rem);
           line-height: 100%;
         }
       }
+
       .content {
         height: 75%;
         gap: 4%;
@@ -678,6 +743,7 @@
           height: 70%;
           border-radius: 5px;
         }
+
         .description {
           width: 50%;
 
@@ -686,11 +752,13 @@
             margin-bottom: 20px;
             line-height: 100%;
           }
+
           p {
             font-size: clamp(0.1875rem, 0.0595rem + 1.024vw, 1.3625rem);
             padding: 10px 10px 10px 25px;
             border-left: 3px solid $purple;
           }
+
           .button {
             font-size: clamp(1.25rem, -0.066rem + 1.4028vw, 1.6875rem);
             border-radius: 5px;

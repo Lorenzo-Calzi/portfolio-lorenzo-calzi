@@ -13,7 +13,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content:  space-evenly;
+    justify-content: space-evenly;
 
     .titles {
       max-height: 25%;
@@ -25,11 +25,12 @@
       .title-gradient {
         text-align: center;
         font-weight: 800;
-        background: linear-gradient(to top, transparent 0%, $grey 70%);
-        -webkit-background-clip: text;
+        background: linear-gradient(to top, transparent 0%, $darkPurple 70%);
+        -webkit-background-clip: text !important;
         -webkit-text-fill-color: transparent;
         opacity: 0.1;
       }
+
       .title-solid {
         text-align: center;
         font-weight: 700;
@@ -47,6 +48,7 @@
     .container {
       width: 85%;
     }
+
     .dynamic-flex {
       height: auto;
 
@@ -57,6 +59,7 @@
           font-size: clamp(2.3125rem, 0.75rem + 12.5vw, 3.25rem);
           line-height: 100%;
         }
+
         .title-solid {
           font-size: clamp(1.9375rem, 0.5833rem + 10.8333vw, 2.75rem);
           line-height: 100%;
@@ -74,6 +77,7 @@
     .container {
       width: 85%;
     }
+
     .dynamic-flex {
       height: auto;
 
@@ -84,6 +88,7 @@
           font-size: clamp(2.3125rem, 0.75rem + 12.5vw, 3.25rem);
           line-height: 100%;
         }
+
         .title-solid {
           font-size: clamp(1.9375rem, 0.5833rem + 10.8333vw, 2.75rem);
           line-height: 100%;
@@ -101,6 +106,7 @@
     .container {
       width: 85%;
     }
+
     .dynamic-flex {
       height: auto;
 
@@ -111,6 +117,7 @@
           font-size: clamp(3.75rem, 2.1788rem + 5.2265vw, 4.6875rem);
           line-height: 100%;
         }
+
         .title-solid {
           font-size: clamp(2.8125rem, 1.2413rem + 5.2265vw, 3.75rem);
           line-height: 100%;
@@ -128,6 +135,7 @@
     .container {
       width: 85%;
     }
+
     .dynamic-flex {
       height: auto;
 
@@ -138,6 +146,7 @@
           font-size: clamp(5.3125rem, 3.7413rem + 5.2265vw, 6.25rem);
           line-height: 100%;
         }
+
         .title-solid {
           font-size: clamp(4.375rem, 2.8038rem + 5.2265vw, 5.3125rem);
           line-height: 100%;
@@ -155,6 +164,7 @@
     .container {
       width: 85%;
     }
+
     .dynamic-flex {
       height: auto;
 
@@ -165,6 +175,7 @@
           font-size: clamp(2.1875rem, 1.292rem + 4.4776vw, 3.125rem);
           line-height: 100%;
         }
+
         .title-solid {
           font-size: clamp(1.25rem, 0.3545rem + 4.4776vw, 2.1875rem);
           line-height: 100%;
@@ -182,6 +193,7 @@
     .container {
       width: 85%;
     }
+
     .dynamic-flex {
       height: auto;
 
@@ -192,6 +204,7 @@
           font-size: clamp(2.1875rem, 1.292rem + 4.4776vw, 3.125rem);
           line-height: 100%;
         }
+
         .title-solid {
           font-size: clamp(1.25rem, 0.3545rem + 4.4776vw, 2.1875rem);
           line-height: 100%;
@@ -209,6 +222,7 @@
     .container {
       width: 85%;
     }
+
     .dynamic-flex {
       height: auto;
 
@@ -219,6 +233,7 @@
           font-size: clamp(2.1875rem, -0.7976rem + 14.9254vw, 5.3125rem);
           line-height: 100%;
         }
+
         .title-solid {
           font-size: clamp(1.25rem, -1.7351rem + 14.9254vw, 4.375rem);
           line-height: 100%;
@@ -236,6 +251,7 @@
     .container {
       width: 85%;
     }
+
     .dynamic-flex {
       height: auto;
 
@@ -246,6 +262,7 @@
           font-size: clamp(5.3125rem, 3.7413rem + 5.2265vw, 6.25rem);
           line-height: 100%;
         }
+
         .title-solid {
           font-size: clamp(4.375rem, 2.8038rem + 5.2265vw, 5.3125rem);
           line-height: 100%;
@@ -263,6 +280,7 @@
     .container {
       width: 85%;
     }
+
     .dynamic-flex {
       height: auto;
 
@@ -273,6 +291,7 @@
           font-size: clamp(2.1875rem, -0.7976rem + 14.9254vw, 5.3125rem);
           line-height: 100%;
         }
+
         .title-solid {
           font-size: clamp(1.25rem, -1.7351rem + 14.9254vw, 4.375rem);
           line-height: 100%;
@@ -290,6 +309,7 @@
     .container {
       width: 85%;
     }
+
     .dynamic-flex {
       height: auto;
 
@@ -300,6 +320,7 @@
           font-size: clamp(4.6875rem, 1.875rem + 3vw, 5.625rem);
           line-height: 100%;
         }
+
         .title-solid {
           font-size: clamp(3.75rem, 0.9375rem + 3vw, 4.6875rem);
           line-height: 100%;
@@ -317,6 +338,7 @@
     .container {
       width: 85%;
     }
+
     .dynamic-flex {
       height: auto;
 
@@ -327,6 +349,7 @@
           font-size: clamp(5.5rem, -0.0715rem + 3.6vw, 7rem);
           line-height: 100%;
         }
+
         .title-solid {
           font-size: clamp(4.5rem, -2.9375rem + 4.8vw, 6.0625rem);
           line-height: 100%;

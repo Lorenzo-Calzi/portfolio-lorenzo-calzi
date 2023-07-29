@@ -1,7 +1,6 @@
 import * as React from "react"
 import {useRef, useState} from "react";
 import emailjs from '@emailjs/browser';
-import ScrollReveal from 'scrollreveal'
 
 function Form(props) {
     const form = useRef();
@@ -207,7 +206,7 @@ function Form(props) {
 
             <div className="divider"/>
 
-            <div className={`inputs shadow-${props.theme ? "light" : "dark"}`}>
+            <div className={`inputs shadow-${props.theme ? "dark" : "light"}`}>
                 <div className="groups">
                     {
                         inputs.map((input, index) => (
@@ -217,7 +216,7 @@ function Form(props) {
                                        value={formValue[input.name]}
                                        onChange={onChange}
                                        onBlur={formFieldsCheck}
-                                       className={`box shadow-${props.theme ? "light" : "dark"}`}
+                                       className={`box shadow-${props.theme ? "dark" : "light"}`}
                                 />
                                 <label className={formValue[input.name] !== '' ? 'upper' : ''}>{input.label}</label>
 
@@ -240,7 +239,7 @@ function Form(props) {
                                       value={formValue.message}
                                       onChange={onChange}
                                       onBlur={formFieldsCheck}
-                                      className={`box shadow-${props.theme ? "light" : "dark"}`}
+                                      className={`box shadow-${props.theme ? "dark" : "light"}`}
                             />
                         <label className={formValue.message !== '' ? 'upper' : ''}>Messaggio *</label>
 
@@ -257,7 +256,7 @@ function Form(props) {
                 </div>
 
                 <input type="submit" value="Invia"
-                       className={`submit shadow-${props.theme ? "light" : "dark"}`}/>
+                       className={`submit shadow-${props.theme ? "dark" : "light"}`}/>
             </div>
         </form>
     )

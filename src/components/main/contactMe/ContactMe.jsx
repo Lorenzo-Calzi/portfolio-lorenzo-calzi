@@ -4,14 +4,17 @@ import {Form} from "../../imports";
 function ContactMe(props) {
 
     return (
-        <section id="contactMe" style={{pointerEvents: props.loading.bar ? 'none' : 'auto', userSelect: props.loading.bar ? 'none' : 'auto'}}>
+        <section id="contactMe" style={{
+            pointerEvents: props.loading.bar ? 'none' : 'auto',
+            userSelect: props.loading.bar ? 'none' : 'auto'
+        }}>
             <div className="container dynamic-flex">
                 <div className="titles">
                     <h1 className="title-gradient">Contatti</h1>
                     <h2 className="title-solid">Contatti</h2>
                 </div>
 
-                <Form handlerLoading={props.handlerLoading}/>
+                <Form handlerLoading={props.handlerLoading} theme={props.theme}/>
             </div>
         </section>
     )

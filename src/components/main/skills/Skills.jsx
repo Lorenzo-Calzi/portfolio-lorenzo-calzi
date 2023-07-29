@@ -62,13 +62,13 @@ function Skills(props) {
                 <div className="cards-container">
                     <div className="education">
                         <div className="subtitle">
-                            <h3 className={`button shadow-${props.theme ? "light" : "dark"}`}>Studi</h3>
+                            <h3 className={`button shadow-${props.theme ? "dark" : "light"}`}>Studi</h3>
                         </div>
 
-                        <div className={`cards shadow-${props.theme ? "light" : "dark"}`}>
+                        <div className={`cards shadow-${props.theme ? "dark" : "light"}`}>
                             {
                                 educationCopies.map((copy, index) => (
-                                    <div className={`box shadow-${props.theme ? "light" : "dark"}`} key={index}>
+                                    <div className={`box shadow-${props.theme ? "dark" : "light"}`} key={index}>
                                         <span className="period">{copy.period}</span>
                                         <span
                                             className="description"><strong>{copy.strong}</strong> - {copy.description}</span>
@@ -80,13 +80,13 @@ function Skills(props) {
 
                     <div className="skills">
                         <div className="subtitle">
-                            <h3 className={`button shadow-${props.theme ? "light" : "dark"}`}>Skills</h3>
+                            <h3 className={`button shadow-${props.theme ? "dark" : "light"}`}>Skills</h3>
                         </div>
 
-                        <div className={`cards shadow-${props.theme ? "light" : "dark"}`}>
+                        <div className={`cards shadow-${props.theme ? "dark" : "light"}`}>
                             {
                                 skillsCopies.map((copy, index) => (
-                                    <div className={`box shadow-${props.theme ? "light" : "dark"}`} key={index}>
+                                    <div className={`box shadow-${props.theme ? "dark" : "light"}`} key={index}>
                                         <div className="information">
                                             <div className="icons">
                                                 <span className="title">{copy.title}</span>
@@ -106,13 +106,13 @@ function Skills(props) {
 
                     <div className="experience">
                         <div className="subtitle">
-                            <h3 className={`button shadow-${props.theme ? "light" : "dark"}`}>Esperienze</h3>
+                            <h3 className={`button shadow-${props.theme ? "dark" : "light"}`}>Esperienze</h3>
                         </div>
 
-                        <div className={`cards shadow-${props.theme ? "light" : "dark"}`}>
+                        <div className={`cards shadow-${props.theme ? "dark" : "light"}`}>
                             {
                                 jobsCopies.map((copy, index) => (
-                                    <div className={`box shadow-${props.theme ? "light" : "dark"}`} key={index}>
+                                    <div className={`box shadow-${props.theme ? "dark" : "light"}`} key={index}>
                                         <span className="period">{copy.period}</span>
                                         <span
                                             className="description"><strong>{copy.strong}</strong> - {copy.description}</span>
