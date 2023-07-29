@@ -1362,31 +1362,31 @@
             border-radius: 5px;
 
             &:focus ~ label {
-              top: -25px;
+              top: -23px;
               font-size: clamp(0.1875rem, 0.0595rem + 1.024vw, 1.3625rem);
             }
           }
 
           label {
             font-size: clamp(0.1875rem, 0.0595rem + 1.024vw, 1.3625rem);
-            top: 5px;
+            top: 8px;
             left: 10px;
           }
 
           .upper {
-            top: -25px;
+            top: -23px;
             font-size: clamp(0.1875rem, 0.0595rem + 1.024vw, 1.3625rem);
           }
 
           .error-container {
-            margin: 5px 5px 0 10px;
+            margin: 10px 5px 0 10px;
 
             i {
-              font-size: clamp(0.1875rem, 0.0595rem + 1.024vw, 1.3625rem);
+              font-size: clamp(0.1675rem, 0.0525rem + 0.8vw, 1.2625rem);
             }
 
             .error {
-              font-size: clamp(0.1875rem, 0.0595rem + 1.024vw, 1.3625rem);
+              font-size: clamp(0.1675rem, 0.0525rem + 0.8vw, 1.2625rem);
               margin-left: 5px;
             }
           }
