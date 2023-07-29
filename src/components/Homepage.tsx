@@ -28,7 +28,7 @@ function Homepage() {
         if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
         } else {
             ScrollReveal().reveal('#navbar .left span', {delay: 25, origin: 'top', afterReveal: removeRevealEffects});
-            ScrollReveal().reveal('#navbar .right ul', {delay: 25, origin: 'top', afterReveal: removeRevealEffects});
+            ScrollReveal().reveal('#navbar .right div', {delay: 25, origin: 'top', afterReveal: removeRevealEffects});
             ScrollReveal().reveal('#navbar .right .menu', {delay: 25, origin: 'top', afterReveal: removeRevealEffects});
         }
 
@@ -141,7 +141,7 @@ function Homepage() {
 
     const navbarManagement = () => {
         const sections = document.querySelectorAll("section");
-        const navLi = document.querySelectorAll("#navbar .container .right ul li");
+        const navLi = document.querySelectorAll("#navbar .container .right div a");
 
         let current = "";
 

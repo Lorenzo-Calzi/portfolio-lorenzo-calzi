@@ -23,24 +23,22 @@ function Navbar(props) {
                 </div>
 
                 <div className="right">
-                    <ul>
+                    <div>
                         {
                             props.language ? (
                                 configArray.listItems.ita.map((item) => (
-                                    <a href={`#${item.href}`} key={item.value}>
-                                        <li className={`${item.href} ${item.href === props.currentSection ? 'li-active-light' : ''}`}
-                                            onClick={() => props.handlerCurrentSection(item.href)}>
-                                            {item.value}
-                                        </li>
+                                    <a href={`#${item.href}`} key={item.value}
+                                       className={`${item.href} ${item.href === props.currentSection ? 'li-active-light' : ''}`}
+                                       onClick={() => props.handlerCurrentSection(item.href)}>
+                                        {item.value}
                                     </a>
                                 ))
                             ) : (
                                 configArray.listItems.eng.map((item) => (
-                                    <a href={`#${item.href}`} key={item.value}>
-                                        <li className={`${item.href} ${item.href === props.currentSection ? 'li-active-light' : ''}`}
-                                            onClick={() => props.handlerCurrentSection(item.href)}>
-                                            {item.value}
-                                        </li>
+                                    <a href={`#${item.href}`} key={item.value}
+                                       className={`${item.href} ${item.href === props.currentSection ? 'li-active-light' : ''}`}
+                                       onClick={() => props.handlerCurrentSection(item.href)}>
+                                        {item.value}
                                     </a>
                                 ))
                             )
@@ -49,7 +47,7 @@ function Navbar(props) {
                         {/*<li className="language" onClick={props.onChangeLanguage}*/}
                         {/*    style={{backgroundImage: `url(${process.env.PUBLIC_URL + flag})`}}>*/}
                         {/*</li>*/}
-                    </ul>
+                    </div>
 
                     <div className="menu" onClick={toggleNavbar}>
                         <i className="fa-solid fa-bars"></i>
