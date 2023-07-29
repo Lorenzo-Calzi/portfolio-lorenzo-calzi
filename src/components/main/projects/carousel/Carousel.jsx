@@ -3,7 +3,7 @@ import React, {useEffect, useRef} from "react";
 function Carousel(props) {
     const data = [
         {
-            "src": `${process.env.PUBLIC_URL}/assets/img/Carousel/boolflix.webp`,
+            "src": `${process.env.PUBLIC_URL}/assets/img/Carousel/netflix.webp`,
             "alt": "Boolflix",
             "url": "https://lorenzo-calzi.github.io/vue-boolflix/Milestone%205/"
         },
