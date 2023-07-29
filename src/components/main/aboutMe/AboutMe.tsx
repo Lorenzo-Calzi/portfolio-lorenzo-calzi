@@ -13,7 +13,7 @@ function AboutMe(props) {
                 <div className="content">
                     <div className="image"/>
                     <div className="description">
-                        <h5>Racconto un po' di me</h5>
+                        <h3>Racconto un po' di me</h3>
                         <p>"Mi chiamo Lorenzo Calzi, ho 23 anni e sono di Milano. <br/>
                             Sono un appassionato di tecnologia in tutti i suoi ambiti e rimango costantemente aggiornato
                             sulle novità introdotte. <br/>

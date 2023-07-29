@@ -3,22 +3,22 @@ import React, {useEffect, useRef} from "react";
 function Carousel(props) {
     const data = [
         {
-            "src": `${process.env.PUBLIC_URL}/assets/img/Carousel/boolflix.jpg`,
+            "src": `${process.env.PUBLIC_URL}/assets/img/Carousel/boolflix.webp`,
             "alt": "Boolflix",
             "url": "https://lorenzo-calzi.github.io/vue-boolflix/Milestone%205/"
         },
         {
-            "src": `${process.env.PUBLIC_URL}/assets/img/Carousel/boolzapp.jpg`,
+            "src": `${process.env.PUBLIC_URL}/assets/img/Carousel/boolzapp.webp`,
             "alt": "Boolzapp",
             "url": "https://lorenzo-calzi.github.io/vue-boolzapp/Milestone_5/"
         },
         {
-            "src": `${process.env.PUBLIC_URL}/assets/img/Carousel/hubspot.jpg`,
+            "src": `${process.env.PUBLIC_URL}/assets/img/Carousel/hubspot.webp`,
             "alt": "Hubspot",
             "url": "https://lorenzo-calzi.github.io/htmlcss-hubspot/"
         },
         {
-            "src": `${process.env.PUBLIC_URL}/assets/img/Carousel/spotify.jpg`,
+            "src": `${process.env.PUBLIC_URL}/assets/img/Carousel/spotify.webp`,
             "alt": "Spotify",
             "url": "https://lorenzo-calzi.github.io/html-css-spotifyweb/"
         }
@@ -170,20 +170,20 @@ function Carousel(props) {
 
     return (
         <div id="slider-container">
-            <a className="slider-left" style={{color: props.theme ? 'white' : 'black'}}
-               onClick={() => changeSlide('left')}>
+            <div className="slider-left" style={{color: props.theme ? 'white' : 'black'}}
+                 onClick={() => changeSlide('left')}>
                 <i className="fa-solid fa-circle-chevron-left"/>
-            </a>
+            </div>
 
             <div className="slider-center-content">
                 <div id="slider-content" ref={carousel}>
                     {
                         data.map((element, index) => (
                             <div className="slider-single" key={index}>
-                                <a href={element.url} target="_blank">
+                                <a href={element.url} target="_blank" aria-label={element.alt}>
                                     <img className="slider-single-image" src={element.src} alt={element.alt}/>
                                 </a>
-                                <a href={element.url} target="_blank">
+                                <a href={element.url} target="_blank" aria-label={element.alt}>
                                     <h1 className={`slider-single-title shadow-${!props.theme ? "light" : "dark"}`}>
                                         {element.alt}
                                         <i className="fa-solid fa-arrow-up-right-from-square"/>
@@ -205,10 +205,10 @@ function Carousel(props) {
                 </div>
             </div>
 
-            <a className="slider-right" style={{color: props.theme ? 'white' : 'black'}}
-               onClick={() => changeSlide('right')}>
+            <div className="slider-right" style={{color: props.theme ? 'white' : 'black'}}
+                 onClick={() => changeSlide('right')}>
                 <i className="fa-solid fa-circle-chevron-right"/>
-            </a>
+            </div>
         </div>
     );
 }

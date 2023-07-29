@@ -3,7 +3,7 @@ import {useEffect, useRef} from "react";
 import Typed from "typed.js";
 
 function Jumbotron(props) {
-    const el = useRef(null);
+    const textCarousel = useRef(null);
     const configArray = props.configArray.header.jumbotron
 
     const setImageHeight = (timeout?: string) => {
@@ -22,7 +22,7 @@ function Jumbotron(props) {
     useEffect(() => {
         setImageHeight('DEFAULT')
 
-        const typed = new Typed(el.current, {
+        const typed = new Typed(textCarousel.current, {
             strings: props.language ? configArray.subtitle.ita : configArray.subtitle.eng,
             startDelay: 300,
             typeSpeed: 100,
@@ -61,7 +61,8 @@ function Jumbotron(props) {
                 <div className="content">
                     <div className="description">
                         <h1 className={`title ${props.theme ? "white" : "black"}`}>{props.language ? configArray.title.ita : configArray.title.eng}</h1>
-                        <h3 className={`subtitle ${props.theme ? "white" : "grey"}`}><span ref={el}></span></h3>
+                        <h2 className={`subtitle ${props.theme ? "white" : "grey"}`}><span ref={textCarousel}></span>
+                        </h2>
 
                         <p className={`paragraph ${props.theme ? "white" : "grey"}`}>{props.language ? configArray.paragraph.ita : configArray.paragraph.eng}</p>
                         <a className={`contact shadow-${!props.theme ? "light" : "dark"}`} href="#contactMe">
@@ -72,7 +73,7 @@ function Jumbotron(props) {
 
                     <div className="images">
                         <div id="image"
-                             style={{backgroundImage: `url("${process.env.PUBLIC_URL}/assets/img/${!props.theme ? "jumbo-image-light.png" : "jumbo-image-light.png"}")`}}/>
+                             style={{backgroundImage: `url("${process.env.PUBLIC_URL}/assets/img/${!props.theme ? "jumbo-image-light.webp" : "jumbo-image-light.webp"}")`}}/>
                     </div>
                 </div>
             </div>

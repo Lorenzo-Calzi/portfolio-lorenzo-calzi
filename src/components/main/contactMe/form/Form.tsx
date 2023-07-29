@@ -213,6 +213,7 @@ function Form(props) {
                             <div className="input-group" key={index}>
                                 <input type={input.type}
                                        name={input.name}
+                                       aria-label={input.name}
                                        value={formValue[input.name]}
                                        onChange={onChange}
                                        onBlur={formFieldsCheck}
@@ -237,6 +238,7 @@ function Form(props) {
                     <div className="textarea-group">
                             <textarea name="message"
                                       value={formValue.message}
+                                      aria-label={'message'}
                                       onChange={onChange}
                                       onBlur={formFieldsCheck}
                                       className={`box shadow-${props.theme ? "dark" : "light"}`}

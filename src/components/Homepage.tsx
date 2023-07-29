@@ -198,7 +198,8 @@ function Homepage() {
                 <i className={`fa-solid fa-moon ${!theme ? "opacity" : ''}`}></i>
             </div>
 
-            <a id="to-the-top" className={`shadow-${!theme ? "light" : "dark"}`} href="#header">
+            <a id="to-the-top" className={`shadow-${!theme ? "light" : "dark"}`} href="#header"
+               aria-label="to-the-top-button">
                 <i className="fa-solid fa-arrow-up"/>
             </a>
         </div>
