@@ -108,7 +108,7 @@ function Homepage() {
         ScrollReveal().reveal('#form .inputs .submit', {delay: 525, origin: 'right'});
 
         // FOOTER
-        ScrollReveal().reveal('.copyright', {delay: 25, origin: 'bottom'});
+        ScrollReveal().reveal('.copyright', {delay: 500, origin: 'bottom'});
     }, [])
 
     ScrollReveal({
